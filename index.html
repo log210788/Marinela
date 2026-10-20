@@ -1,0 +1,2964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marinela's Peaceful English Sanctuary | Lesson 01 Transcript & Vocabulary</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Literary Serif), Plus Jakarta Sans (Soft Modern UI), JetBrains Mono (Timestamps & IPA) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            parchment: {
+              50: '#fbf9f5',
+              100: '#f6f1e7',
+              200: '#ede3d1',
+              300: '#dfd0b5',
+              400: '#cbb38e',
+              500: '#b6966b',
+            },
+            autumn: {
+              50: '#fcf6f0',
+              100: '#f7e9db',
+              200: '#eed0b5',
+              300: '#e2b086',
+              400: '#d38c57',
+              500: '#be6f38',
+              600: '#a3582b',
+              700: '#854524',
+              800: '#6c3921',
+            },
+            sage: {
+              50: '#f4f7f5',
+              100: '#e4ece7',
+              200: '#cadad1',
+              300: '#a5bfb1',
+              400: '#7b9f8d',
+              500: '#5b826f',
+              600: '#476858',
+              700: '#3a5448',
+              800: '#30443b',
+            },
+            slatewarm: {
+              700: '#3d4441',
+              800: '#2b312e',
+              900: '#1e2321',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP for Gentle Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Popper & Tippy.js for Interactive Vocabulary Explanations -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+
+  <!-- Canvas Confetti for Gentle Practice Encouragement -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-base: #f9f6f0;
+      --bg-card: rgba(255, 253, 249, 0.90);
+      --bg-subcard: rgba(255, 255, 255, 0.94);
+      --border-soft: #e6decb;
+      --border-accent: #d9c8b0;
+      --text-main: #2b312e;
+      --text-muted: #5c6660;
+      --grad-1: rgba(238, 208, 181, 0.42);
+      --grad-2: rgba(202, 218, 209, 0.48);
+      --grad-3: rgba(246, 241, 231, 0.70);
+    }
+
+    body[data-theme="winchester"] {
+      --bg-base: #f3f6f5;
+      --bg-card: rgba(252, 254, 253, 0.91);
+      --bg-subcard: rgba(255, 255, 255, 0.95);
+      --border-soft: #d7e2dc;
+      --border-accent: #b8ccc2;
+      --text-main: #26312d;
+      --text-muted: #52635c;
+      --grad-1: rgba(202, 218, 209, 0.50);
+      --grad-2: rgba(219, 228, 238, 0.48);
+      --grad-3: rgba(244, 240, 230, 0.55);
+    }
+
+    body[data-theme="twilight"] {
+      --bg-base: #f5efe6;
+      --bg-card: rgba(253, 249, 242, 0.92);
+      --bg-subcard: rgba(255, 252, 247, 0.96);
+      --border-soft: #e2d2be;
+      --border-accent: #cfaea0;
+      --text-main: #2d2622;
+      --text-muted: #665850;
+      --grad-1: rgba(226, 176, 134, 0.36);
+      --grad-2: rgba(214, 196, 176, 0.42);
+      --grad-3: rgba(235, 220, 202, 0.55);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(at 8% 5%, var(--grad-1) 0px, transparent 52%),
+        radial-gradient(at 92% 18%, var(--grad-2) 0px, transparent 52%),
+        radial-gradient(at 50% 88%, var(--grad-3) 0px, transparent 58%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      transition: background-color 0.5s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 36px -10px rgba(91, 130, 111, 0.08), 0 4px 14px -3px rgba(43, 49, 46, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sanctuary-subcard {
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 14px -4px rgba(43, 49, 46, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    /* Inline Vocabulary Highlight in Transcript */
+    .vocab-mark {
+      display: inline-block;
+      background: linear-gradient(120deg, rgba(226, 176, 134, 0.25) 0%, rgba(165, 191, 177, 0.28) 100%);
+      border-bottom: 2px dashed #a3582b;
+      color: #5b3216;
+      font-weight: 600;
+      padding: 0px 5px;
+      margin: 0 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .vocab-mark:hover, .vocab-mark.active-vocab {
+      background: linear-gradient(120deg, rgba(190, 111, 56, 0.25) 0%, rgba(91, 130, 111, 0.32) 100%);
+      border-bottom-style: solid;
+      border-bottom-color: #476858;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(163, 88, 43, 0.14);
+    }
+
+    body.hide-vocab-highlights .vocab-mark {
+      background: transparent !important;
+      border-bottom: none !important;
+      color: inherit !important;
+      font-weight: inherit !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Note-taker fix badge */
+    .asr-fix-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f7f5;
+      color: #476858;
+      border: 1px solid #cadad1;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    body.hide-asr-fixes .asr-fix-pill {
+      display: none !important;
+    }
+
+    /* Custom Tippy Tooltip Theme: Peaceful Autumn */
+    .tippy-box[data-theme~='autumn-sanctuary'] {
+      background-color: #fffdf9;
+      color: #2b312e;
+      border: 1px solid #dfd0b5;
+      border-radius: 1rem;
+      box-shadow: 0 20px 38px -8px rgba(61, 68, 65, 0.16), 0 6px 16px -4px rgba(163, 88, 43, 0.08);
+      padding: 0.35rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='top'] > .tippy-arrow::before {
+      border-top-color: #dfd0b5;
+    }
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='bottom'] > .tippy-arrow::before {
+      border-bottom-color: #dfd0b5;
+    }
+
+    /* Highlight pulse when jumping to a transcript line */
+    @keyframes gentleGlow {
+      0% { background-color: rgba(226, 176, 134, 0.45); transform: scale(1.005); }
+      50% { background-color: rgba(165, 191, 177, 0.38); }
+      100% { background-color: transparent; transform: scale(1); }
+    }
+    .turn-highlight-flash {
+      animation: gentleGlow 2.8s ease-out;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f6f1e7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbb38e;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a3582b;
+    }
+
+    @media print {
+      .no-print, #autumn-breeze-canvas { display: none !important; }
+      body { background: #fff !important; }
+      .sanctuary-card, .sanctuary-subcard { box-shadow: none !important; border: 1px solid #ccc !important; }
+    }
+  </style>
+</head>
+<body data-theme="kensington" class="font-sans antialiased min-h-screen selection:bg-autumn-200 selection:text-slatewarm-900 relative">
+
+  <!-- CALMING LONDON AUTUMN BREEZE CANVAS OVERLAY (Interactive Physics Leaves & Motes) -->
+  <canvas id="autumn-breeze-canvas" class="fixed inset-0 pointer-events-none z-20 opacity-80"></canvas>
+
+  <!-- STICKY PEACEFUL NAVIGATION & ATMOSPHERE BAR -->
+  <header class="sticky top-0 z-40 border-b border-[#e6decb]/90 bg-[#fbf9f5]/85 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand Identity -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sage-600 via-sage-500 to-autumn-500 flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm">
+          M
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slatewarm-900">Marinela's Peaceful English Sanctuary</span>
+            <span class="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-sage-100 text-sage-800 border border-sage-200">
+              <i data-lucide="feather" class="w-3 h-3 text-sage-600"></i>
+              Lesson 01 • Conversation & Vocabulary
+            </span>
+          </div>
+          <p class="text-[11px] text-stone-500 hidden md:block">A calm, tidy space with your corrected lesson transcript, timestamps, and flagged vocabulary</p>
+        </div>
+      </div>
+
+      <!-- Calming Atmosphere Controls: London Breeze Audio, Leaf Animation, UK Voice Speed & Palette -->
+      <div class="flex flex-wrap items-center gap-2">
+        
+        <!-- Ambient London Autumn Breeze Soundscape Player (Web Audio API) -->
+        <div class="flex items-center gap-1.5 bg-white/90 border border-[#dfd0b5] rounded-xl px-2.5 py-1 shadow-sm">
+          <button id="soundscape-btn" onclick="toggleSoundscape()" class="flex items-center gap-1.5 text-xs font-semibold text-sage-700 hover:text-sage-900 transition px-1.5 py-0.5 rounded-lg" title="Play soothing London autumn breeze & gentle rain soundscape">
+            <i data-lucide="wind" id="soundscape-icon" class="w-3.5 h-3.5 text-autumn-600"></i>
+            <span id="soundscape-label">London Breeze Audio: Off</span>
+          </button>
+          <select id="soundscape-preset" onchange="changeSoundscapePreset(this.value)" class="text-[11px] bg-parchment-50 border border-parchment-200 rounded-lg px-1.5 py-0.5 text-stone-700 focus:outline-none" title="Choose calming ambient sound">
+            <option value="breeze">🍂 Kensington Breeze</option>
+            <option value="rain">🌧️ Soft London Rain</option>
+            <option value="study">🕯️ Warm Study Hearth</option>
+          </select>
+          <input id="soundscape-volume" type="range" min="0.05" max="0.6" step="0.05" value="0.22" oninput="updateSoundscapeVolume(this.value)" class="w-14 accent-sage-600 cursor-pointer hidden sm:block" title="Ambient Sound Volume" />
+        </div>
+
+        <!-- Falling Autumn Leaves Toggle -->
+        <button id="leaves-toggle-btn" onclick="cycleLeafBreeze()" class="px-2.5 py-1.5 rounded-xl bg-white/90 hover:bg-autumn-50 border border-[#dfd0b5] text-xs font-medium text-stone-700 flex items-center gap-1.5 shadow-sm transition" title="Adjust falling autumn leaves animation">
+          <i data-lucide="leaf" class="w-3.5 h-3.5 text-autumn-600"></i>
+          <span id="leaves-label" class="hidden sm:inline">Leaves: Gentle</span>
+        </button>
+
+        <!-- UK Voice Speed -->
+        <div class="flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl px-2 py-1 shadow-sm text-xs">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-sage-600"></i>
+          <button onclick="setVoiceRate(0.85)" id="rate-slow" class="px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition">0.85×</button>
+          <button onclick="setVoiceRate(1.0)" id="rate-normal" class="px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition">UK 1×</button>
+        </div>
+
+        <!-- Theme Mood Selector -->
+        <div class="hidden lg:flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl p-1 text-[11px] shadow-sm">
+          <button onclick="setThemeMood('kensington')" id="theme-kensington" class="px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition">Bath Stone</button>
+          <button onclick="setThemeMood('winchester')" id="theme-winchester" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Winchester Mist</button>
+          <button onclick="setThemeMood('twilight')" id="theme-twilight" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Warm Study</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-7 relative z-10">
+
+    <!-- PEACEFUL HERO BANNER -->
+    <section class="sanctuary-card rounded-3xl p-6 sm:p-9 relative overflow-hidden">
+      <div class="absolute -right-12 -top-12 w-64 h-64 bg-autumn-200/30 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-sage-200/35 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+        <div class="lg:col-span-8 space-y-3.5">
+          <div class="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-sage-100/90 border border-sage-200 text-sage-800 text-xs font-medium">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-autumn-600"></i>
+            <span>October 20, 2026 • First Conversation with Louie • Winchester, Bath & The Church of the Light</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slatewarm-900 leading-[1.16]">
+            Welcome, Marinela — Your <span class="text-autumn-700 italic font-semibold">Autumn Sanctuary</span> for English Reflection
+          </h1>
+
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl">
+            Thank you so much for a wonderful, thoughtful first conversation! Just as promised at the end of our lesson, here is your <strong class="text-slatewarm-800">tidy, corrected transcript</strong> with exact timestamps and <strong class="text-slatewarm-800">58 flagged vocabulary words & idioms</strong>. All of the automated note-taker's funny spelling mistakes (like writing <em>"a visa"</em> instead of <em>"Ibiza"</em>, or <em>"a bar"</em> instead of <em>"Bath"</em>!) have been gently sorted out for you.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-stone-700">
+            <span class="inline-flex items-center gap-1.5 bg-parchment-100/90 px-3 py-1.5 rounded-xl border border-parchment-300">
+              <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-autumn-600"></i>
+              <span><strong>Tip 1:</strong> Click or hover over any <span class="vocab-mark text-xs">highlighted word</span> in the transcript to see its meaning & timestamp</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-sage-50/90 px-3 py-1.5 rounded-xl border border-sage-200">
+              <i data-lucide="headphones" class="w-3.5 h-3.5 text-sage-600"></i>
+              <span><strong>Tip 2:</strong> Click <strong>"London Breeze Audio"</strong> at the top for a peaceful background sound while you read</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Calm Lesson Summary Cards -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+          <div onclick="switchTab('transcript')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-autumn-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-autumn-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">29 Mins</span>
+              <i data-lucide="scroll-text" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Full Transcript</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Every turn tidied with inline vocab & timestamps</p>
+          </div>
+
+          <div onclick="switchTab('vocab')" class="cursor-pointer p-4 rounded-2xl bg-sage-50/95 border border-sage-200 hover:border-sage-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-sage-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">58 Flagged</span>
+              <i data-lucide="book-open-check" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Vocabulary & Idioms</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">B2–C2 words, UK audio & Spanish links</p>
+          </div>
+
+          <div onclick="switchTab('fixes')" class="cursor-pointer p-4 rounded-2xl bg-autumn-50/95 border border-autumn-200 hover:border-autumn-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-autumn-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">13 Fixes</span>
+              <i data-lucide="wand-sparkles" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Note-Taker Fixes</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Sorted spelling errors & gentle phrasing tips</p>
+          </div>
+
+          <div onclick="switchTab('places')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-sage-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-sage-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">5 Places</span>
+              <i data-lucide="compass" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Places & Practice</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Church of the Light, Winchester, Bath & review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIMARY TAB NAVIGATION BAR -->
+    <nav class="sanctuary-card rounded-2xl p-2 flex flex-wrap items-center justify-between gap-2 no-print" aria-label="Lesson Sections">
+      <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
+          <i data-lucide="message-square-quote" class="w-4 h-4"></i>
+          <span>1. Lesson Transcript & Inline Vocab</span>
+          <span class="px-2 py-0.5 text-[10px] rounded-full bg-white/20 text-white font-mono">00:00–29:08</span>
+        </button>
+
+        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600"></i>
+          <span>2. Vocabulary Dictionary</span>
+          <span class="px-2 py-0.5 text-[10px] rounded-full bg-autumn-100 text-autumn-800 font-mono">58 Words</span>
+        </button>
+
+        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600"></i>
+          <span>3. Note-Taker Fixes & Gentle Notes</span>
+        </button>
+
+        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="landmark" class="w-4 h-4 text-autumn-600"></i>
+          <span>4. Cultural Places & Prompts</span>
+        </button>
+
+        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="coffee" class="w-4 h-4 text-sage-600"></i>
+          <span>5. Peaceful Practice</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: FULL LESSON TRANSCRIPT WITH INLINE VOCABULARY & TIMESTAMPS   -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-transcript" class="tab-panel space-y-6">
+      
+      <!-- Transcript Controls & Chapter Bar -->
+      <div class="sanctuary-card rounded-3xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Interactive Conversation Transcript</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-full bg-autumn-100 text-autumn-800 font-medium">Spelling & Names Corrected</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+              Our Conversation — With Vocabulary Explained Right Where We Said It
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-1">
+              Every underlined <span class="vocab-mark">vocabulary word</span> is interactive. Hover over it for a quick tooltip, or click it to inspect its full details, British pronunciation, and Spanish connection in the side panel.
+            </p>
+          </div>
+
+          <!-- Search & Display Toggles -->
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <div class="relative">
+              <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+              <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Search transcript or time..." class="pl-9 pr-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none focus:border-sage-600 w-48 sm:w-56" />
+            </div>
+
+            <select id="speaker-filter" onchange="filterTranscript()" class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700 focus:outline-none">
+              <option value="all">Both Speakers</option>
+              <option value="Marinela">Marinela's Turns Only</option>
+              <option value="Louie">Louie's Turns Only</option>
+            </select>
+
+            <button onclick="toggleVocabHighlights()" id="btn-toggle-highlights" class="px-3 py-1.5 rounded-xl bg-autumn-100 text-autumn-800 border border-autumn-300 text-xs font-semibold transition flex items-center gap-1.5">
+              <i data-lucide="highlighter" class="w-3.5 h-3.5"></i>
+              <span>Vocab Highlights: On</span>
+            </button>
+
+            <button onclick="toggleAsrBadges()" id="btn-toggle-asr" class="px-3 py-1.5 rounded-xl bg-sage-100 text-sage-800 border border-sage-300 text-xs font-semibold transition flex items-center gap-1.5" title="Show or hide badges where the automated note-taker's spelling errors were fixed">
+              <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
+              <span>Note-Taker Fixes: Visible</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chapter Quick-Jump Pills -->
+        <div class="flex flex-wrap items-center gap-1.5 pt-1">
+          <span class="text-[11px] font-mono uppercase tracking-wider text-stone-500 mr-1">Chapters:</span>
+          <button onclick="scrollToChapter('chap-1')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            00:00 • I. Church of the Light
+          </button>
+          <button onclick="scrollToChapter('chap-2')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            06:30 • II. Hanoi, Ibiza & Winchester
+          </button>
+          <button onclick="scrollToChapter('chap-3')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            10:36 • III. Living Abroad, London & Bath
+          </button>
+          <button onclick="scrollToChapter('chap-4')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            14:30 • IV. Immersion & Teaching Styles
+          </button>
+          <button onclick="scrollToChapter('chap-5')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            20:05 • V. Memorable Students & Vietnam
+          </button>
+          <button onclick="scrollToChapter('chap-6')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            26:51 • VI. Closing & Lesson Notes
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Transcript Grid: Left (Conversation Stream) + Right (Sticky Vocabulary Inspector) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left 8 Cols: Full Conversation Stream -->
+        <div class="lg:col-span-8 space-y-4" id="transcript-stream-container">
+          <!-- Rendered dynamically by JS from complete cleaned transcript data -->
+        </div>
+
+        <!-- Right 4 Cols: Sticky Live Vocabulary Inspector & Quick Guide -->
+        <aside class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+          
+          <!-- Active Word Inspector Card -->
+          <div class="sanctuary-card rounded-3xl p-5 sm:p-6 border-t-4 border-t-autumn-500 space-y-4" id="vocab-inspector-card">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-1.5">
+                <i data-lucide="sparkle" class="w-3.5 h-3.5"></i>
+                Vocabulary Spotlight
+              </span>
+              <span id="insp-time" class="px-2.5 py-0.5 rounded-full bg-parchment-100 border border-parchment-300 font-mono text-xs text-stone-700">
+                🕒 03:09
+              </span>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <h3 id="insp-word" class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">put myself in their shoes</h3>
+                <button id="insp-audio-btn" onclick="speakWord('put myself in their shoes')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0" title="Listen in British English">
+                  <i data-lucide="volume-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <div class="flex flex-wrap items-center gap-2 mt-1">
+                <span id="insp-ipa" class="text-xs font-mono text-stone-500">/pʊt maɪˈself ɪn ðeər ʃuːz/</span>
+                <span id="insp-pos" class="px-2 py-0.5 text-[11px] rounded-md bg-parchment-100 text-stone-700 font-medium">idiom</span>
+                <span id="insp-level" class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800 font-mono font-semibold">B2 / C1</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-parchment-50 border border-parchment-200 space-y-1.5">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Meaning & Nuance</div>
+              <p id="insp-def" class="text-xs sm:text-sm text-slatewarm-800 leading-relaxed">
+                To imagine how someone else feels or how they see the world in their situation; to practice empathy before judging or designing something.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-sage-50/80 border border-sage-200 space-y-1.5">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">How It Was Used in Our Lesson</div>
+              <p id="insp-quote" class="text-xs italic text-stone-700 leading-relaxed">
+                "I'd like to put myself in their shoes and try to think in someone else's mindset."
+              </p>
+            </div>
+
+            <div class="flex items-center justify-between pt-1 text-xs border-t border-[#e6decb]">
+              <span class="text-stone-500">Conexión en español:</span>
+              <span id="insp-es" class="font-semibold text-sage-800">ponerse en el lugar (o en los zapatos) de alguien</span>
+            </div>
+          </div>
+
+          <!-- Quick Legend & Reassurance Box for Marinela -->
+          <div class="sanctuary-card rounded-3xl p-5 space-y-3">
+            <div class="flex items-center gap-2 text-sage-800 font-serif font-bold text-lg">
+              <i data-lucide="heart-handshake" class="w-5 h-5 text-autumn-600"></i>
+              <span>A Gentle Note for You</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              In our lesson, you expressed deep, poetic ideas—especially comparing Tadao Ando's <em>Church of the Light</em> to a <strong>metaphor for life</strong> and describing Winchester as a peaceful <strong>bubble</strong> away from a noisy world.
+            </p>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Click any word in the transcript to explore it here at your own pace, or switch to the <strong>Vocabulary Dictionary</strong> tab to browse all 58 words by timestamp.
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: VOCABULARY & IDIOMS EXPLORER (58 FLAGGED WORDS BY TIMESTAMP) -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-vocab" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Timestamped Lexicon • 58 Flagged Items</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+              Vocabulary, Idioms & British Expressions from Lesson 01
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-1">
+              Every word includes the exact timestamp when we said it. Click <strong>"Jump to Transcript"</strong> on any card to see the word inside the full conversation!
+            </p>
+          </div>
+
+          <!-- Search & Level Filter -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="relative">
+              <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+              <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Search word, Spanish, time..." class="pl-9 pr-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none focus:border-sage-600 w-52" />
+            </div>
+
+            <select id="vocab-level-filter" onchange="renderVocabGrid()" class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">All Levels (B2–C2)</option>
+              <option value="C2">C2 Mastery / Literary</option>
+              <option value="C1">C1 Advanced</option>
+              <option value="B2">B2 Upper-Intermediate</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="setVocabCategory('all')" id="vcat-all" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sage-700 text-white transition">
+            All 58 Flagged Words
+          </button>
+          <button onclick="setVocabCategory('architecture')" id="vcat-architecture" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            🏛️ Architecture, Light & Space
+          </button>
+          <button onclick="setVocabCategory('travel')" id="vcat-travel" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            🍂 England, Bath & Living Abroad
+          </button>
+          <button onclick="setVocabCategory('teaching')" id="vcat-teaching" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            📚 Language Immersion & Teaching
+          </button>
+          <button onclick="setVocabCategory('idioms')" id="vcat-idioms" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            ✨ Idioms & Phrasal Verbs
+          </button>
+        </div>
+
+        <!-- Vocabulary Cards Grid -->
+        <div id="vocab-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: NOTE-TAKER SPELLING FIXES & GENTLE PHRASING REFINEMENTS      -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-fixes" class="tab-panel hidden space-y-6">
+      
+      <!-- Part A: Gentle Phrasing Refinements & Strengths for Marinela -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Supportive Language Notes</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            Your Natural Strengths & 6 Gentle Phrasing Polishes
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            First, let's celebrate the natural expressions you used effortlessly today—followed by 6 small preposition and tense adjustments that will make your English sound even more fluent when you return to England.
+          </p>
+        </div>
+
+        <!-- Marinela's Highlights Banner -->
+        <div class="p-5 rounded-2xl bg-sage-50/90 border border-sage-200 space-y-3">
+          <div class="flex items-center gap-2 text-sage-800 font-serif font-bold text-xl">
+            <i data-lucide="award" class="w-5 h-5 text-autumn-600"></i>
+            <span>Expressions You Used Naturally & Accurately Today</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+              <span class="font-mono text-[11px] text-sage-700">08:59</span>
+              <div class="font-bold text-slatewarm-900 mt-0.5">"I felt so at home again there."</div>
+              <p class="text-stone-600 mt-0.5">Warm, idiomatic phrasing for feeling a deep sense of belonging in England.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+              <span class="font-mono text-[11px] text-sage-700">08:59</span>
+              <div class="font-bold text-slatewarm-900 mt-0.5">"trying to settle down"</div>
+              <p class="text-stone-600 mt-0.5">Natural phrasal verb for establishing a calm, permanent life in one place.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+              <span class="font-mono text-[11px] text-sage-700">10:02</span>
+              <div class="font-bold text-slatewarm-900 mt-0.5">"like being in my own bubble"</div>
+              <p class="text-stone-600 mt-0.5">Very expressive idiom for a sheltered, peaceful sanctuary away from world news.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+              <span class="font-mono text-[11px] text-sage-700">13:06</span>
+              <div class="font-bold text-slatewarm-900 mt-0.5">"I wouldn't mind going, really."</div>
+              <p class="text-stone-600 mt-0.5">Classic understated British English way of saying "I would quite like to go!"</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+              <span class="font-mono text-[11px] text-sage-700">14:56</span>
+              <div class="font-bold text-slatewarm-900 mt-0.5">"the English was quite posh"</div>
+              <p class="text-stone-600 mt-0.5">Spot-on British vocabulary to describe polished Southern/Winchester accents.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+              <span class="font-mono text-[11px] text-sage-700">23:18</span>
+              <div class="font-bold text-slatewarm-900 mt-0.5">"we get on very well"</div>
+              <p class="text-stone-600 mt-0.5">Authentic British phrasal verb (where Americans say "get along well").</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Gentle Polishes Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="gentle-polishes-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Part B: The 13 AI Note-Taker Spelling & Mishearing Fixes -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Transcript Clean-Up Log • 13 Fixes</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            How We Sorted Out the Automated Note-Taker's Spelling Mistakes
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            Automated speech-to-text programs often mishear proper nouns (like <em>Bath</em>, <em>Ibiza</em>, <em>Winchester</em>, and <em>Tadao Ando</em>) or poetic words (like <em>boon</em> and <em>never-ending</em>). Here is every place where the raw note-taker got confused and what we actually said:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="asr-fixes-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: CULTURAL PLACES & ARCHITECTURE FROM OUR CONVERSATION         -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-places" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Visual & Cultural Companion</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            The Spaces & Cities We Explored Together
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            Our conversation travelled from minimalist Japanese architecture to Renaissance bubbles in England and rooftop views in Hanoi. Here is a calm guide to the places and vocabulary connected with each one.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Place 1: Church of the Light -->
+          <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-l-4 border-l-autumn-500">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-autumn-700 font-semibold">00:00 – 06:25 • Ibaraki, Osaka, Japan</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-medium">Architecture Prompt</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">1. The Church of the Light — Tadao Ando (1989)</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Designed by the self-taught Japanese architect <strong>Tadao Ando</strong> (whom the note-taker spelled <em>"Tano Ando"</em>), this small chapel uses smooth reinforced concrete walls and low dark-wood seating. A cross-shaped cut in the eastern wall lets morning light pour into the darkness.
+            </p>
+            <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs text-stone-700 space-y-1">
+              <div class="font-semibold text-slatewarm-900">Your Reflection in the Lesson:</div>
+              <p class="italic">"Coming from white, you go through dark and then go back to white again... It's a metaphor for life—like a never-ending process of being alive."</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">all-encompassing</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">minimalist</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">humble</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">stature</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">dwarfed by</span>
+            </div>
+          </div>
+
+          <!-- Place 2: Winchester & Oxford -->
+          <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-l-4 border-l-sage-600">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-sage-700 font-semibold">08:59 – 10:35 • Hampshire, Southern England</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sage-100 text-sage-800 text-[11px] font-medium">Your English Bubble</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">2. Winchester — England's Ancient Cathedral City</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Just an hour southwest of London, <strong>Winchester</strong> was once the ancient capital of Anglo-Saxon England. With its medieval cathedral, historic college, and water-meadow walks (where the poet John Keats wrote <em>"To Autumn"</em>!), it feels remarkably like Oxford or a peaceful Renaissance hometown.
+            </p>
+            <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs text-stone-700 space-y-1">
+              <div class="font-semibold text-slatewarm-900">Your Reflection in the Lesson:</div>
+              <p class="italic">"I haven't been to England since 2010. I felt so at home again there... I really want to be in a place that is like being in my own bubble."</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">feel at home</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">in one's own bubble</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">posh</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">boon</span>
+            </div>
+          </div>
+
+          <!-- Place 3: Bath, Somerset -->
+          <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-l-4 border-l-autumn-400">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-autumn-700 font-semibold">13:25 – 14:25 • Somerset, Southwest England</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-medium">Louie's Recommendation</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">3. Bath — Golden Limestone & The River Avon</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              When the note-taker wrote <em>"have you ever been to a bar at all?"</em>, Louie was actually asking: <strong>"Have you ever been to Bath at all?"</strong> Built from warm, honey-coloured oolitic <strong>limestone</strong> (Bath stone), its Georgian crescent <strong>facades</strong> catch the afternoon sun so that the light literally <strong>bathes Bath</strong> in a golden glow.
+            </p>
+            <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs text-stone-700 space-y-1">
+              <div class="font-semibold text-slatewarm-900">Louie's Description in the Lesson:</div>
+              <p class="italic">"It is truly magical. The river, the building facades—the fronts of the buildings—they're absolutely lovely... It gives the city a magical glow. It's like the light bathes Bath in a lovely way."</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">facade</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">limestone</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-sage-100 text-sage-800">bathe (in light)</span>
+            </div>
+          </div>
+
+          <!-- Place 4: Leicester Square & Hanoi Rooftop -->
+          <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-l-4 border-l-sage-500">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-sage-700 font-semibold">06:54 & 12:15 • London & Downtown Hanoi</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sage-100 text-sage-800 text-[11px] font-medium">Vantage Points & Immersion</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">4. Rooftop Vantage Points & London's Energy</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Even in a bustling <strong>metropolis</strong> like Hanoi or London's <strong>Leicester Square</strong>, you can find quiet sanctuaries—whether it is a rooftop <strong>vantage point</strong> watching families pick up birthday cakes below, or sharing a spontaneous, joyful conversation at a traffic light.
+            </p>
+            <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs text-stone-700 space-y-1">
+              <div class="font-semibold text-slatewarm-900">Key Idea from Our Talk:</div>
+              <p class="italic">"You have a very nice vantage point where the city still belongs to you. It feels like it's yours—like your own secret place in this metropolis."</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">vantage point</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">metropolis</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">skyline</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800">immersed</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: PEACEFUL PRACTICE SANCTUARY (FLASHCARDS & REFLECTION)        -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-practice" class="tab-panel hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left 6 Cols: Calm Flashcard Deck -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Calm Memory Cards</span>
+              <span id="fc-counter" class="text-xs font-mono text-stone-500">Card 1 of 12</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Gentle Vocabulary Flashcards</h3>
+            <p class="text-xs text-stone-600">Click the card to flip between the word, its meaning, and how we used it in our conversation.</p>
+          </div>
+
+          <div onclick="flipFlashcard()" class="cursor-pointer sanctuary-subcard rounded-2xl p-7 min-h-[240px] flex flex-col items-center justify-center text-center space-y-3 border-2 border-[#dfd0b5] hover:border-autumn-400 transition select-none">
+            <span id="fc-badge" class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-mono">03:09 • Idiom (B2/C1)</span>
+            <h4 id="fc-front-title" class="font-serif text-3xl font-bold text-slatewarm-900">put oneself in someone's shoes</h4>
+            <p id="fc-sub" class="text-xs sm:text-sm text-stone-600 max-w-md leading-relaxed">
+              Click anywhere on this card to reveal the meaning, lesson quote & Spanish equivalent
+            </p>
+            <div id="fc-back-details" class="hidden space-y-2 pt-2 border-t border-parchment-200 w-full">
+              <p id="fc-quote" class="text-xs italic text-sage-800"></p>
+              <p id="fc-es" class="text-xs font-semibold text-autumn-700"></p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-2 pt-2">
+            <button onclick="prevFlashcard()" class="px-4 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-xs font-semibold text-stone-700 flex items-center gap-1.5 transition">
+              <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+            </button>
+            <button onclick="speakCurrentFlashcard()" class="px-4 py-2 rounded-xl bg-sage-100 hover:bg-sage-200 text-xs font-semibold text-sage-800 flex items-center gap-1.5 transition">
+              <i data-lucide="volume-2" class="w-4 h-4"></i> Listen (UK)
+            </button>
+            <button onclick="nextFlashcard()" class="px-4 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 text-xs font-semibold text-white flex items-center gap-1.5 transition">
+              Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right 6 Cols: Interactive Context Quiz -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">No-Pressure Review</span>
+              <h3 class="font-serif text-2xl font-bold text-slatewarm-900 mt-0.5">Match the Word to Our Conversation</h3>
+            </div>
+            <span id="quiz-score-badge" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">0 / 6 Completed</span>
+          </div>
+
+          <div id="quiz-container" class="space-y-4 max-h-[420px] overflow-y-auto pr-1">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Thoughtful Prompts for Future Conversations -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-autumn-800 font-serif font-bold text-2xl">
+          <i data-lucide="tea" class="w-5 h-5 text-autumn-600"></i>
+          <span>3 Peaceful Prompts to Ponder Over Tea (For Whenever We Chat Next)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 01 • Architecture & Emotion</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Your Renaissance Hometown</h4>
+            <p class="text-stone-600 leading-relaxed">
+              You mentioned that your hometown comes from the Renaissance and feels a little like how you imagine Oxford. If you took a friend to one quiet square or building there, what <strong>vantage point</strong> would you show them first?
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">Prompt 02 • Teaching & Empathy</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Putting Yourself in Their Shoes</h4>
+            <p class="text-stone-600 leading-relaxed">
+              As you work on your Master's in teaching Spanish as a second language, what is one <strong>preconception</strong> students often have about Spanish before they start learning with you?
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 03 • England Next Year</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Winchester, Bath & Oxford</h4>
+            <p class="text-stone-600 leading-relaxed">
+              When you apply for a teaching position in England next year, what daily routines would help you feel <strong>immersed</strong> in the language while still keeping your peaceful <strong>bubble</strong>?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-stone-500 border-t border-[#e6decb]/80 mt-8 no-print">
+    <p class="font-serif italic text-base text-slatewarm-800 mb-1">"All the roads lead to the light." — Lesson 01 Sanctuary prepared for Marinela</p>
+    <p>With calm London autumn breezes • Corrected Transcript, Timestamps & 58 Vocabulary Notes</p>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: VOCABULARY DATA, FULL TRANSCRIPT, AUDIO & AUTUMN BREEZE   -->
+  <!-- ===================================================================== -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 1. COMPLETE VOCABULARY DICTIONARY (58 FLAGGED ITEMS WITH TIMESTAMPS)
+    // -------------------------------------------------------------------------
+    const VOCAB_DB = {
+      "crucifix": {
+        word: "crucifix",
+        ipa: "/ˈkruː.sɪ.fɪks/",
+        pos: "noun",
+        level: "B2",
+        time: "00:06",
+        turnId: "turn-2",
+        cat: "architecture",
+        def: "A cross or representation of a cross with the figure of Jesus Christ upon it.",
+        quote: "Louie (00:06): \"The crucifix, mhm...\" (Note-taker wrote: 'The crucifixm')",
+        es: "crucifijo"
+      },
+      "all-encompassing": {
+        word: "all-encompassing",
+        ipa: "/ˌɔːl.ɪnˈkʌm.pə.sɪŋ/",
+        pos: "adjective",
+        level: "C1",
+        time: "00:12",
+        turnId: "turn-4",
+        cat: "architecture",
+        def: "Including, surrounding, or covering everything completely; filling the entire environment.",
+        quote: "Louie (00:12): \"I believe that the light is all-encompassing, overcoming...\"",
+        es: "omnipresente / que lo abarca todo"
+      },
+      "overcoming": {
+        word: "overcoming (overwhelming)",
+        ipa: "/ˌəʊ.vəˈkʌm.ɪŋ/",
+        pos: "adjective / participle",
+        level: "B2",
+        time: "00:12",
+        turnId: "turn-4",
+        cat: "architecture",
+        def: "Having a powerful, almost overpowering emotional or sensory effect on someone.",
+        quote: "Louie (00:12): \"I believe that the light is all-encompassing, overcoming...\"",
+        es: "sobrecogedor / abrumador"
+      },
+      "shields": {
+        word: "shield",
+        ipa: "/ʃiːld/",
+        pos: "verb",
+        level: "B2",
+        time: "00:12",
+        turnId: "turn-4",
+        cat: "architecture",
+        def: "To protect someone or a space from excessive force, brightness, or outside danger.",
+        quote: "Louie (00:12): \"...however, the structure of the room shields the space.\"",
+        es: "proteger / resguardar / escudar"
+      },
+      "intensity": {
+        word: "intensity",
+        ipa: "/ɪnˈten.sə.ti/",
+        pos: "noun",
+        level: "B2",
+        time: "00:12",
+        turnId: "turn-4",
+        cat: "architecture",
+        def: "The quality of being very strong, concentrated, or extreme in brightness, emotion, or power.",
+        quote: "Louie (00:12): \"...even though there is a great intensity outside, the space is protected.\"",
+        es: "intensidad"
+      },
+      "shelter": {
+        word: "shelter",
+        ipa: "/ˈʃel.tər/",
+        pos: "noun",
+        level: "B2",
+        time: "00:12",
+        turnId: "turn-4",
+        cat: "architecture",
+        def: "A safe, peaceful refuge that protects you from the outside elements or stress.",
+        quote: "Louie (00:12): \"...for people that pray in this space, it gives, like I said, protection, shelter.\"",
+        es: "refugio / cobijo / amparo"
+      },
+      "metaphor": {
+        word: "metaphor (for)",
+        ipa: "/ˈmet.ə.fɔːr/",
+        pos: "noun",
+        level: "B2",
+        time: "01:59",
+        turnId: "turn-9",
+        cat: "architecture",
+        def: "A symbolic image or comparison that represents a deeper truth (usually followed by the preposition 'for': 'a metaphor for life').",
+        quote: "Marinela (01:59): \"I could think about a metaphor for life.\"",
+        es: "metáfora (metáfora de la vida → metaphor FOR life)"
+      },
+      "narrower": {
+        word: "narrower",
+        ipa: "/ˈnær.əʊ.ər/",
+        pos: "adjective (comparative)",
+        level: "B2",
+        time: "02:04",
+        turnId: "turn-10",
+        cat: "architecture",
+        def: "Becoming less wide or more focused from side to side.",
+        quote: "Louie (02:04): \"I believe the structure of the room becomes narrower...\"",
+        es: "más estrecho / más angosto"
+      },
+      "wander": {
+        word: "wander",
+        ipa: "/ˈwɒn.dər/",
+        pos: "verb",
+        level: "B2",
+        time: "02:04",
+        turnId: "turn-10",
+        cat: "idioms",
+        def: "To walk or move gently through a place (or through life) without a rigid, fixed path.",
+        quote: "Louie (02:04): \"That we wander through life, then at some points, we come to maybe our own spirituality.\"",
+        es: "vagar / recorrer sin rumbo fijo / caminar"
+      },
+      "self-reflection": {
+        word: "self-reflection",
+        ipa: "/ˌself.rɪˈflek.ʃən/",
+        pos: "noun",
+        level: "C1",
+        time: "02:04",
+        turnId: "turn-10",
+        cat: "architecture",
+        def: "Quiet, thoughtful meditation about one's own life, character, feelings, and spiritual state.",
+        quote: "Louie (02:04): \"...or even maybe just reflection, self-reflection, and isolation of ourselves to practice that.\"",
+        es: "autorreflexión / introspección"
+      },
+      "on-purpose": {
+        word: "on purpose",
+        ipa: "/ɒn ˈpɜː.pəs/",
+        pos: "phrase",
+        level: "B2",
+        time: "03:03",
+        turnId: "turn-11",
+        cat: "idioms",
+        def: "Intentionally; by design, not by accident.",
+        quote: "Marinela (03:03): \"I think it's on purpose, you know? You don't know what it is, because it's open...\"",
+        es: "a propósito / intencionadamente"
+      },
+      "minimalist": {
+        word: "minimalist",
+        ipa: "/ˈmɪn.ɪ.məl.ɪst/",
+        pos: "adjective",
+        level: "B2",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "Designed with only the simplest, most essential lines and materials (like concrete and natural light) for a calm, uncluttered atmosphere.",
+        quote: "Louie (03:09): \"This is a famous image called The Church of the Light by Tadao Ando... It's quite a minimalist space.\"",
+        es: "minimalista"
+      },
+      "humble": {
+        word: "humble",
+        ipa: "/ˈhʌm.bəl/",
+        pos: "adjective",
+        level: "B2",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "Modest, unpretentious, and free of arrogance or grand display.",
+        quote: "Louie (03:09): \"It has no pride. I believe it's quite humble in its appearance and the size of the room.\"",
+        es: "humilde / modesto / sencillo"
+      },
+      "put-myself-in-their-shoes": {
+        word: "put myself in their shoes",
+        ipa: "/pʊt maɪˈself ɪn ðeər ʃuːz/",
+        pos: "idiom",
+        level: "C1",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "idioms",
+        def: "To imagine yourself in someone else's situation so you can understand their feelings and perspective deeply.",
+        quote: "Louie (03:09): \"I'd like to put myself in their shoes and try to think in someone else's mindset.\"",
+        es: "ponerse en el lugar (o en los zapatos) de otra persona"
+      },
+      "mindset": {
+        word: "mindset",
+        ipa: "/ˈmaɪnd.set/",
+        pos: "noun",
+        level: "B2",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "teaching",
+        def: "A person's established way of thinking, attitude, or outlook on the world.",
+        quote: "Louie (03:09): \"...and try to think in someone else's mindset.\"",
+        es: "mentalidad / forma de pensar"
+      },
+      "reverend": {
+        word: "reverend",
+        ipa: "/ˈrev.ər.ənd/",
+        pos: "noun",
+        level: "C1",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "A Christian minister or member of the clergy.",
+        quote: "Louie (03:09): \"...if there was a priest or a reverend or a church leader...\"",
+        es: "reverendo / ministro religioso"
+      },
+      "stature": {
+        word: "stature",
+        ipa: "/ˈstætʃ.ər/",
+        pos: "noun",
+        level: "C1",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "A person's natural physical height and build; also used figuratively for someone's importance or standing.",
+        quote: "Louie (03:09): \"...having their size, like you said, contrasted to the wall—their size and their stature.\"",
+        es: "estatura / porte / talla"
+      },
+      "dwarfed-by": {
+        word: "dwarfed by",
+        ipa: "/dwɔːft baɪ/",
+        pos: "passive verb phrase",
+        level: "C2",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "Made to appear very small or humble by comparison with something much larger or grander beside it.",
+        quote: "Louie (03:09): \"Their stature would be dwarfed by the imagery of the Christian faith.\"",
+        es: "empequeñecido por / eclipsado por"
+      },
+      "non-threatening": {
+        word: "non-threatening",
+        ipa: "/ˌnɒnˈθret.ən.ɪŋ/",
+        pos: "adjective",
+        level: "B2",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "Gentle, calm, and not causing anyone to feel intimidated, fearful, or uneasy.",
+        quote: "Louie (03:09): \"But at the same time, in a non-threatening way, it seems quite supportive.\"",
+        es: "no amenazante / acogedor / apacible"
+      },
+      "well-planned-out": {
+        word: "well-planned-out",
+        ipa: "/ˌwel.plændˈaʊt/",
+        pos: "compound adjective",
+        level: "B2",
+        time: "03:09",
+        turnId: "turn-12",
+        cat: "architecture",
+        def: "Carefully and thoughtfully designed in every detail.",
+        quote: "Louie (03:09): \"I think it's quite a well-planned-out space.\"",
+        es: "bien planificado / muy bien pensado"
+      },
+      "never-ending": {
+        word: "never-ending",
+        ipa: "/ˌnev.ərˈen.dɪŋ/",
+        pos: "adjective",
+        level: "B2",
+        time: "05:37",
+        turnId: "turn-13",
+        cat: "architecture",
+        def: "Having or seeming to have no end; eternal and continuous.",
+        quote: "Marinela (05:37): \"So it's like a never-ending process of being alive.\" (Note-taker misheard as: 'not a clever ending')",
+        es: "interminable / eterno / continuo"
+      },
+      "inhabit": {
+        word: "inhabit",
+        ipa: "/ɪnˈhæb.ɪt/",
+        pos: "verb",
+        level: "C1",
+        time: "06:32",
+        turnId: "turn-16",
+        cat: "architecture",
+        def: "To live in, occupy, or dwell peacefully within a place.",
+        quote: "Louie (06:32): \"If you have a place that you love to inhabit...\"",
+        es: "habitar / morar en"
+      },
+      "fair-enough": {
+        word: "fair enough",
+        ipa: "/ˌfeər ɪˈnʌf/",
+        pos: "British conversational idiom",
+        level: "B2",
+        time: "06:50",
+        turnId: "turn-18",
+        cat: "idioms",
+        def: "A warm, everyday British response meaning 'That makes complete sense; I understand and accept what you mean.'",
+        quote: "Louie (06:50): \"Okay, fair enough.\"",
+        es: "es comprensible / me parece justo / tiene sentido"
+      },
+      "outstanding": {
+        word: "outstanding",
+        ipa: "/ˌaʊtˈstæn.dɪŋ/",
+        pos: "adjective",
+        level: "B2",
+        time: "06:54",
+        turnId: "turn-20",
+        cat: "travel",
+        def: "Exceptionally good, breathtaking, or remarkable.",
+        quote: "Louie (06:54): \"It has an outstanding view...\"",
+        es: "excepcional / extraordinario / impresionante"
+      },
+      "tight-schedules": {
+        word: "tight schedules",
+        ipa: "/taɪt ˈʃed.juːlz/",
+        pos: "collocation",
+        level: "B2",
+        time: "06:54",
+        turnId: "turn-20",
+        cat: "travel",
+        def: "Busy timetables with very little free time between work or study commitments.",
+        quote: "Louie (06:54): \"We just had dinner because we have tight schedules.\"",
+        es: "horarios ajustados / agendas apretadas"
+      },
+      "skyline": {
+        word: "skyline",
+        ipa: "/ˈskaɪ.laɪn/",
+        pos: "noun",
+        level: "B2",
+        time: "06:54",
+        turnId: "turn-20",
+        cat: "travel",
+        def: "The silhouette or outline of buildings and towers seen against the sky.",
+        quote: "Louie (06:54): \"...and it has the beautiful new Hanoi skyline.\"",
+        es: "horizonte urbano / silueta de la ciudad"
+      },
+      "vantage-point": {
+        word: "vantage point",
+        ipa: "/ˈvɑːn.tɪdʒ pɔɪnt/",
+        pos: "noun",
+        level: "C1",
+        time: "06:54",
+        turnId: "turn-20",
+        cat: "architecture",
+        def: "A high or peaceful position that gives you a clear, wide view of everything below (also used figuratively for a perspective on life).",
+        quote: "Louie (06:54): \"...you have a good vantage point, a very nice vantage point where the city still belongs to you.\"",
+        es: "mirador privilegiado / punto de observación / perspectiva"
+      },
+      "metropolis": {
+        word: "metropolis",
+        ipa: "/məˈtrɒp.əl.ɪs/",
+        pos: "noun",
+        level: "C1",
+        time: "06:54",
+        turnId: "turn-20",
+        cat: "travel",
+        def: "A very large, lively, and densely populated city (such as London or Hanoi).",
+        quote: "Louie (06:54): \"It's like your own secret place in this metropolis.\"",
+        es: "metrópoli / gran urbe"
+      },
+      "felt-so-at-home": {
+        word: "feel at home",
+        ipa: "/fiːl æt həʊm/",
+        pos: "idiom",
+        level: "B2",
+        time: "08:59",
+        turnId: "turn-23",
+        cat: "idioms",
+        def: "To feel completely relaxed, comfortable, and welcome in a place, as if you belong there.",
+        quote: "Marinela (08:59): \"I went to England two weeks ago to visit a friend... I felt so at home again there.\"",
+        es: "sentirse como en casa"
+      },
+      "settle-down": {
+        word: "settle down",
+        ipa: "/ˈset.əl daʊn/",
+        pos: "phrasal verb",
+        level: "B2",
+        time: "08:59",
+        turnId: "turn-23",
+        cat: "idioms",
+        def: "To begin living a calm, stable, permanent life in one place.",
+        quote: "Marinela (08:59): \"I lived in Ibiza, on the island, a few times, trying to settle down because in the winter it's really nice.\"",
+        es: "establecerse / asentarse / echar raíces"
+      },
+      "bubble": {
+        word: "in one's own bubble",
+        ipa: "/ɪn wʌnz əʊn ˈbʌb.əl/",
+        pos: "idiom",
+        level: "B2",
+        time: "10:02",
+        turnId: "turn-29",
+        cat: "idioms",
+        def: "In a peaceful, protected, self-contained world sheltered from outside stress and bad news.",
+        quote: "Marinela (10:02): \"So I really want to be in a place that is like being in my own bubble...\"",
+        es: "en tu propia burbuja / en un refugio tranquilo"
+      },
+      "trials-and-tribulations": {
+        word: "trials and tribulations",
+        ipa: "/ˈtraɪ.əlz ænd ˌtrɪb.jʊˈleɪ.ʃənz/",
+        pos: "idiom",
+        level: "C2",
+        time: "10:36",
+        turnId: "turn-32",
+        cat: "idioms",
+        def: "Difficulties, hardships, and challenges that test your patience over time.",
+        quote: "Louie (10:36): \"But even though Vietnam has its trials and tribulations...\"",
+        es: "pruebas y tribulaciones / dificultades y contratiempos"
+      },
+      "reception": {
+        word: "reception",
+        ipa: "/rɪˈsep.ʃən/",
+        pos: "noun",
+        level: "B2",
+        time: "10:36",
+        turnId: "turn-32",
+        cat: "travel",
+        def: "The way people welcome, greet, and respond to someone arriving in their community.",
+        quote: "Louie (10:36): \"...I had this wonderful reception because I try very hard to speak Vietnamese.\"",
+        es: "acogida / recibimiento"
+      },
+      "go-above-and-beyond": {
+        word: "go above and beyond",
+        ipa: "/ɡəʊ əˈbʌv ænd bɪˈjɒnd/",
+        pos: "idiom",
+        level: "C1",
+        time: "10:36",
+        turnId: "turn-32",
+        cat: "idioms",
+        def: "To make a much greater effort than what is normally expected or required.",
+        quote: "Louie (10:36): \"...because I try very hard to speak Vietnamese. I go above and beyond.\"",
+        es: "ir más allá de lo esperado / dar el máximo esfuerzo"
+      },
+      "fade-away": {
+        word: "fade away",
+        ipa: "/feɪd əˈweɪ/",
+        pos: "phrasal verb",
+        level: "B2",
+        time: "10:36",
+        turnId: "turn-32",
+        cat: "idioms",
+        def: "To gently disappear, dissolve, or become less noticeable.",
+        quote: "Louie (10:36): \"However, for me, the problems fade away because I'm really concentrating on who I am with now.\"",
+        es: "desvanecerse / disiparse"
+      },
+      "wouldnt-mind": {
+        word: "wouldn't mind (+ -ing)",
+        ipa: "/ˈwʊd.ənt maɪnd/",
+        pos: "British understatement",
+        level: "B2",
+        time: "13:06",
+        turnId: "turn-33",
+        cat: "idioms",
+        def: "A polite, understated British way of saying 'I would actually quite like to do that.'",
+        quote: "Marinela (13:06): \"I have friends there in that area, and I wouldn't mind going, really.\"",
+        es: "no me importaría ir / me encantaría ir"
+      },
+      "boon": {
+        word: "boon",
+        ipa: "/buːn/",
+        pos: "noun",
+        level: "C2",
+        time: "13:25",
+        turnId: "turn-34",
+        cat: "travel",
+        def: "Something that is wonderfully helpful and brings great benefit or comfort; a true blessing.",
+        quote: "Louie (13:25): \"...because, obviously, they're a huge boon, right, for you to be there...\" (Note-taker wrote: 'boom')",
+        es: "bendición / gran ventaja / gran ayuda"
+      },
+      "facades": {
+        word: "facade (façade)",
+        ipa: "/fəˈsɑːd/",
+        pos: "noun",
+        level: "C1",
+        time: "13:48",
+        turnId: "turn-36",
+        cat: "architecture",
+        def: "The front exterior face of a building, especially a historic stone building facing a street or river.",
+        quote: "Louie (13:48): \"The river, the building facades—the fronts of the buildings—they're absolutely lovely.\"",
+        es: "fachada"
+      },
+      "limestone": {
+        word: "limestone",
+        ipa: "/ˈlaɪm.stəʊn/",
+        pos: "noun",
+        level: "B2",
+        time: "13:48",
+        turnId: "turn-36",
+        cat: "architecture",
+        def: "A warm, honey-toned natural stone famous in historic English cities like Bath and Oxford.",
+        quote: "Louie (13:48): \"I don't know if it's like the limestone or the effect, but it gives the city a glow, a magical glow.\"",
+        es: "piedra caliza"
+      },
+      "bathes": {
+        word: "bathe (in light)",
+        ipa: "/beɪð/",
+        pos: "verb (literary)",
+        level: "C1",
+        time: "13:48",
+        turnId: "turn-36",
+        cat: "architecture",
+        def: "When sunlight or warm light washes softly and completely over a place.",
+        quote: "Louie (13:48): \"It's like the light bathes Bath in a lovely way...\" (Note-taker wrote: 'Babe's bath')",
+        es: "bañar (de luz) / iluminar suavemente"
+      },
+      "posh": {
+        word: "posh",
+        ipa: "/pɒʃ/",
+        pos: "adjective (UK informal)",
+        level: "B2",
+        time: "14:56",
+        turnId: "turn-39",
+        cat: "travel",
+        def: "(British English) Upper-class, refined, or spoken with a polished standard Southern British accent.",
+        quote: "Marinela (14:56): \"...I could follow the conversations and the English was quite posh, so it was easy to understand...\"",
+        es: "distinguido / refinado / culto (acento británico)"
+      },
+      "picking-up": {
+        word: "pick up (words / a language)",
+        ipa: "/pɪk ʌp/",
+        pos: "phrasal verb",
+        level: "B2",
+        time: "14:56",
+        turnId: "turn-39",
+        cat: "teaching",
+        def: "To catch, understand, or acquire words naturally from listening to conversations around you.",
+        quote: "Marinela (14:56): \"...I reacted by picking up, you know, the main words.\"",
+        es: "captar / pillar (las palabras principales)"
+      },
+      "fluency": {
+        word: "fluency",
+        ipa: "/ˈfluː.ən.si/",
+        pos: "noun",
+        level: "B2",
+        time: "14:56",
+        turnId: "turn-39",
+        cat: "teaching",
+        def: "The ability to express yourself easily, smoothly, and naturally in a language.",
+        quote: "Marinela (14:56): \"I need to be more into the language, to be in the country again to have that fluency again.\"",
+        es: "fluidez"
+      },
+      "immersed": {
+        word: "immersed / immersion",
+        ipa: "/ɪˈmɜːst/ • /ɪˈmɜː.ʃən/",
+        pos: "adjective / noun",
+        level: "C1",
+        time: "15:27",
+        turnId: "turn-40",
+        cat: "teaching",
+        def: "Completely surrounded by a language and culture in your daily life so you absorb it naturally.",
+        quote: "Louie (15:27): \"You need to be immersed in it, and for it to become your daily life... yes, immersion is very important.\"",
+        es: "inmerso / inmersión lingüística"
+      },
+      "nonetheless": {
+        word: "nonetheless",
+        ipa: "/ˌnʌn.ðəˈles/",
+        pos: "adverb",
+        level: "C1",
+        time: "15:27",
+        turnId: "turn-40",
+        cat: "idioms",
+        def: "Despite that; nevertheless; even so.",
+        quote: "Louie (15:27): \"Not for money, unfortunately, but we played poker nonetheless.\"",
+        es: "sin embargo / no obstante / aun así"
+      },
+      "lecturers": {
+        word: "lecturer",
+        ipa: "/ˈlek.tʃər.ər/",
+        pos: "noun (UK)",
+        level: "B2",
+        time: "15:27",
+        turnId: "turn-40",
+        cat: "teaching",
+        def: "A university or college teacher in the British education system.",
+        quote: "Louie (15:27): \"Are they school teachers? Are they language teachers? ... Are they lecturers?\"",
+        es: "profesor universitario"
+      },
+      "shortcomings": {
+        word: "shortcoming",
+        ipa: "/ˈʃɔːtˌkʌm.ɪŋ/",
+        pos: "noun",
+        level: "C1",
+        time: "17:04",
+        turnId: "turn-44",
+        cat: "teaching",
+        def: "A weakness, limitation, or area where learners typically struggle.",
+        quote: "Louie (17:04): \"What is their disadvantage in learning a little Spanish... what are their shortcomings?\"",
+        es: "punto débil / carencia / limitación"
+      },
+      "competent": {
+        word: "competent",
+        ipa: "/ˈkɒm.pɪ.tənt/",
+        pos: "adjective",
+        level: "B2",
+        time: "18:11",
+        turnId: "turn-46",
+        cat: "teaching",
+        def: "Having the necessary skill, knowledge, and ability to do something very well.",
+        quote: "Louie (18:11): \"Now, they're very competent people. They're very competent, very professional...\"",
+        es: "competente / muy capaz"
+      },
+      "reassurance": {
+        word: "reassurance",
+        ipa: "/ˌriː.əˈʃɔː.rəns/",
+        pos: "noun",
+        level: "C1",
+        time: "18:36",
+        turnId: "turn-48",
+        cat: "teaching",
+        def: "Warm encouragement and support that removes someone's self-doubt and helps them feel confident.",
+        quote: "Louie (18:36): \"What they actually need is the confidence, the reassurance, to let them know they are doing well.\"",
+        es: "tranquilidad / estímulo / apoyo que da confianza"
+      },
+      "overestimating": {
+        word: "overestimate",
+        ipa: "/ˌəʊ.vərˈes.tɪ.meɪt/",
+        pos: "verb",
+        level: "B2",
+        time: "18:36",
+        turnId: "turn-48",
+        cat: "teaching",
+        def: "To think that something (such as one's own ability) is greater or more advanced than it really is.",
+        quote: "Louie (18:36): \"They are very sure of themselves. They're overestimating their abilities...\"",
+        es: "sobreestimar"
+      },
+      "flaws": {
+        word: "flaw",
+        ipa: "/flɔː/",
+        pos: "noun",
+        level: "C1",
+        time: "19:13",
+        turnId: "turn-50",
+        cat: "teaching",
+        def: "An imperfection, mistake, or weakness in pronunciation or structure.",
+        quote: "Louie (19:13): \"...have deep pronunciation flaws because they have trouble with the L and the R.\"",
+        es: "fallo / imperfección / defecto"
+      },
+      "preconception": {
+        word: "preconception",
+        ipa: "/ˌpriː.kənˈsep.ʃən/",
+        pos: "noun",
+        level: "C1",
+        time: "20:34",
+        turnId: "turn-56",
+        cat: "teaching",
+        def: "An idea or expectation formed in advance, before experiencing something directly.",
+        quote: "Louie (20:34): \"I enjoy the step when the relationship evolves—so they have a preconception of what the lesson will be.\"",
+        es: "idea preconcebida / expectativa previa"
+      },
+      "utilize": {
+        word: "utilize",
+        ipa: "/ˈjuː.təl.aɪz/",
+        pos: "verb",
+        level: "C1",
+        time: "20:34",
+        turnId: "turn-56",
+        cat: "teaching",
+        def: "To make practical, effective, and creative use of something.",
+        quote: "Louie (20:34): \"Then they realize how they can utilize you and how they can use you.\"",
+        es: "utilizar / aprovechar eficazmente"
+      },
+      "day-to-day": {
+        word: "day-to-day",
+        ipa: "/ˌdeɪ.təˈdeɪ/",
+        pos: "noun / adjective",
+        level: "B2",
+        time: "21:00",
+        turnId: "turn-58",
+        cat: "idioms",
+        def: "Daily routine; the ordinary course of everyday life.",
+        quote: "Louie (21:00): \"So in your day-to-day, do you have much time to reflect and think about your students at all?\"",
+        es: "día a día / vida cotidiana"
+      },
+      "stood-out": {
+        word: "stand out (stood out)",
+        ipa: "/stænd aʊt/",
+        pos: "phrasal verb",
+        level: "B2",
+        time: "23:00",
+        turnId: "turn-62",
+        cat: "idioms",
+        def: "To be especially memorable, noticeable, or remarkable compared with others.",
+        quote: "Louie (23:00): \"Is there a personality or a person that has stood out to you recently?\"",
+        es: "destacar / llamar especialmente la atención"
+      },
+      "get-on-well": {
+        word: "get on well (with)",
+        ipa: "/ɡet ɒn wel wɪð/",
+        pos: "phrasal verb (UK)",
+        level: "B2",
+        time: "23:18",
+        turnId: "turn-63",
+        cat: "idioms",
+        def: "To enjoy a warm, friendly, harmonious relationship with someone.",
+        quote: "Marinela (23:18): \"We don't have anything in common in general, but we get on very well.\"",
+        es: "llevarse muy bien (con alguien)"
+      },
+      "impromptu": {
+        word: "impromptu",
+        ipa: "/ɪmˈprɒmp.tjuː/",
+        pos: "adjective",
+        level: "C1",
+        time: "24:32",
+        turnId: "turn-64",
+        cat: "travel",
+        def: "Done or organized spontaneously on the spot, without advance planning.",
+        quote: "Louie (24:32): \"And they would have like an impromptu party at my house, unannounced.\"",
+        es: "improvisado / espontáneo"
+      },
+      "unannounced": {
+        word: "unannounced",
+        ipa: "/ˌʌn.əˈnaʊnst/",
+        pos: "adjective / adverb",
+        level: "C1",
+        time: "24:32",
+        turnId: "turn-64",
+        cat: "travel",
+        def: "Arriving or happening without prior warning or invitation.",
+        quote: "Louie (24:32): \"...an impromptu party at my house, unannounced.\"",
+        es: "sin avisar / por sorpresa"
+      },
+      "batch": {
+        word: "batch (of students)",
+        ipa: "/bætʃ/",
+        pos: "noun",
+        level: "B2",
+        time: "24:32",
+        turnId: "turn-64",
+        cat: "teaching",
+        def: "A group of people or things that belong together or study during the same period.",
+        quote: "Louie (24:32): \"...to meet this batch of students—they're online, but to think about their teacher...\"",
+        es: "grupo / promoción (de estudiantes)"
+      },
+      "short-lived": {
+        word: "short-lived",
+        ipa: "/ˌʃɔːtˈlɪvd/",
+        pos: "adjective",
+        level: "C1",
+        time: "24:32",
+        turnId: "turn-64",
+        cat: "idioms",
+        def: "Lasting only for a brief time.",
+        quote: "Louie (24:32): \"They are short-lived because obviously I moved to Hanoi, but I do still hold it dear to me.\"",
+        es: "efímero / de corta duración"
+      },
+      "hold-it-dear": {
+        word: "hold (something) dear",
+        ipa: "/həʊld dɪər/",
+        pos: "idiom",
+        level: "C2",
+        time: "24:32",
+        turnId: "turn-64",
+        cat: "idioms",
+        def: "To cherish a memory, person, or experience deeply in your heart.",
+        quote: "Louie (24:32): \"...but I do still hold it dear to me. Those experiences I'll never forget.\"",
+        es: "guardar con profundo cariño / atesorar en el corazón"
+      },
+      "prize": {
+        word: "prize (verb)",
+        ipa: "/praɪz/",
+        pos: "verb",
+        level: "C1",
+        time: "26:51",
+        turnId: "turn-66",
+        cat: "teaching",
+        def: "To value, treasure, or appreciate a relationship or quality very highly.",
+        quote: "Louie (26:51): \"...it's unique, the relationships I have there now, which I prize...\"",
+        es: "valorar muchísimo / apreciar / atesorar"
+      },
+      "flag": {
+        word: "flag (words)",
+        ipa: "/flæɡ/",
+        pos: "verb",
+        level: "B2",
+        time: "27:41",
+        turnId: "turn-70",
+        cat: "teaching",
+        def: "To highlight, mark, or draw attention to important items so you can review them later.",
+        quote: "Louie (27:41): \"It will flag any words that are over a certain level, just in case.\"",
+        es: "marcar / señalar / destacar"
+      },
+      "prompt": {
+        word: "prompt",
+        ipa: "/prɒmpt/",
+        pos: "noun",
+        level: "B2",
+        time: "27:41",
+        turnId: "turn-70",
+        cat: "teaching",
+        def: "An image, question, or idea chosen to spark reflection and start a meaningful conversation.",
+        quote: "Louie (27:41): \"I choose a topic or a prompt—for example, the picture of the Church of the Light—something quite different to get us talking.\"",
+        es: "propuesta / estímulo de conversación / tema disparador"
+      }
+    };
+
+    // Helper to create inline clickable/hoverable vocabulary span inside transcript text
+    function v(key, displayWord) {
+      const item = VOCAB_DB[key];
+      const label = displayWord || (item ? item.word : key);
+      return `<span class="vocab-mark" data-vkey="${key}" onclick="inspectVocab('${key}')">${label}</span>`;
+    }
+
+    // Helper to create inline Note-Taker spelling fix badge
+    function fixBadge(corrected, rawMistake) {
+      return `<span class="asr-fix-pill" title="The automated note-taker misheard '${corrected}' as '${rawMistake}'">✨ Fixed: "${corrected}" <span class="text-stone-400">(note-taker wrote: "${rawMistake}")</span></span>`;
+    }
+
+    // -------------------------------------------------------------------------
+    // 2. COMPLETE CLEANED TRANSCRIPT (ALL TURNS 00:00 TO 29:08)
+    // -------------------------------------------------------------------------
+    const TRANSCRIPT_TURNS = [
+      {
+        id: "turn-1",
+        chapterId: "chap-1",
+        chapterTitle: "Chapter I • Tadao Ando's \"Church of the Light\" & Metaphors for Life (00:00 – 06:25)",
+        speaker: "Marinela",
+        time: "00:00",
+        html: `Isn't it to do with religion? I think so, because of the cross figure...`
+      },
+      {
+        id: "turn-2",
+        speaker: "Louie",
+        time: "00:06",
+        html: `The ${v("crucifix", "crucifix")}, mhm... ${fixBadge("crucifix", "crucifixm")}`
+      },
+      {
+        id: "turn-3",
+        speaker: "Marinela",
+        time: "00:08",
+        html: `Yeah, yes.`
+      },
+      {
+        id: "turn-4",
+        speaker: "Louie",
+        time: "00:12",
+        html: `The materials... I agree. I'll give my opinion about the light, if that's okay. I believe that the light is ${v("all-encompassing", "all-encompassing")}, ${v("overcoming", "overcoming")}; however, the structure of the room ${v("shields", "shields")} the space—it prevents it. Even though there is a great ${v("intensity", "intensity")} outside, the space is protected, okay? The space is protected. I believe—and I think it's quite unique—because even though we know the power, for example, for people that pray in this space, it gives, like I said, protection, ${v("shelter", "shelter")}.<br><br>Okay, what do you think about the structure of the room? What do you think about the structure—like the shape?`
+      },
+      {
+        id: "turn-5",
+        speaker: "Marinela",
+        time: "01:25",
+        html: `It's a very—okay, it's a very empty place, and all the information is on the right, so there are like two very different spaces. On the right, there is the information, like the change of colours. And so coming from white, you go through dark and then go back to white again.`
+      },
+      {
+        id: "turn-6",
+        speaker: "Louie",
+        time: "01:54",
+        html: `And why?`
+      },
+      {
+        id: "turn-7",
+        speaker: "Marinela",
+        time: "01:54",
+        html: `So, I mean... I don't know...`
+      },
+      {
+        id: "turn-8",
+        speaker: "Louie",
+        time: "01:58",
+        html: `But why do you think?`
+      },
+      {
+        id: "turn-9",
+        speaker: "Marinela",
+        time: "01:59",
+        html: `I could think about a ${v("metaphor", "metaphor")} for life.`
+      },
+      {
+        id: "turn-10",
+        speaker: "Louie",
+        time: "02:04",
+        html: `Yes! Yeah, I think for me personally, I believe the structure of the room becomes ${v("narrower", "narrower")}, and I think it's quite a ${v("metaphor", "metaphor")} for life as well, in a spiritual sense: that we ${v("wander", "wander")} through life, and then at some points we come to maybe our own spirituality, or even maybe just reflection, ${v("self-reflection", "self-reflection")}, and isolation of ourselves to practice that. That's what I get from the space. And I was wondering, could you take a guess what country this is in? I think it's quite difficult—I think it's very difficult...`
+      },
+      {
+        id: "turn-11",
+        speaker: "Marinela",
+        time: "03:03",
+        html: `I think it's ${v("on-purpose", "on purpose")}, you know? You don't know what it is, because it's open for interpretation.`
+      },
+      {
+        id: "turn-12",
+        speaker: "Louie",
+        time: "03:09",
+        html: `But I would only guess because I'm in Asia, so maybe I see things in Asia—for example, the low seating. I just had dinner with a friend about half an hour ago, and the seating is so low off the floor. So in my brain, I automatically think it's in Asia—it's in Japan.<br><br>This is a famous image called <em>The Church of the Light</em> by a famous architect, <strong>Tadao Ando</strong>. ${fixBadge("Tadao Ando", "Tano Ando")} It's quite a ${v("minimalist", "minimalist")} space. It's quite a minimally lit space. It has no pride; I believe it's quite ${v("humble", "humble")} in its appearance and the size of the room.<br><br>Because I myself am not religious, I like to try to imagine what someone who uses this space would use it for. I'd like to ${v("put-myself-in-their-shoes", "put myself in their shoes")} and try to think in someone else's ${v("mindset", "mindset")}. What I particularly would like, if I were a person who prayed or a Christian or a religious person, is that if there was a priest or a ${v("reverend", "reverend")} or a church leader in the room, having their size—like you said—contrasted to the wall, their size and their ${v("stature", "stature")}... Their ${v("stature", "stature")} would be ${v("dwarfed-by", "dwarfed by")} the imagery of the Christian faith. But at the same time, in a ${v("non-threatening", "non-threatening")} way, like I said earlier, it seems quite supportive. I think it's quite a ${v("well-planned-out", "well-planned-out")} space.<br><br>Does this image give you any memories of anything, or any of the materials or the minimalism? Does it have any memories for you personally?`
+      },
+      {
+        id: "turn-13",
+        speaker: "Marinela",
+        time: "05:37",
+        html: `I was just thinking that it's a ${v("metaphor", "metaphor")} for life—like you're coming from you don't know where into this space, and when you die, you go to the light again. So it's like a ${v("never-ending", "never-ending")} process of being alive. ${fixBadge("like a never-ending process", "not a clever ending process")}`
+      },
+      {
+        id: "turn-14",
+        speaker: "Louie",
+        time: "05:52",
+        html: `Yes, like you go to the light, right? All the roads lead to the light, yes, in a way. Very nice, and it's a very unique space—the materials, the concrete on the walls, the wood... Sorry about the low-resolution image! Thank you. It's a very unusual room.<br><br>May I ask what your favourite space in the world is? What is your favourite space?`
+      },
+      {
+        id: "turn-15",
+        chapterId: "chap-2",
+        chapterTitle: "Chapter II • Favourite Spaces: Hanoi Rooftops, Ibiza & Winchester's Bubble (06:30 – 10:35)",
+        speaker: "Marinela",
+        time: "06:30",
+        html: `Like a physical space or a place?`
+      },
+      {
+        id: "turn-16",
+        speaker: "Louie",
+        time: "06:32",
+        html: `A place, yes. A place—if you have a place that you love to ${v("inhabit", "inhabit")}.`
+      },
+      {
+        id: "turn-17",
+        speaker: "Marinela",
+        time: "06:42",
+        html: `That's the problem—I don't know. I mean, I'm still looking for that place. I don't know what it is.`
+      },
+      {
+        id: "turn-18",
+        speaker: "Louie",
+        time: "06:50",
+        html: `Okay, ${v("fair-enough", "fair enough")}.`
+      },
+      {
+        id: "turn-19",
+        speaker: "Marinela",
+        time: "06:53",
+        html: `Yeah...`
+      },
+      {
+        id: "turn-20",
+        speaker: "Louie",
+        time: "06:54",
+        html: `Interesting. I personally rent this office space—Hanoi is very noisy, and I'm in downtown Hanoi, so it's better to have a quiet place. I hope you can hear me and can't hear any noises! Thank you. It took me a while to find this office space. On the top of this office building—it's not that high—it has an ${v("outstanding", "outstanding")} view, and I have to take a picture. I was just up there with my friend. My friend is actually from Scotland; we maybe meet each other once every two months in a different country, or in Hanoi, or somewhere.<br><br>He's a very nice gentleman, very lovely. We just had dinner because we have ${v("tight-schedules", "tight schedules")}—we're both doing different things. But I took him up for the view, and it has the beautiful new Hanoi ${v("skyline", "skyline")}. You can see the volume of the Vietnamese traffic spreading across the city. You can see all the families having their coffee or their dessert on the street—literally on the street. Everyone is going to pick up birthday cakes.<br><br>It's so close that you feel like you're in that world, but you have a good ${v("vantage-point", "vantage point")}, a very nice ${v("vantage-point", "vantage point")} where the city still belongs to you. It feels like it's yours. It's like your own secret place in this ${v("metropolis", "metropolis")}. It is ${v("outstanding", "outstanding")}. I'll take a picture, or maybe a video is better.`
+      },
+      {
+        id: "turn-21",
+        speaker: "Marinela",
+        time: "08:41",
+        html: `Please go ahead.`
+      },
+      {
+        id: "turn-22",
+        speaker: "Louie",
+        time: "08:41",
+        html: `Yes, yeah, absolutely. And so you're struggling—you haven't found a place that you love to be, or haven't had a recent place. And why do you think that is? Why?`
+      },
+      {
+        id: "turn-23",
+        speaker: "Marinela",
+        time: "08:59",
+        html: `I don't know. I mean, I went to England two weeks ago to visit a friend, and I hadn't been to England since 2010. I ${v("felt-so-at-home", "felt so at home")} again there. I thought, "Well, maybe I want to come back to England and stay for a while and teach Spanish." So that's why I want to go back to having a regular English class.<br><br>But I don't know—I mean, I lived in <strong>Ibiza</strong>, on the island, ${fixBadge("Ibiza, on the island", "a visa on the island")} a few times, trying to ${v("settle-down", "settle down")} because in the winter it's really nice. But then at the end of it, it was too expensive and it wasn't worth the effort. That was a place that I really loved because of the beaches and the way of life, but it's too expensive now.`
+      },
+      {
+        id: "turn-24",
+        speaker: "Louie",
+        time: "09:48",
+        html: `So may I ask why you love England? Is it London specifically? What part?`
+      },
+      {
+        id: "turn-25",
+        speaker: "Marinela",
+        time: "09:56",
+        html: `No, I was in <strong>Winchester</strong> with a friend that's working there.`
+      },
+      {
+        id: "turn-26",
+        speaker: "Louie",
+        time: "10:00",
+        html: `Okay, yes.`
+      },
+      {
+        id: "turn-29",
+        speaker: "Marinela",
+        time: "10:02",
+        html: `So he was living there... And coming from my hometown, which is from the Renaissance, it's very—I guess—similar to Oxford. I've never been to Oxford, so it's like you are in your ${v("bubble", "bubble")}, and the world seems to be so terrible lately. So I really want to be in a place that is like being ${v("bubble", "in my own bubble")}, because civilization hasn't learned anything lately.`
+      },
+      {
+        id: "turn-30",
+        speaker: "Louie",
+        time: "10:29",
+        html: `Yes, I understand that.`
+      },
+      {
+        id: "turn-31",
+        speaker: "Marinela",
+        time: "10:34",
+        html: `It was a bubble, and I loved it. ${fixBadge("It was a bubble", "I was a BO")}`
+      },
+      {
+        id: "turn-32",
+        chapterId: "chap-3",
+        chapterTitle: "Chapter III • Living Abroad: Hanoi Traffic Lights, London & Magical Bath (10:36 – 14:25)",
+        speaker: "Louie",
+        time: "10:36",
+        html: `Sometimes—I don't know about you, I wonder if you feel the same way—even though Vietnam has its ${v("trials-and-tribulations", "trials and tribulations")} for people here, because I'm an outsider trying to understand them (and there is a lot I do not understand), I feel like I'm in a special time. I've had this wonderful ${v("reception", "reception")} because I try very hard to speak Vietnamese. I ${v("go-above-and-beyond", "go above and beyond")}. Well, I think it's a duty, if you live in a country, to speak the language. So I have a great relationship. However, for me, the problems ${v("fade-away", "fade away")} because I'm really concentrating on who I am with now and the relationship.<br><br>For example, I was driving today on my motorbike and I stopped at a traffic light. There might have been a hundred people on their motorbikes at this light, and the locals looked at me, and we just started having a massive conversation—all twenty people around me in Vietnamese! And they were like, "My gosh, your Vietnamese is so great!" It's just like, we'll possibly never meet each other again, but in that one moment at a traffic light, we're just all happy and enjoying the moment, simply because of our love of other people.<br><br>We don't know each other, but it's the joy of conversation and communicating with someone from another life or experience. I think that's the same in England. When I was younger, my dream was to live in London, and I went to university in London, because it's another world. I'll never forget coming out into <strong>Leicester Square</strong>—because my office was near Leicester Square—and the neon lights, and just a completely different planet with different communities, and thinking, "I'm going to be part of that." That's what I truly love about the world.<br><br>And when do you think you will try to go over to England?`
+      },
+      {
+        id: "turn-33",
+        speaker: "Marinela",
+        time: "13:06",
+        html: `Maybe in a year. I've begun a Master's right now in teaching Spanish as a second language to improve my job, and if there is a position for the next course, I think I will apply. I have friends there in that area, and I ${v("wouldnt-mind", "wouldn't mind")} going, really.`
+      },
+      {
+        id: "turn-34",
+        speaker: "Louie",
+        time: "13:25",
+        html: `Yeah, I think that England has a few great places. I'm sure you would like to be with your friends because, obviously, they're a huge ${v("boon", "boon")}, right, ${fixBadge("boon", "boom")} for you to be there. Have you ever been to <strong>Bath</strong> at all? ${fixBadge("Bath", "a bar")}`
+      },
+      {
+        id: "turn-35",
+        speaker: "Marinela",
+        time: "13:46",
+        html: `No, I really want to go.`
+      },
+      {
+        id: "turn-36",
+        speaker: "Louie",
+        time: "13:48",
+        html: `It is truly magical. The river, the building ${v("facades", "facades")}—the fronts of the buildings—they're absolutely lovely. I don't know if it's the ${v("limestone", "limestone")} or the effect, but it gives the city a glow, a magical glow, and it's very nice. It's like the light ${v("bathes", "bathes")} <strong>Bath</strong> in a lovely way, ${fixBadge("bathes Bath", "Babe's bath")} and plus, it's very clean, which is very nice.<br><br>So do you read many English books, or how do you practice?`
+      },
+      {
+        id: "turn-37",
+        chapterId: "chap-4",
+        chapterTitle: "Chapter IV • Language Immersion, Winchester Teachers & Learning Styles (14:30 – 20:04)",
+        speaker: "Marinela",
+        time: "14:30",
+        html: `I watch series with subtitles, because I don't really have time for reading much besides preparing classes and stuff.`
+      },
+      {
+        id: "turn-38",
+        speaker: "Louie",
+        time: "14:40",
+        html: `And how do you find understanding English? It seems like—hopefully—you understand me quite well, you receive me quite well!`
+      },
+      {
+        id: "turn-39",
+        speaker: "Marinela",
+        time: "14:56",
+        html: `The thing is, when I was in <strong>Winchester</strong>, ${fixBadge("when I was in Winchester", "one was in Leicester")} I was talking with some teachers, and I could follow the conversations, and the English was quite ${v("posh", "posh")}, so it was, you know, easy to understand. But at times I got lost, and I reacted by ${v("picking-up", "picking up")}, you know, the main words. So I thought, "No, I need to be more into the language—to be in the country again to have that ${v("fluency", "fluency")} again."`
+      },
+      {
+        id: "turn-40",
+        speaker: "Louie",
+        time: "15:27",
+        html: `Yes, you need to be—and I'm quite lucky—${v("immersed", "immersed")}. You need to be ${v("immersed", "immersed")} in it for it to become your daily life. For example, I learned a new word yesterday. Every day I learn new words, and yesterday I learnt the Vietnamese word <em>"sập"</em> ${fixBadge("sập (Vietnamese poker term)", "SOP")}—you might not approve, but I was playing poker in a Vietnamese bar with Vietnamese people! I just walked in because I needed to charge my phone, and because I speak Vietnamese, they said, "Would you like to play poker with us?" Not for money, unfortunately, but we played poker ${v("nonetheless", "nonetheless")}. And I just got to learn more vocabulary and meet some new people. Yes, ${v("immersed", "immersion")} is very important.<br><br>So may I ask, the teachers in Winchester—what kind of teachers are they? Are they school teachers? Are they language teachers? Are they ${v("lecturers", "lecturers")}?`
+      },
+      {
+        id: "turn-41",
+        speaker: "Marinela",
+        time: "16:42",
+        html: `Some of them were not, and some of them were language teachers—most of them, I think, yeah. So probably they were talking about things at the school and using specific words, and I realized that I needed to be there to get back into it, you know?`
+      },
+      {
+        id: "turn-44",
+        speaker: "Louie",
+        time: "17:04",
+        html: `I would love to know your opinion: have you ever taught English speakers before—British English native speakers? And what is their—I don't want to say their ${v("shortcomings", "shortcomings")}—what is their disadvantage in learning Spanish? What are their ${v("shortcomings", "shortcomings")}?`
+      },
+      {
+        id: "turn-45",
+        speaker: "Marinela",
+        time: "17:35",
+        html: `Well, the fact is that because I speak English, I know where the problems are—because I had those same problems in reverse, so I can anticipate them and go beyond them. I know where the problem is going to be, and I fix it very soon. Though for me, most of the time my classes are full of people from everywhere, so all the nationalities are mixed and it's difficult to separate just one group.`
+      },
+      {
+        id: "turn-46",
+        speaker: "Louie",
+        time: "18:11",
+        html: `Can I say what I find for myself? I have many students from around the world on Preply. For example, with my Japanese students, it's confidence. Now, they're very ${v("competent", "competent")} people—they're very ${v("competent", "competent")}, very...`
+      },
+      {
+        id: "turn-47",
+        speaker: "Marinela",
+        time: "18:36",
+        html: `Yeah.`
+      },
+      {
+        id: "turn-48",
+        speaker: "Louie",
+        time: "18:36",
+        html: `...professional, and they actually do not need the lesson for grammar. What they actually need is the confidence, the ${v("reassurance", "reassurance")}, to let them know they are doing well. Whereas the opposite is sometimes true for my Thai students: they are very sure of themselves, sometimes ${v("overestimating", "overestimating")} their abilities, and they...`
+      },
+      {
+        id: "turn-49",
+        speaker: "Marinela",
+        time: "19:12",
+        html: `Okay.`
+      },
+      {
+        id: "turn-50",
+        speaker: "Louie",
+        time: "19:13",
+        html: `...have deep pronunciation ${v("flaws", "flaws")} because they have trouble with the <em>L</em> and the <em>R</em>, so they might get frustrated because of that. That's just an example of some of my students' ${v("shortcomings", "shortcomings")} when they're learning the language. It's always interesting how different school systems and different countries produce different students.<br><br>What is your favourite thing about teaching?`
+      },
+      {
+        id: "turn-51",
+        chapterId: "chap-5",
+        chapterTitle: "Chapter V • The Joy of Teaching, Memorable Students & Vietnamese Hospitality (20:05 – 26:50)",
+        speaker: "Marinela",
+        time: "20:05",
+        html: `Getting to know the world from a different perspective. It's like it's never boring—you always discover something new, you always learn something. I think it's very interesting to interact with people from different nationalities. That's what I like most.`
+      },
+      {
+        id: "turn-54",
+        speaker: "Louie",
+        time: "20:26",
+        html: `Yes! You get to explore not only their culture, but when you get to know them, their mind and who they are—it's quite lovely.`
+      },
+      {
+        id: "turn-55",
+        speaker: "Marinela",
+        time: "20:34",
+        html: `Yes.`
+      },
+      {
+        id: "turn-56",
+        speaker: "Louie",
+        time: "20:34",
+        html: `I enjoy the step when the relationship evolves: at first they have a ${v("preconception", "preconception")} of what the lesson will be, and then they realize how they can ${v("utilize", "utilize")} you and how they can use you—"Wow, I can actually use the teacher in this way!" That's when...`
+      },
+      {
+        id: "turn-57",
+        speaker: "Marinela",
+        time: "21:00",
+        html: `Okay...`
+      },
+      {
+        id: "turn-58",
+        speaker: "Louie",
+        time: "21:00",
+        html: `...the lesson, I think, gets very interesting. So in your ${v("day-to-day", "day-to-day")}, do you have much time to reflect and think about your students at all?`
+      },
+      {
+        id: "turn-59",
+        speaker: "Marinela",
+        time: "21:26",
+        html: `Say it again, sorry? ${fixBadge("Say it again, sorry?", "See it again. Sorry.")}`
+      },
+      {
+        id: "turn-60",
+        speaker: "Louie",
+        time: "21:28",
+        html: `On a normal day in your ${v("day-to-day", "day-to-day")}, do you reflect often about your students or how they look at the world? And in fact, where do your students mainly come from? Are they mainly from England, or across Europe?`
+      },
+      {
+        id: "turn-61",
+        speaker: "Marinela",
+        time: "21:52",
+        html: `I teach at a language school here, so they come to the class—they live in the country. I have many students from China, some Japanese, Korean, I think I only have one or two Vietnamese (not many), and North Americans—many nationalities nowadays.<br><br>I have so many students that I can't always think about all of them that much, but when there is someone interested in culture or art or things like that, I really like to reflect more on them. I also teach many different ages. Nowadays there are more older people who are retired, and they want to train their minds to avoid Alzheimer's. Normally they are very interesting people with rich life experience.`
+      },
+      {
+        id: "turn-62",
+        speaker: "Louie",
+        time: "23:00",
+        html: `Is there a personality or a person that has ${v("stood-out", "stood out")} to you recently? Someone where you thought, "Wow, what an interesting soul or way of looking at the world"?`
+      },
+      {
+        id: "turn-63",
+        speaker: "Marinela",
+        time: "23:18",
+        html: `I had two American women this year. In general, I ${v("get-on-well", "get on well")} with the students, though I don't usually make close friends because there are so many people. But I met these two women and they were really nice.<br><br>One was working with trauma in Black communities and Native American communities in the US—very interesting work—and she was a photographer too. We got on very well from the beginning, and we joked that we were friends from a past life or something, because we became friends so easily.<br><br>And there was another woman whose grandmother was Spanish, so I was helping her find her ancestors in the north of Spain, which was really nice. We didn't have much in common in general, but we ${v("get-on-well", "got on very well")}. Normally, though, we don't make friends that often with students because they're leaving after a short while, so it can feel like a big emotional effort when they have to leave, you know?`
+      },
+      {
+        id: "turn-64",
+        speaker: "Louie",
+        time: "24:32",
+        html: `You know, in Vietnam, sometimes I taught children—especially when I lived outside of Hanoi in the local schools—and they have a very unique relationship with their teachers. I would be having a nap, and someone would come into my house calling, <em>"Anh ơi!</em> (Older brother!) <em>Đến đây!</em> (Come with me!)" ${fixBadge("Anh ơi / Đến đây", "an oy / Dan Day")} And I'd be like, "Who are you?" And they would take me to a community wedding!<br><br>Or sometimes during the holidays, my online students would be on a road trip—maybe 20 or 30 of them ${fixBadge("20 or 30 of them", "2030 of them")}—making their way ${fixBadge("making their way", "bake way")} back to their homeland. And they would come to my house bringing soup, food, fruit, and karaoke machines, and they would have an ${v("impromptu", "impromptu")} party at my house, completely ${v("unannounced", "unannounced")}!<br><br>It was absolutely lovely—to meet this ${v("batch", "batch")} of online students who thought about their teacher on their travels and came to see me. The older gentlemen and ladies would introduce me to their families, and the children wanted to play chess against me. Those connections were ${v("short-lived", "short-lived")} because I moved to Hanoi, but I still ${v("hold-it-dear", "hold it dear")} to me. Those are experiences I'll never forget.`
+      },
+      {
+        id: "turn-65",
+        speaker: "Marinela",
+        time: "26:50",
+        html: `I understand.`
+      },
+      {
+        id: "turn-66",
+        chapterId: "chap-6",
+        chapterTitle: "Chapter VI • Wrapping Up & How Your Lesson Notes Work (26:51 – 29:08)",
+        speaker: "Louie",
+        time: "26:51",
+        html: `At the moment I go to university here, which takes up quite a bit of my time. And it's unique, the relationships I have there now, which I ${v("prize", "prize")} because I never really got to hang out with 18- to 25-year-olds before—so it's like discovering their society.<br><br>Just to let you know, so you're never worried about taking notes or missing any language I use: I have a program that transcribes what we say.`
+      },
+      {
+        id: "turn-67",
+        speaker: "Marinela",
+        time: "27:36",
+        html: `No, not at all... ${fixBadge("No, not at all", "None of...")}`
+      },
+      {
+        id: "turn-68",
+        speaker: "Louie",
+        time: "27:37",
+        html: `Then I'm going to send it to you, and it will be nice and tidy.`
+      },
+      {
+        id: "turn-69",
+        speaker: "Marinela",
+        time: "27:41",
+        html: `Okay!`
+      },
+      {
+        id: "turn-70",
+        speaker: "Louie",
+        time: "27:41",
+        html: `It will ${v("flag", "flag")} any words that are over a certain level, just in case we miss something or I say an unusual word. It will give the description and tell you the exact time when we said it ${fixBadge("when we said it", "When we set it")}, so you know where in the lesson it came up.<br><br>In our conversations, I always like to choose an interesting topic or ${v("prompt", "prompt")}—like the picture of <em>The Church of the Light</em>—to get us talking. Thank you very much for your time today, Marinela! I really appreciate it. Let me know if you have any questions, and if you'd like to have another conversation, my schedule is always open.`
+      },
+      {
+        id: "turn-71",
+        speaker: "Marinela",
+        time: "28:55",
+        html: `Okay! Is this time good for you? ${fixBadge("Is this time good for you?", "I this time is good for you.")}`
+      },
+      {
+        id: "turn-72",
+        speaker: "Louie",
+        time: "28:57",
+        html: `Of course, yeah, it's perfect—it's just after dinner time here! [Laughter]`
+      },
+      {
+        id: "turn-73",
+        speaker: "Marinela",
+        time: "29:01",
+        html: `Okay, thank you very much!`
+      },
+      {
+        id: "turn-76",
+        speaker: "Louie",
+        time: "29:08",
+        html: `Thank you very much, and enjoy the rest of your evening. You're welcome—goodbye!`
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 3. GENTLE PHRASING REFINEMENTS FOR MARINELA (6 ITEMS)
+    // -------------------------------------------------------------------------
+    const GENTLE_POLISHES = [
+      {
+        time: "01:59 & 05:37",
+        topic: "Preposition with 'Metaphor'",
+        said: "I could think about a metaphor about / of life.",
+        natural: "I could think of it as a metaphor for life.",
+        why: "In Spanish we say 'una metáfora de la vida', whereas in English the natural preposition after 'metaphor' is almost always 'for' ('a metaphor for life')."
+      },
+      {
+        time: "08:59",
+        topic: "Using 'Worth' Naturally",
+        said: "It was too expensive and it didn't worth the effort.",
+        natural: "It was too expensive and it wasn't worth the effort.",
+        why: "'Worth' works like an adjective after the verb 'to be' ('to be worth it' / 'to be worth the effort'), rather than taking 'didn't'."
+      },
+      {
+        time: "08:59",
+        topic: "Past Perfect When Looking Back at a Past Trip",
+        said: "I went to England two weeks ago... and I haven't been in England since 2010.",
+        natural: "I went to England two weeks ago... and I hadn't been to England since 2010.",
+        why: "Because you visited England two weeks ago, looking back before that trip uses 'hadn't been to' (past perfect) + 'to' after 'been'."
+      },
+      {
+        time: "10:02",
+        topic: "Life Experience with 'Never'",
+        said: "I never been to Oxford.",
+        natural: "I've never been to Oxford.",
+        why: "In fast speech the auxiliary 'have' ('I've') is very soft, so adding a light '/aɪv/' makes 'I've never been to Oxford' sound effortless."
+      },
+      {
+        time: "14:56",
+        topic: "Explaining How You Did Something (by + -ing)",
+        said: "I reacted with picking up the main words.",
+        natural: "I reacted by picking up the main words.",
+        why: "To express the method or way we respond ('by doing something'), English uses 'by + -ing' ('reacted by picking up')."
+      },
+      {
+        time: "23:18",
+        topic: "Past Simple for How a Friendship Started",
+        said: "So I think we get on very well from the beginning.",
+        natural: "So I think we got on very well right from the beginning.",
+        why: "Your choice of the British phrasal verb 'get on well' is wonderful! Shifting 'get' to 'got' matches 'from the beginning'."
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 4. AI NOTE-TAKER SPELLING & HEARING FIXES (13 ITEMS)
+    // -------------------------------------------------------------------------
+    const ASR_FIXES = [
+      {
+        time: "00:06",
+        speaker: "Louie",
+        wrong: "The crucifixm...",
+        right: "The crucifix, mhm...",
+        note: "The note-taker merged 'crucifix' and Louie's vocal nod 'mhm' into one invented word."
+      },
+      {
+        time: "03:09",
+        speaker: "Louie",
+        wrong: "Tano Ando",
+        right: "Tadao Ando",
+        note: "The world-famous Japanese minimalist architect who designed The Church of the Light in Osaka."
+      },
+      {
+        time: "05:37",
+        speaker: "Marinela",
+        wrong: "not a clever ending process of being alive",
+        right: "like a never-ending process of being alive",
+        note: "You expressed a beautiful philosophical thought about returning to the light—the note-taker misheard 'like a never-ending' as 'not a clever ending'!"
+      },
+      {
+        time: "08:59",
+        speaker: "Marinela",
+        wrong: "I lived in a visa on the island",
+        right: "I lived in Ibiza, on the island",
+        note: "A classic speech-to-text mistake: it heard the Spanish island 'Ibiza' as 'a visa'!"
+      },
+      {
+        time: "10:34",
+        speaker: "Marinela",
+        wrong: "I was a BO and I loved it.",
+        right: "It was a bubble, and I loved it.",
+        note: "Continuing your thought about Winchester being a peaceful bubble."
+      },
+      {
+        time: "13:25",
+        speaker: "Louie",
+        wrong: "they're a huge boom, right",
+        right: "they're a huge boon, right",
+        note: "'Boon' (C2 noun) means a wonderful blessing or benefit—having friends in England is a huge boon!"
+      },
+      {
+        time: "13:25",
+        speaker: "Louie",
+        wrong: "have you ever been to a bar at all",
+        right: "have you ever been to Bath at all?",
+        note: "Louie was asking if you had ever visited the historic English city of Bath, not 'a bar'!"
+      },
+      {
+        time: "13:48",
+        speaker: "Louie",
+        wrong: "It's like the light... Babe's bath in a lovely way",
+        right: "It's like the light bathes Bath in a lovely way",
+        note: "Louie used poetic wordplay ('the light bathes Bath'), which the computer hilariously turned into 'Babe's bath'!"
+      },
+      {
+        time: "14:56",
+        speaker: "Marinela",
+        wrong: "The thing is, one was in Leicester.",
+        right: "The thing is, when I was in Winchester...",
+        note: "Confirmed right afterwards when Louie asks about the teachers you met in Winchester."
+      },
+      {
+        time: "21:26",
+        speaker: "Marinela",
+        wrong: "See it again. Sorry.",
+        right: "Say it again, sorry?",
+        note: "Asking politely for the question to be repeated."
+      },
+      {
+        time: "24:32",
+        speaker: "Louie",
+        wrong: "an oy older brother... Dan Day, come with me",
+        right: "\"Anh ơi\" (Older brother)... \"Đến đây\" (Come with me)",
+        note: "Vietnamese phrases Louie's students used when inviting him to a village wedding."
+      },
+      {
+        time: "24:32",
+        speaker: "Louie",
+        wrong: "maybe 2030 of them... bake way come back",
+        right: "maybe 20 or 30 of them... make their way back",
+        note: "The note-taker combined '20 or 30' into the year '2030' and wrote 'bake way' for 'make their way'."
+      },
+      {
+        time: "27:41",
+        speaker: "Louie",
+        wrong: "When we set it so you know",
+        right: "When we said it, so you know",
+        note: "Referring to the timestamps showing when each word was spoken in the lesson."
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 5. FLASHCARDS & GENTLE QUIZ DATA
+    // -------------------------------------------------------------------------
+    const FLASHCARD_KEYS = [
+      "put-myself-in-their-shoes",
+      "vantage-point",
+      "boon",
+      "immersed",
+      "dwarfed-by",
+      "all-encompassing",
+      "bubble",
+      "reassurance",
+      "preconception",
+      "impromptu",
+      "hold-it-dear",
+      "bathes"
+    ];
+    let currentCardIndex = 0;
+    let isCardFlipped = false;
+
+    const QUIZ_QUESTIONS = [
+      {
+        q: "1. In The Church of the Light, Louie says the human figure is made to look small by the cross—their stature is ________ by the imagery.",
+        options: ["dwarfed", "overestimated", "unannounced"],
+        correct: 0,
+        explain: "'Dwarfed by' (03:09) means made to look small by comparison with something much grander."
+      },
+      {
+        q: "2. Having good friends already living in Winchester is a huge ________ (a wonderful benefit or blessing) if you move to England.",
+        options: ["flaw", "boon", "shortcoming"],
+        correct: 1,
+        explain: "'Boon' (13:25) means a great benefit, help, or blessing."
+      },
+      {
+        q: "3. From the rooftop in Hanoi, you have a peaceful ________ where you can see the whole city skyline.",
+        options: ["preconception", "vantage point", "facade"],
+        correct: 1,
+        explain: "A 'vantage point' (06:54) is a high place that affords a wide, clear view."
+      },
+      {
+        q: "4. To regain full fluency in English, it helps to be completely ________ in the language in daily life.",
+        options: ["immersed", "short-lived", "minimalist"],
+        correct: 0,
+        explain: "'Immersed' (15:27) means completely surrounded by and involved in an environment or language."
+      },
+      {
+        q: "5. Many competent students don't actually need more grammar rules; what they really need is warm ________ to feel confident.",
+        options: ["intensity", "reassurance", "trials"],
+        correct: 1,
+        explain: "'Reassurance' (18:36) is kind encouragement that removes doubt and builds confidence."
+      },
+      {
+        q: "6. Even though those teaching days in the Vietnamese countryside were brief, Louie still ________ those memories ________.",
+        options: ["puts ... in their shoes", "holds ... dear", "picks ... up"],
+        correct: 1,
+        explain: "To 'hold something dear' (24:32) means to treasure and cherish it deeply in your heart."
+      }
+    ];
+    let quizAnswered = new Set();
+
+    // -------------------------------------------------------------------------
+    // 6. RENDER FUNCTIONS (TRANSCRIPT, VOCABULARY, FIXES, PRACTICE)
+    // -------------------------------------------------------------------------
+    function renderTranscript() {
+      const container = document.getElementById('transcript-stream-container');
+      const searchVal = (document.getElementById('transcript-search')?.value || '').toLowerCase().trim();
+      const speakerFilter = document.getElementById('speaker-filter')?.value || 'all';
+
+      let html = '';
+      TRANSCRIPT_TURNS.forEach(turn => {
+        if (turn.chapterTitle && speakerFilter === 'all' && !searchVal) {
+          html += `
+            <div id="${turn.chapterId}" class="pt-3 pb-1">
+              <div class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-sage-100/90 via-parchment-100 to-autumn-50 border border-sage-200 flex items-center gap-2 text-xs sm:text-sm font-serif font-bold text-sage-800 shadow-sm">
+                <i data-lucide="bookmark" class="w-4 h-4 text-autumn-600 shrink-0"></i>
+                <span>${turn.chapterTitle}</span>
+              </div>
+            </div>
+          `;
+        }
+
+        if (speakerFilter !== 'all' && turn.speaker !== speakerFilter) return;
+        const plainText = turn.html.replace(/<[^>]+>/g, '').toLowerCase();
+        if (searchVal && !plainText.includes(searchVal) && !turn.time.includes(searchVal)) return;
+
+        const isMarinela = turn.speaker === 'Marinela';
+        const cardStyle = isMarinela
+          ? 'bg-[#fffdf9] border-l-4 border-l-autumn-500 border border-[#e6decb]'
+          : 'bg-[#f8faf8] border-l-4 border-l-sage-600 border border-[#d8e4dc]';
+        const badgeStyle = isMarinela
+          ? 'bg-autumn-100 text-autumn-800 border-autumn-200'
+          : 'bg-sage-100 text-sage-800 border-sage-200';
+
+        html += `
+          <article id="${turn.id}" class="rounded-2xl p-4 sm:p-5 ${cardStyle} shadow-sm transition-all duration-300 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold border ${badgeStyle}">
+                  ${isMarinela ? '🌸 Marinela' : '🍂 Louie'}
+                </span>
+                <span class="font-mono text-xs text-stone-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3 h-3"></i>
+                  ${turn.time}
+                </span>
+              </div>
+              <button onclick="speakPlainTurn('${turn.id}')" class="text-stone-400 hover:text-sage-700 transition p-1 rounded-lg" title="Listen to this line in British English">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+            <div class="text-sm sm:text-[15px] text-slatewarm-800 leading-relaxed font-sans">
+              ${turn.html}
+            </div>
+          </article>
+        `;
+      });
+
+      if (!html) {
+        html = `<div class="sanctuary-card rounded-2xl p-8 text-center text-stone-500 text-sm">No transcript lines matched your search. Try clearing the search box!</div>`;
+      }
+
+      container.innerHTML = html;
+      lucide.createIcons();
+      initVocabTooltips();
+    }
+
+    function initVocabTooltips() {
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        const key = el.getAttribute('data-vkey');
+        const item = VOCAB_DB[key];
+        if (!item) return;
+
+        if (el._tippy) el._tippy.destroy();
+
+        tippy(el, {
+          theme: 'autumn-sanctuary',
+          allowHTML: true,
+          interactive: true,
+          animation: 'shift-away',
+          maxWidth: 320,
+          content: `
+            <div class="p-2.5 space-y-2 text-left">
+              <div class="flex items-center justify-between gap-2 border-b border-parchment-200 pb-1.5">
+                <div>
+                  <span class="font-serif font-bold text-base text-slatewarm-900">${item.word}</span>
+                  <span class="block font-mono text-[10px] text-stone-500">${item.ipa} • ${item.pos}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="px-1.5 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[10px] font-bold">${item.level}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[10px]">🕒 ${item.time}</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-700 leading-snug">${item.def}</p>
+              <div class="flex items-center justify-between pt-1 text-[11px] border-t border-parchment-200">
+                <span class="text-sage-800 font-semibold">🇪🇸 ${item.es}</span>
+                <button onclick="speakWord('${item.word.replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded bg-sage-700 text-white text-[10px] font-semibold">🔊 Listen UK</button>
+              </div>
+            </div>
+          `
+        });
+      });
+    }
+
+    function inspectVocab(key) {
+      const item = VOCAB_DB[key];
+      if (!item) return;
+
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        el.classList.toggle('active-vocab', el.getAttribute('data-vkey') === key);
+      });
+
+      document.getElementById('insp-time').textContent = `🕒 ${item.time}`;
+      document.getElementById('insp-word').textContent = item.word;
+      document.getElementById('insp-ipa').textContent = item.ipa;
+      document.getElementById('insp-pos').textContent = item.pos;
+      document.getElementById('insp-level').textContent = item.level;
+      document.getElementById('insp-def').textContent = item.def;
+      document.getElementById('insp-quote').textContent = item.quote;
+      document.getElementById('insp-es').textContent = item.es;
+      document.getElementById('insp-audio-btn').setAttribute('onclick', `speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')`);
+
+      gsap.fromTo('#vocab-inspector-card', { scale: 0.98, opacity: 0.85 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'power2.out' });
+    }
+
+    // Vocabulary Dictionary Grid
+    let activeVocabCat = 'all';
+    function setVocabCategory(cat) {
+      activeVocabCat = cat;
+      document.querySelectorAll('.vcat-btn').forEach(btn => {
+        const isCurrent = btn.id === `vcat-${cat}`;
+        btn.className = isCurrent
+          ? 'vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sage-700 text-white transition shadow-sm'
+          : 'vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition';
+      });
+      renderVocabGrid();
+    }
+
+    function renderVocabGrid() {
+      const grid = document.getElementById('vocab-cards-grid');
+      const search = (document.getElementById('vocab-search')?.value || '').toLowerCase().trim();
+      const levelFilter = document.getElementById('vocab-level-filter')?.value || 'all';
+
+      const entries = Object.entries(VOCAB_DB).filter(([key, item]) => {
+        if (activeVocabCat !== 'all' && item.cat !== activeVocabCat) return false;
+        if (levelFilter !== 'all' && item.level !== levelFilter) return false;
+        if (search) {
+          const hay = `${item.word} ${item.def} ${item.es} ${item.time} ${item.quote}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return true;
+      });
+
+      grid.innerHTML = entries.map(([key, item]) => `
+        <div class="sanctuary-subcard rounded-2xl p-5 flex flex-col justify-between space-y-3 hover:border-autumn-400">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-autumn-100 text-autumn-800 font-mono text-[11px] font-bold">${item.level}</span>
+                <span class="px-2 py-0.5 rounded-md bg-parchment-100 text-stone-600 text-[11px]">${item.pos}</span>
+              </div>
+              <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="px-2.5 py-0.5 rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 font-mono text-[11px] font-semibold flex items-center gap-1 transition" title="Jump to this exact moment in the transcript">
+                <i data-lucide="clock" class="w-3 h-3"></i>
+                ${item.time} ↗
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between gap-2 pt-1">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-slatewarm-900">${item.word}</h3>
+                <span class="text-xs font-mono text-stone-500">${item.ipa}</span>
+              </div>
+              <button onclick="speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')" class="p-2 rounded-xl bg-parchment-100 hover:bg-sage-100 text-sage-800 transition" title="Listen in British English">
+                <i data-lucide="volume-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">${item.def}</p>
+            <p class="text-xs italic text-stone-500 bg-parchment-50 p-2.5 rounded-xl border border-parchment-200">${item.quote}</p>
+          </div>
+
+          <div class="pt-2 border-t border-parchment-200 flex items-center justify-between text-xs">
+            <span class="text-sage-800 font-medium">🇪🇸 ${item.es}</span>
+            <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="text-autumn-700 hover:underline font-semibold text-[11px]">
+              See in Transcript →
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function jumpToTranscriptTurn(turnId, vocabKey) {
+      switchTab('transcript');
+      setTimeout(() => {
+        if (vocabKey) inspectVocab(vocabKey);
+        const el = document.getElementById(turnId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.remove('turn-highlight-flash');
+          void el.offsetWidth;
+          el.classList.add('turn-highlight-flash');
+        }
+      }, 100);
+    }
+
+    function renderFixesAndPolishes() {
+      const polishesEl = document.getElementById('gentle-polishes-grid');
+      polishesEl.innerHTML = GENTLE_POLISHES.map(p => `
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-2.5 border-l-4 border-l-sage-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-sage-800">${p.topic}</span>
+            <span class="px-2 py-0.5 rounded-full bg-parchment-100 font-mono text-[11px] text-stone-600">🕒 ${p.time}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-autumn-50/70 border border-autumn-200/80 text-xs text-stone-600">
+            <span class="font-semibold text-autumn-800">In the moment:</span> "${p.said}"
+          </div>
+          <div class="p-2.5 rounded-xl bg-sage-50 border border-sage-200 text-xs text-slatewarm-900 flex items-center justify-between gap-2">
+            <div><span class="font-semibold text-sage-800">Natural Polish:</span> <strong>"${p.natural}"</strong></div>
+            <button onclick="speakWord('${p.natural.replace(/'/g, "\\'")}')" class="p-1.5 rounded-lg bg-white text-sage-700 hover:bg-sage-100 shrink-0" title="Listen">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">${p.why}</p>
+        </div>
+      `).join('');
+
+      const fixesEl = document.getElementById('asr-fixes-grid');
+      fixesEl.innerHTML = ASR_FIXES.map(f => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2 border-t-2 border-t-autumn-400">
+          <div class="flex items-center justify-between text-[11px] font-mono text-stone-500">
+            <span>${f.speaker}</span>
+            <span>🕒 ${f.time}</span>
+          </div>
+          <div class="text-xs line-through text-stone-400">Note-taker wrote: "${f.wrong}"</div>
+          <div class="text-sm font-serif font-bold text-sage-800">Actually said: "${f.right}"</div>
+          <p class="text-xs text-stone-600 leading-relaxed">${f.note}</p>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    // Flashcards & Quiz
+    function renderFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (!item) return;
+
+      document.getElementById('fc-counter').textContent = `Card ${currentCardIndex + 1} of ${FLASHCARD_KEYS.length}`;
+      document.getElementById('fc-badge').textContent = `${item.time} • ${item.pos} (${item.level})`;
+
+      const titleEl = document.getElementById('fc-front-title');
+      const subEl = document.getElementById('fc-sub');
+      const backEl = document.getElementById('fc-back-details');
+
+      if (!isCardFlipped) {
+        titleEl.textContent = item.word;
+        subEl.textContent = `${item.ipa} — Click card to reveal meaning & lesson context`;
+        backEl.classList.add('hidden');
+      } else {
+        titleEl.textContent = item.word;
+        subEl.textContent = item.def;
+        document.getElementById('fc-quote').textContent = item.quote;
+        document.getElementById('fc-es').textContent = `🇪🇸 ${item.es}`;
+        backEl.classList.remove('hidden');
+      }
+    }
+
+    function flipFlashcard() {
+      isCardFlipped = !isCardFlipped;
+      renderFlashcard();
+    }
+    function nextFlashcard() {
+      isCardFlipped = false;
+      currentCardIndex = (currentCardIndex + 1) % FLASHCARD_KEYS.length;
+      renderFlashcard();
+    }
+    function prevFlashcard() {
+      isCardFlipped = false;
+      currentCardIndex = (currentCardIndex - 1 + FLASHCARD_KEYS.length) % FLASHCARD_KEYS.length;
+      renderFlashcard();
+    }
+    function speakCurrentFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (item) speakWord(item.word.replace(/\s*\(.*?\)/g, ''));
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = QUIZ_QUESTIONS.map((q, qIdx) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2.5">
+          <p class="text-xs sm:text-sm font-medium text-slatewarm-900">${q.q}</p>
+          <div class="flex flex-wrap gap-2">
+            ${q.options.map((opt, oIdx) => `
+              <button id="qbtn-${qIdx}-${oIdx}" onclick="answerQuiz(${qIdx}, ${oIdx})" class="px-3 py-1.5 rounded-xl border border-[#dfd0b5] bg-parchment-50 hover:bg-autumn-100 text-xs font-medium text-stone-700 transition">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <p id="qexp-${qIdx}" class="hidden text-xs text-sage-800 bg-sage-50 p-2.5 rounded-xl border border-sage-200"></p>
+        </div>
+      `).join('');
+    }
+
+    function answerQuiz(qIdx, oIdx) {
+      const q = QUIZ_QUESTIONS[qIdx];
+      const expEl = document.getElementById(`qexp-${qIdx}`);
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`qbtn-${qIdx}-${idx}`);
+        if (idx === q.correct) {
+          btn.className = 'px-3 py-1.5 rounded-xl border border-sage-500 bg-sage-600 text-white text-xs font-semibold';
+        } else if (idx === oIdx) {
+          btn.className = 'px-3 py-1.5 rounded-xl border border-autumn-300 bg-autumn-100 text-autumn-900 text-xs';
+        }
+      });
+      expEl.textContent = `✨ ${q.explain}`;
+      expEl.classList.remove('hidden');
+
+      if (oIdx === q.correct && !quizAnswered.has(qIdx)) {
+        quizAnswered.add(qIdx);
+        document.getElementById('quiz-score-badge').textContent = `${quizAnswered.size} / ${QUIZ_QUESTIONS.length} Completed`;
+        if (quizAnswered.size === QUIZ_QUESTIONS.length && typeof confetti === 'function') {
+          confetti({ particleCount: 55, spread: 60, origin: { y: 0.7 }, colors: ['#be6f38', '#5b826f', '#e2b086'] });
+        }
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. TAB NAVIGATION, FILTERS & THEME SWITCHERS
+    // -------------------------------------------------------------------------
+    function switchTab(tabName) {
+      const tabs = ['transcript', 'vocab', 'fixes', 'places', 'practice'];
+      tabs.forEach(t => {
+        const panel = document.getElementById(`tab-panel-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm';
+          gsap.fromTo(panel, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100';
+        }
+      });
+    }
+
+    function filterTranscript() {
+      renderTranscript();
+    }
+
+    function scrollToChapter(chapId) {
+      document.getElementById('speaker-filter').value = 'all';
+      document.getElementById('transcript-search').value = '';
+      renderTranscript();
+      const el = document.getElementById(chapId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let highlightsOn = true;
+    function toggleVocabHighlights() {
+      highlightsOn = !highlightsOn;
+      document.body.classList.toggle('hide-vocab-highlights', !highlightsOn);
+      const btn = document.getElementById('btn-toggle-highlights');
+      btn.querySelector('span').textContent = `Vocab Highlights: ${highlightsOn ? 'On' : 'Off'}`;
+    }
+
+    let asrBadgesOn = true;
+    function toggleAsrBadges() {
+      asrBadgesOn = !asrBadgesOn;
+      document.body.classList.toggle('hide-asr-fixes', !asrBadgesOn);
+      const btn = document.getElementById('btn-toggle-asr');
+      btn.querySelector('span').textContent = `Note-Taker Fixes: ${asrBadgesOn ? 'Visible' : 'Hidden'}`;
+    }
+
+    function setThemeMood(mood) {
+      document.body.setAttribute('data-theme', mood);
+      ['kensington', 'winchester', 'twilight'].forEach(m => {
+        const btn = document.getElementById(`theme-${m}`);
+        if (!btn) return;
+        btn.className = m === mood
+          ? 'px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition'
+          : 'px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition';
+      });
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. BRITISH ENGLISH SPEECH SYNTHESIS (en-GB)
+    // -------------------------------------------------------------------------
+    let speechRate = 1.0;
+    function setVoiceRate(rate) {
+      speechRate = rate;
+      document.getElementById('rate-slow').className = rate < 1
+        ? 'px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition'
+        : 'px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition';
+      document.getElementById('rate-normal').className = rate >= 1
+        ? 'px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition'
+        : 'px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition';
+    }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = speechRate;
+      const voices = window.speechSynthesis.getVoices();
+      const ukVoice = voices.find(v => v.lang.includes('en-GB') && (v.name.includes('Libby') || v.name.includes('Sonia') || v.name.includes('Google UK') || v.name.includes('Natural'))) || voices.find(v => v.lang.includes('en-GB'));
+      if (ukVoice) utter.voice = ukVoice;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function speakPlainTurn(turnId) {
+      const turn = TRANSCRIPT_TURNS.find(t => t.id === turnId);
+      if (!turn) return;
+      const temp = document.createElement('div');
+      temp.innerHTML = turn.html;
+      temp.querySelectorAll('.asr-fix-pill').forEach(el => el.remove());
+      speakWord(temp.textContent || '');
+    }
+
+    // -------------------------------------------------------------------------
+    // 9. CALMING LONDON AUTUMN BREEZE & RAIN SOUNDSCAPE (WEB AUDIO API)
+    // -------------------------------------------------------------------------
+    let audioCtx = null;
+    let soundscapePlaying = false;
+    let masterGain = null;
+    let lfoTimer = null;
+    let currentFilter = null;
+
+    function buildNoiseBuffer(ctx) {
+      const bufferSize = ctx.sampleRate * 4;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = buffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+        b6 = white * 0.115926;
+      }
+      return buffer;
+    }
+
+    function toggleSoundscape() {
+      const label = document.getElementById('soundscape-label');
+      const btn = document.getElementById('soundscape-btn');
+
+      if (!soundscapePlaying) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const noiseSource = audioCtx.createBufferSource();
+        noiseSource.buffer = buildNoiseBuffer(audioCtx);
+        noiseSource.loop = true;
+
+        currentFilter = audioCtx.createBiquadFilter();
+        masterGain = audioCtx.createGain();
+        const vol = parseFloat(document.getElementById('soundscape-volume').value || '0.22');
+        masterGain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+        masterGain.gain.exponentialRampToValueAtTime(vol, audioCtx.currentTime + 1.5);
+
+        noiseSource.connect(currentFilter);
+        currentFilter.connect(masterGain);
+        masterGain.connect(audioCtx.destination);
+        noiseSource.start();
+        audioCtx._activeSource = noiseSource;
+
+        soundscapePlaying = true;
+        applyPresetSettings(document.getElementById('soundscape-preset').value);
+
+        label.textContent = 'London Breeze: Playing';
+        btn.classList.add('bg-sage-100', 'text-sage-900');
+      } else {
+        if (lfoTimer) clearInterval(lfoTimer);
+        if (audioCtx && audioCtx._activeSource) {
+          try { audioCtx._activeSource.stop(); } catch (e) {}
+        }
+        soundscapePlaying = false;
+        label.textContent = 'London Breeze Audio: Off';
+        btn.classList.remove('bg-sage-100', 'text-sage-900');
+      }
+    }
+
+    function applyPresetSettings(preset) {
+      if (!currentFilter || !audioCtx) return;
+      if (lfoTimer) clearInterval(lfoTimer);
+
+      if (preset === 'breeze') {
+        currentFilter.type = 'bandpass';
+        currentFilter.Q.value = 1.8;
+        currentFilter.frequency.setValueAtTime(340, audioCtx.currentTime);
+        let t = 0;
+        lfoTimer = setInterval(() => {
+          if (!soundscapePlaying) return;
+          t += 0.15;
+          const freq = 320 + Math.sin(t) * 140 + Math.cos(t * 0.4) * 60;
+          currentFilter.frequency.setTargetAtTime(Math.max(180, freq), audioCtx.currentTime, 0.4);
+        }, 300);
+      } else if (preset === 'rain') {
+        currentFilter.type = 'lowpass';
+        currentFilter.Q.value = 0.7;
+        currentFilter.frequency.setTargetAtTime(880, audioCtx.currentTime, 0.3);
+      } else {
+        currentFilter.type = 'lowpass';
+        currentFilter.Q.value = 1.2;
+        currentFilter.frequency.setTargetAtTime(240, audioCtx.currentTime, 0.3);
+      }
+    }
+
+    function changeSoundscapePreset(preset) {
+      if (soundscapePlaying) applyPresetSettings(preset);
+    }
+
+    function updateSoundscapeVolume(val) {
+      if (masterGain && audioCtx && soundscapePlaying) {
+        masterGain.gain.setTargetAtTime(parseFloat(val), audioCtx.currentTime, 0.15);
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 10. AUTUMN LEAVES IN LONDON BREEZE CANVAS ENGINE
+    // -------------------------------------------------------------------------
+    const canvas = document.getElementById('autumn-breeze-canvas');
+    const ctx = canvas.getContext('2d');
+    let leaves = [];
+    let leafMode = 1; // 1 = Gentle (16 leaves), 2 = Crisp Breeze (32 leaves), 0 = Off
+
+    const LEAF_COLORS = [
+      'rgba(190, 111, 56, 0.42)',
+      'rgba(211, 140, 87, 0.40)',
+      'rgba(165, 191, 177, 0.42)',
+      'rgba(203, 179, 142, 0.45)',
+      'rgba(163, 88, 43, 0.34)'
+    ];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function createLeaf() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height - canvas.height,
+        size: 6 + Math.random() * 8,
+        speedY: 0.35 + Math.random() * 0.55,
+        speedX: 0.25 + Math.random() * 0.45,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.014,
+        swayOffset: Math.random() * 100,
+        color: LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)]
+      };
+    }
+
+    function rebuildLeaves() {
+      const count = leafMode === 1 ? 15 : leafMode === 2 ? 30 : 0;
+      leaves = Array.from({ length: count }, () => {
+        const l = createLeaf();
+        l.y = Math.random() * canvas.height;
+        return l;
+      });
+    }
+
+    function cycleLeafBreeze() {
+      leafMode = (leafMode + 1) % 3;
+      const label = document.getElementById('leaves-label');
+      if (leafMode === 1) label.textContent = 'Leaves: Gentle';
+      else if (leafMode === 2) label.textContent = 'Leaves: London Breeze';
+      else label.textContent = 'Leaves: Still';
+      rebuildLeaves();
+    }
+
+    let breezeTime = 0;
+    function animateLeaves() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (leafMode !== 0) {
+        breezeTime += 0.01;
+        leaves.forEach(l => {
+          l.y += l.speedY;
+          l.x += l.speedX + Math.sin(breezeTime + l.swayOffset) * 0.45;
+          l.angle += l.spin;
+
+          if (l.y > canvas.height + 20) {
+            l.y = -20;
+            l.x = Math.random() * canvas.width;
+          }
+          if (l.x > canvas.width + 20) l.x = -20;
+
+          ctx.save();
+          ctx.translate(l.x, l.y);
+          ctx.rotate(l.angle);
+          ctx.fillStyle = l.color;
+          ctx.beginPath();
+          ctx.ellipse(0, 0, l.size, l.size * 0.52, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+      }
+      requestAnimationFrame(animateLeaves);
+    }
+
+    // -------------------------------------------------------------------------
+    // INITIALIZE ON LOAD
+    // -------------------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      renderTranscript();
+      renderVocabGrid();
+      renderFixesAndPolishes();
+      renderFlashcard();
+      renderQuiz();
+      rebuildLeaves();
+      animateLeaves();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
