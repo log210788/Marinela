@@ -1,0 +1,3149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marinela's Peaceful English Sanctuary | Lesson 02 (Latest) & All Weeks</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Literary Serif), Plus Jakarta Sans (Soft Modern UI), JetBrains Mono (Timestamps & IPA) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            parchment: {
+              50: '#fbf9f5',
+              100: '#f6f1e7',
+              200: '#ede3d1',
+              300: '#dfd0b5',
+              400: '#cbb38e',
+              500: '#b6966b',
+            },
+            autumn: {
+              50: '#fcf6f0',
+              100: '#f7e9db',
+              200: '#eed0b5',
+              300: '#e2b086',
+              400: '#d38c57',
+              500: '#be6f38',
+              600: '#a3582b',
+              700: '#854524',
+              800: '#6c3921',
+            },
+            sage: {
+              50: '#f4f7f5',
+              100: '#e4ece7',
+              200: '#cadad1',
+              300: '#a5bfb1',
+              400: '#7b9f8d',
+              500: '#5b826f',
+              600: '#476858',
+              700: '#3a5448',
+              800: '#30443b',
+            },
+            slatewarm: {
+              700: '#3d4441',
+              800: '#2b312e',
+              900: '#1e2321',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP for Gentle Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Popper & Tippy.js for Interactive Vocabulary Explanations -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+
+  <!-- Canvas Confetti for Gentle Practice Encouragement -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-base: #f9f6f0;
+      --bg-card: rgba(255, 253, 249, 0.90);
+      --bg-subcard: rgba(255, 255, 255, 0.94);
+      --border-soft: #e6decb;
+      --border-accent: #d9c8b0;
+      --text-main: #2b312e;
+      --text-muted: #5c6660;
+      --grad-1: rgba(238, 208, 181, 0.42);
+      --grad-2: rgba(202, 218, 209, 0.48);
+      --grad-3: rgba(246, 241, 231, 0.70);
+    }
+
+    body[data-theme="winchester"] {
+      --bg-base: #f3f6f5;
+      --bg-card: rgba(252, 254, 253, 0.91);
+      --bg-subcard: rgba(255, 255, 255, 0.95);
+      --border-soft: #d7e2dc;
+      --border-accent: #b8ccc2;
+      --text-main: #26312d;
+      --text-muted: #52635c;
+      --grad-1: rgba(202, 218, 209, 0.50);
+      --grad-2: rgba(219, 228, 238, 0.48);
+      --grad-3: rgba(244, 240, 230, 0.55);
+    }
+
+    body[data-theme="twilight"] {
+      --bg-base: #f5efe6;
+      --bg-card: rgba(253, 249, 242, 0.92);
+      --bg-subcard: rgba(255, 252, 247, 0.96);
+      --border-soft: #e2d2be;
+      --border-accent: #cfaea0;
+      --text-main: #2d2622;
+      --text-muted: #665850;
+      --grad-1: rgba(226, 176, 134, 0.36);
+      --grad-2: rgba(214, 196, 176, 0.42);
+      --grad-3: rgba(235, 220, 202, 0.55);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(at 8% 5%, var(--grad-1) 0px, transparent 52%),
+        radial-gradient(at 92% 18%, var(--grad-2) 0px, transparent 52%),
+        radial-gradient(at 50% 88%, var(--grad-3) 0px, transparent 58%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      transition: background-color 0.5s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 36px -10px rgba(91, 130, 111, 0.08), 0 4px 14px -3px rgba(43, 49, 46, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sanctuary-subcard {
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 14px -4px rgba(43, 49, 46, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    /* Inline Vocabulary Highlight in Transcript */
+    .vocab-mark {
+      display: inline-block;
+      background: linear-gradient(120deg, rgba(226, 176, 134, 0.25) 0%, rgba(165, 191, 177, 0.28) 100%);
+      border-bottom: 2px dashed #a3582b;
+      color: #5b3216;
+      font-weight: 600;
+      padding: 0px 5px;
+      margin: 0 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .vocab-mark:hover, .vocab-mark.active-vocab {
+      background: linear-gradient(120deg, rgba(190, 111, 56, 0.25) 0%, rgba(91, 130, 111, 0.32) 100%);
+      border-bottom-style: solid;
+      border-bottom-color: #476858;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(163, 88, 43, 0.14);
+    }
+
+    body.hide-vocab-highlights .vocab-mark {
+      background: transparent !important;
+      border-bottom: none !important;
+      color: inherit !important;
+      font-weight: inherit !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Note-taker fix badge */
+    .asr-fix-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f7f5;
+      color: #476858;
+      border: 1px solid #cadad1;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    body.hide-asr-fixes .asr-fix-pill {
+      display: none !important;
+    }
+
+    /* Custom Tippy Tooltip Theme: Peaceful Autumn */
+    .tippy-box[data-theme~='autumn-sanctuary'] {
+      background-color: #fffdf9;
+      color: #2b312e;
+      border: 1px solid #dfd0b5;
+      border-radius: 1rem;
+      box-shadow: 0 20px 38px -8px rgba(61, 68, 65, 0.16), 0 6px 16px -4px rgba(163, 88, 43, 0.08);
+      padding: 0.35rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='top'] > .tippy-arrow::before {
+      border-top-color: #dfd0b5;
+    }
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='bottom'] > .tippy-arrow::before {
+      border-bottom-color: #dfd0b5;
+    }
+
+    /* Highlight pulse when jumping to a transcript line */
+    @keyframes gentleGlow {
+      0% { background-color: rgba(226, 176, 134, 0.45); transform: scale(1.005); }
+      50% { background-color: rgba(165, 191, 177, 0.38); }
+      100% { background-color: transparent; transform: scale(1); }
+    }
+    .turn-highlight-flash {
+      animation: gentleGlow 2.8s ease-out;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f6f1e7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbb38e;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a3582b;
+    }
+
+    @media print {
+      .no-print, #autumn-breeze-canvas { display: none !important; }
+      body { background: #fff !important; }
+      .sanctuary-card, .sanctuary-subcard { box-shadow: none !important; border: 1px solid #ccc !important; }
+    }
+  </style>
+</head>
+<body data-theme="kensington" class="font-sans antialiased min-h-screen selection:bg-autumn-200 selection:text-slatewarm-900 relative">
+
+  <!-- CALMING LONDON AUTUMN BREEZE CANVAS OVERLAY (Interactive Physics Leaves & Motes) -->
+  <canvas id="autumn-breeze-canvas" class="fixed inset-0 pointer-events-none z-20 opacity-80"></canvas>
+
+  <!-- STICKY PEACEFUL NAVIGATION & ATMOSPHERE BAR -->
+  <header class="sticky top-0 z-40 border-b border-[#e6decb]/90 bg-[#fbf9f5]/85 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand Identity & Quick Week Links -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-autumn-600 via-autumn-500 to-sage-600 flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm">
+          M
+        </div>
+        <div>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slatewarm-900">Marinela's Peaceful English Sanctuary</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-autumn-100 text-autumn-800 border border-autumn-300">
+              <i data-lucide="sparkles" class="w-3 h-3 text-autumn-700"></i>
+              Week 02 (Latest) • Oct 27, 2026
+            </span>
+            <a href="lesson01.html" class="inline-flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 border border-sage-200 transition">
+              <i data-lucide="history" class="w-3 h-3 text-sage-700"></i>
+              Week 01 Notes (Oct 20) →
+            </a>
+          </div>
+          <p class="text-[11px] text-stone-500 hidden md:block">Latest Lesson On Top • Escapism, Untranslatable Spanish Words, Henry Darger's <em>The Vivian Girls</em> & Sharing Poetry</p>
+        </div>
+      </div>
+
+      <!-- Calming Atmosphere Controls: London Breeze Audio, Leaf Animation, UK Voice Speed & Palette -->
+      <div class="flex flex-wrap items-center gap-2">
+        
+        <!-- Ambient London Autumn Breeze Soundscape Player (Web Audio API) -->
+        <div class="flex items-center gap-1.5 bg-white/90 border border-[#dfd0b5] rounded-xl px-2.5 py-1 shadow-sm">
+          <button id="soundscape-btn" onclick="toggleSoundscape()" class="flex items-center gap-1.5 text-xs font-semibold text-sage-700 hover:text-sage-900 transition px-1.5 py-0.5 rounded-lg" title="Play soothing London autumn breeze & gentle rain soundscape">
+            <i data-lucide="wind" id="soundscape-icon" class="w-3.5 h-3.5 text-autumn-600"></i>
+            <span id="soundscape-label">London Breeze Audio: Off</span>
+          </button>
+          <select id="soundscape-preset" onchange="changeSoundscapePreset(this.value)" class="text-[11px] bg-parchment-50 border border-parchment-200 rounded-lg px-1.5 py-0.5 text-stone-700 focus:outline-none" title="Choose calming ambient sound">
+            <option value="breeze">🍂 Kensington Breeze</option>
+            <option value="rain">🌧️ Soft London Rain</option>
+            <option value="study">🕯️ Warm Study Hearth</option>
+          </select>
+          <input id="soundscape-volume" type="range" min="0.05" max="0.6" step="0.05" value="0.22" oninput="updateSoundscapeVolume(this.value)" class="w-14 accent-sage-600 cursor-pointer hidden sm:block" title="Ambient Sound Volume" />
+        </div>
+
+        <!-- Falling Autumn Leaves Toggle -->
+        <button id="leaves-toggle-btn" onclick="cycleLeafBreeze()" class="px-2.5 py-1.5 rounded-xl bg-white/90 hover:bg-autumn-50 border border-[#dfd0b5] text-xs font-medium text-stone-700 flex items-center gap-1.5 shadow-sm transition" title="Adjust falling autumn leaves animation">
+          <i data-lucide="leaf" class="w-3.5 h-3.5 text-autumn-600"></i>
+          <span id="leaves-label" class="hidden sm:inline">Leaves: Gentle</span>
+        </button>
+
+        <!-- UK Voice Speed -->
+        <div class="flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl px-2 py-1 shadow-sm text-xs">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-sage-600"></i>
+          <button onclick="setVoiceRate(0.85)" id="rate-slow" class="px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition">0.85×</button>
+          <button onclick="setVoiceRate(1.0)" id="rate-normal" class="px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition">UK 1×</button>
+        </div>
+
+        <!-- Theme Mood Selector -->
+        <div class="hidden lg:flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl p-1 text-[11px] shadow-sm">
+          <button onclick="setThemeMood('kensington')" id="theme-kensington" class="px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition">Bath Stone</button>
+          <button onclick="setThemeMood('winchester')" id="theme-winchester" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Winchester Mist</button>
+          <button onclick="setThemeMood('twilight')" id="theme-twilight" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Warm Study</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-7 relative z-10">
+
+    <!-- =================================================================== -->
+    <!-- ALL WEEKS & LESSON ARCHIVE BAR (LATEST LESSON ON TOP + OTHER WEEKS) -->
+    <!-- =================================================================== -->
+    <section class="sanctuary-card rounded-3xl p-4 sm:p-5 border-2 border-autumn-300/80 space-y-3 no-print">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-[#e6decb] pb-3">
+        <div class="flex items-center gap-2.5">
+          <span class="px-2.5 py-1 rounded-xl bg-autumn-700 text-white font-mono text-xs font-semibold shadow-sm flex items-center gap-1.5">
+            <i data-lucide="calendar-Check" class="w-3.5 h-3.5"></i>
+            <span>All Weeks & Lesson Archive</span>
+          </span>
+          <span class="text-xs sm:text-sm text-stone-700 font-medium">
+            Our most recent lesson (<strong>Week 02 • October 27</strong>) is right below on top. Click any card to explore previous weeks or visual galleries:
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <!-- Week 02 (Active / On Top) -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-autumn-50 via-[#fffdf9] to-parchment-100 border-2 border-autumn-500 shadow-sm flex items-start justify-between gap-3">
+          <div class="space-y-1">
+            <div class="flex items-center gap-1.5">
+              <span class="px-2 py-0.5 rounded-full bg-autumn-600 text-white font-mono text-[10px] font-bold uppercase">Latest Lesson • On Top</span>
+              <span class="font-mono text-[11px] text-stone-500">Oct 27, 2026 (53 mins)</span>
+            </div>
+            <div class="font-serif font-bold text-base sm:text-lg text-slatewarm-900">
+              Week 02 • Escapism, <em>Desengaño</em> & Henry Darger's <em>Vivian Girls</em>
+            </div>
+            <p class="text-xs text-stone-600 leading-snug">
+              Full 53-min corrected transcript, 54 flagged words, 15 note-taker fixes, and the complete Henry Darger artwork gallery in Tab 4.
+            </p>
+          </div>
+        </div>
+
+        <!-- Week 02 Visual Art Salon & Anglo-Spanish Cultural Readings -->
+        <a href="lesson02_prompt.html" class="group p-3.5 rounded-2xl bg-white/90 hover:bg-parchment-50 border border-[#dfd0b5] hover:border-autumn-400 transition shadow-sm flex flex-col justify-between space-y-2">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded-full bg-parchment-200 text-autumn-800 font-mono text-[10px] font-semibold uppercase">Companion Salon</span>
+              <span class="text-xs font-semibold text-autumn-700 group-hover:translate-x-0.5 transition flex items-center gap-1">Open Salon <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></span>
+            </div>
+            <div class="font-serif font-bold text-base sm:text-lg text-slatewarm-900 group-hover:text-autumn-800 transition">
+              Week 02 • Cultural Salon & Critical Readings
+            </div>
+            <p class="text-xs text-stone-600 leading-snug">
+              Full-screen Henry Darger gallery, Philip II in Rainy Winchester (1554), Spanish Plaza vs. English Cloister & Velázquez's <em>Desengaño</em>.
+            </p>
+          </div>
+        </a>
+
+        <!-- Week 01 (Lesson 01 Archive) -->
+        <a href="lesson01.html" class="group p-3.5 rounded-2xl bg-sage-50/70 hover:bg-sage-100/80 border border-sage-200 hover:border-sage-400 transition shadow-sm flex flex-col justify-between space-y-2">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded-full bg-sage-200 text-sage-900 font-mono text-[10px] font-semibold uppercase">Week 01 Archive • Oct 20, 2026</span>
+              <span class="text-xs font-semibold text-sage-800 group-hover:translate-x-0.5 transition flex items-center gap-1">View Lesson 01 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+            </div>
+            <div class="font-serif font-bold text-base sm:text-lg text-slatewarm-900 group-hover:text-sage-800 transition">
+              Week 01 • Tadao Ando's <em>Church of the Light</em>, Winchester & Bath
+            </div>
+            <p class="text-xs text-stone-600 leading-snug">
+              29-min cleaned transcript, 58 vocabulary words & idioms, 13 note-taker fixes, and your reflections on living in a peaceful bubble.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PEACEFUL HERO BANNER (LESSON 02 — OCTOBER 27, 2026)                 -->
+    <!-- =================================================================== -->
+    <section class="sanctuary-card rounded-3xl p-6 sm:p-9 relative overflow-hidden">
+      <div class="absolute -right-12 -top-12 w-64 h-64 bg-autumn-200/30 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-sage-200/35 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+        <div class="lg:col-span-8 space-y-3.5">
+          <div class="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-autumn-100/90 border border-autumn-200 text-autumn-800 text-xs font-medium">
+            <i data-lucide="palette" class="w-3.5 h-3.5 text-autumn-700"></i>
+            <span>October 27, 2026 • Lesson 02 with Louie • Escapism, Outsider Art & Standing at the Edge of the Abyss</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slatewarm-900 leading-[1.16]">
+            Marinela's Lesson 02 Sanctuary — <span class="text-autumn-700 italic font-semibold">Outsider Art, Inner Worlds</span> & The Courage to Share
+          </h1>
+
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl">
+            What a rich, unforgettable 53-minute conversation! We began by unpacking two wonderfully complex Spanish concepts—<strong class="text-slatewarm-800"><em>desengaño</em></strong> and <strong class="text-slatewarm-800"><em>vergüenza ajena</em></strong> (secondhand embarrassment)—before exploring <strong class="text-slatewarm-800">Henry Darger's secret 15,000-page universe (<em>The Vivian Girls</em>)</strong>, childhood imaginary friends through the showerhead, feeling at home on stage, and why sharing personal poetry feels like standing on the edge of an <strong class="text-slatewarm-800">abyss</strong>. Just as promised in our lesson, all of Darger's paintings and manuscripts are waiting for you in <strong class="text-autumn-800">Tab 4</strong>!
+          </p>
+
+          <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-stone-700">
+            <span class="inline-flex items-center gap-1.5 bg-parchment-100/90 px-3 py-1.5 rounded-xl border border-parchment-300">
+              <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-autumn-600"></i>
+              <span><strong>Tip 1:</strong> Click or hover over any <span class="vocab-mark text-xs">highlighted word</span> in the transcript to see its meaning & timestamp</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-sage-50/90 px-3 py-1.5 rounded-xl border border-sage-200">
+              <i data-lucide="image" class="w-3.5 h-3.5 text-sage-600"></i>
+              <span><strong>Tip 2:</strong> Open <strong>Tab 4 (Henry Darger Gallery & Places)</strong> to zoom into all the paintings from our class</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Calm Lesson Summary Cards -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+          <div onclick="switchTab('transcript')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-autumn-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-autumn-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">53 Mins</span>
+              <i data-lucide="scroll-text" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Full Transcript</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">All 6 chapters tidied with inline vocab & timestamps</p>
+          </div>
+
+          <div onclick="switchTab('vocab')" class="cursor-pointer p-4 rounded-2xl bg-sage-50/95 border border-sage-200 hover:border-sage-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-sage-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">54 Flagged</span>
+              <i data-lucide="book-open-check" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Vocabulary & Idioms</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">B2–C2 words, UK audio & Spanish links</p>
+          </div>
+
+          <div onclick="switchTab('fixes')" class="cursor-pointer p-4 rounded-2xl bg-autumn-50/95 border border-autumn-200 hover:border-autumn-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-autumn-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">15 Fixes</span>
+              <i data-lucide="wand-sparkles" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Note-Taker Fixes</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Eastbourne, Henry Darger & gentle phrasing polishes</p>
+          </div>
+
+          <div onclick="switchTab('places')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-sage-400 transition shadow-sm group">
+            <div class="flex items-center justify-between text-sage-700 mb-1">
+              <span class="text-[11px] font-mono font-semibold uppercase">9 Art Plates</span>
+              <i data-lucide="frame" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg">Darger Art & Topics</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">The Vivian Girls gallery, Eastbourne & Laos bridge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIMARY TAB NAVIGATION BAR -->
+    <nav class="sanctuary-card rounded-2xl p-2 flex flex-wrap items-center justify-between gap-2 no-print" aria-label="Lesson Sections">
+      <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
+          <i data-lucide="message-square-quote" class="w-4 h-4"></i>
+          <span>1. Lesson Transcript & Inline Vocab</span>
+          <span class="px-2 py-0.5 text-[10px] rounded-full bg-white/20 text-white font-mono">00:00–52:57</span>
+        </button>
+
+        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600"></i>
+          <span>2. Vocabulary Dictionary</span>
+          <span class="px-2 py-0.5 text-[10px] rounded-full bg-autumn-100 text-autumn-800 font-mono">54 Words</span>
+        </button>
+
+        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600"></i>
+          <span>3. Note-Taker Fixes & Gentle Notes</span>
+        </button>
+
+        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="frame" class="w-4 h-4 text-autumn-600"></i>
+          <span>4. Henry Darger Gallery & Cultural Notes</span>
+        </button>
+
+        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="coffee" class="w-4 h-4 text-sage-600"></i>
+          <span>5. Peaceful Practice & Next Lesson</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: FULL LESSON TRANSCRIPT WITH INLINE VOCABULARY & TIMESTAMPS   -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-transcript" class="tab-panel space-y-6">
+      
+      <!-- Transcript Controls & Chapter Bar -->
+      <div class="sanctuary-card rounded-3xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Interactive Conversation Transcript • Lesson 02</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-full bg-autumn-100 text-autumn-800 font-medium">Spelling & Names Corrected</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+              Our Conversation — With Vocabulary Explained Right Where We Said It
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-1">
+              Every underlined <span class="vocab-mark">vocabulary word</span> is interactive. Hover over it for a quick tooltip, or click it to inspect its full details, British pronunciation, and Spanish connection in the side panel.
+            </p>
+          </div>
+
+          <!-- Search & Display Toggles -->
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <div class="relative">
+              <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+              <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Search transcript or time..." class="pl-9 pr-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none focus:border-sage-600 w-48 sm:w-56" />
+            </div>
+
+            <select id="speaker-filter" onchange="filterTranscript()" class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700 focus:outline-none">
+              <option value="all">Both Speakers</option>
+              <option value="Marinela">Marinela's Turns Only</option>
+              <option value="Louie">Louie's Turns Only</option>
+            </select>
+
+            <button onclick="toggleVocabHighlights()" id="btn-toggle-highlights" class="px-3 py-1.5 rounded-xl bg-autumn-100 text-autumn-800 border border-autumn-300 text-xs font-semibold transition flex items-center gap-1.5">
+              <i data-lucide="highlighter" class="w-3.5 h-3.5"></i>
+              <span>Vocab Highlights: On</span>
+            </button>
+
+            <button onclick="toggleAsrBadges()" id="btn-toggle-asr" class="px-3 py-1.5 rounded-xl bg-sage-100 text-sage-800 border border-sage-300 text-xs font-semibold transition flex items-center gap-1.5" title="Show or hide badges where the automated note-taker's spelling errors were fixed">
+              <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
+              <span>Note-Taker Fixes: Visible</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chapter Quick-Jump Pills -->
+        <div class="flex flex-wrap items-center gap-1.5 pt-1">
+          <span class="text-[11px] font-mono uppercase tracking-wider text-stone-500 mr-1">Chapters:</span>
+          <button onclick="scrollToChapter('chap-1')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            00:00 • I. Catch-Up & Desengaño
+          </button>
+          <button onclick="scrollToChapter('chap-2')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            05:28 • II. Vergüenza Ajena & Hypocrisy
+          </button>
+          <button onclick="scrollToChapter('chap-3')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            14:45 • III. Eastbourne & Tailored Shirts
+          </button>
+          <button onclick="scrollToChapter('chap-4')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            21:14 • IV. Henry Darger & The Vivian Girls
+          </button>
+          <button onclick="scrollToChapter('chap-5')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            33:28 • V. Showerhead Friends & Gypsy Folklore
+          </button>
+          <button onclick="scrollToChapter('chap-6')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 hover:text-autumn-800 text-xs font-medium transition border border-parchment-200">
+            40:10 • VI. Stage, The Abyss & Organizing Worlds
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Transcript Grid: Left (Conversation Stream) + Right (Sticky Vocabulary Inspector) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left 8 Cols: Full Conversation Stream -->
+        <div class="lg:col-span-8 space-y-4" id="transcript-stream-container">
+          <!-- Rendered dynamically by JS from complete cleaned transcript data -->
+        </div>
+
+        <!-- Right 4 Cols: Sticky Live Vocabulary Inspector & Quick Guide -->
+        <aside class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+          
+          <!-- Active Word Inspector Card -->
+          <div class="sanctuary-card rounded-3xl p-5 sm:p-6 border-t-4 border-t-autumn-500 space-y-4" id="vocab-inspector-card">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-1.5">
+                <i data-lucide="sparkle" class="w-3.5 h-3.5"></i>
+                Vocabulary Spotlight
+              </span>
+              <span id="insp-time" class="px-2.5 py-0.5 rounded-full bg-parchment-100 border border-parchment-300 font-mono text-xs text-stone-700">
+                🕒 08:36
+              </span>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <h3 id="insp-word" class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">secondhand embarrassment</h3>
+                <button id="insp-audio-btn" onclick="speakWord('secondhand embarrassment')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0" title="Listen in British English">
+                  <i data-lucide="volume-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <div class="flex flex-wrap items-center gap-2 mt-1">
+                <span id="insp-ipa" class="text-xs font-mono text-stone-500">/ˌsek.əndˈhænd ɪmˈbær.əs.mənt/</span>
+                <span id="insp-pos" class="px-2 py-0.5 text-[11px] rounded-md bg-parchment-100 text-stone-700 font-medium">noun phrase / idiom</span>
+                <span id="insp-level" class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800 font-mono font-semibold">C1</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-parchment-50 border border-parchment-200 space-y-1.5">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Meaning & Nuance</div>
+              <p id="insp-def" class="text-xs sm:text-sm text-slatewarm-800 leading-relaxed">
+                Feeling acute embarrassment or cringe on behalf of another person who is behaving foolishly or breaking a social code without realizing it.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-sage-50/80 border border-sage-200 space-y-1.5">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">How It Was Used in Our Lesson</div>
+              <p id="insp-quote" class="text-xs italic text-stone-700 leading-relaxed">
+                "It's secondhand embarrassment... You feel embarrassed for them because they don't realize."
+              </p>
+            </div>
+
+            <div class="flex items-center justify-between pt-1 text-xs border-t border-[#e6decb]">
+              <span class="text-stone-500">🇪🇸 Conexión en español:</span>
+              <span id="insp-es" class="font-semibold text-sage-800">vergüenza ajena</span>
+            </div>
+          </div>
+
+          <!-- Quick Legend & Reassurance Box for Marinela -->
+          <div class="sanctuary-card rounded-3xl p-5 space-y-3">
+            <div class="flex items-center gap-2 text-sage-800 font-serif font-bold text-lg">
+              <i data-lucide="heart-handshake" class="w-5 h-5 text-autumn-600"></i>
+              <span>A Gentle Note on Lesson 02</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Your explanation of <strong><em>desengaño</em></strong> and <strong><em>vergüenza ajena</em></strong> (connecting social shame in Spain all the way back to outdoor plaza life and the Inquisition!) was genuinely brilliant.
+            </p>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              And your metaphor for sharing personal poetry—<em>"standing safe at the top, looking down into the abyss"</em>—inspired Louie to promise he will try sharing his own writing too!
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: VOCABULARY & IDIOMS EXPLORER (54 FLAGGED WORDS BY TIMESTAMP) -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-vocab" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Timestamped Lexicon • 54 Flagged Items</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+              Vocabulary, Idioms & Expressions from Lesson 02
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-1">
+              Every word includes the exact timestamp when we said it. Click <strong>"🕒 MM:SS ↗"</strong> or <strong>"See in Transcript"</strong> on any card to jump straight to that moment in our conversation!
+            </p>
+          </div>
+
+          <!-- Search & Level Filter -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="relative">
+              <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+              <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Search word, Spanish, time..." class="pl-9 pr-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none focus:border-sage-600 w-52" />
+            </div>
+
+            <select id="vocab-level-filter" onchange="renderVocabGrid()" class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">All Levels (B2–C2)</option>
+              <option value="C2">C2 Mastery / Literary</option>
+              <option value="C1">C1 Advanced</option>
+              <option value="B2">B2 Upper-Intermediate</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="setVocabCategory('all')" id="vcat-all" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sage-700 text-white transition">
+            All 54 Flagged Words
+          </button>
+          <button onclick="setVocabCategory('emotions')" id="vcat-emotions" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            🎭 Emotions, Values & Soul Words
+          </button>
+          <button onclick="setVocabCategory('art')" id="vcat-art" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            🎨 Outsider Art, Writing & Stage
+          </button>
+          <button onclick="setVocabCategory('culture')" id="vcat-culture" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            🌍 Culture, Dress Codes & Travel
+          </button>
+          <button onclick="setVocabCategory('idioms')" id="vcat-idioms" class="vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition">
+            ✨ Idioms & Phrasal Verbs
+          </button>
+        </div>
+
+        <!-- Vocabulary Cards Grid -->
+        <div id="vocab-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: NOTE-TAKER SPELLING FIXES & GENTLE PHRASING REFINEMENTS      -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-fixes" class="tab-panel hidden space-y-6">
+      
+      <!-- Part A: Gentle Phrasing Refinements & Strengths for Marinela -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Supportive Language Notes • Lesson 02</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            Your Natural Strengths & 6 Gentle Phrasing Polishes
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            First, let's celebrate 6 expressive, nuanced phrases you used naturally during our conversation—followed by 6 small grammar and idiom polishes.
+          </p>
+        </div>
+
+        <!-- Marinela's Highlights Banner -->
+        <div class="p-5 rounded-2xl bg-sage-50/90 border border-sage-200 space-y-3">
+          <div class="flex items-center gap-2 text-sage-800 font-serif font-bold text-xl">
+            <i data-lucide="award" class="w-5 h-5 text-autumn-600"></i>
+            <span>Expressions You Used Naturally & Accurately in Lesson 02</span>
+          </div>
+          <div id="student-strengths-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- 6 Gentle Polishes Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="gentle-polishes-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Part B: The 15 AI Note-Taker Spelling & Mishearing Fixes -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Transcript Clean-Up Log • 15 Fixes</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            How We Sorted Out the Automated Note-Taker's Spelling Mistakes
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            In this lesson, the automated note-taker called you <em>"Marilyn"</em>, wrote <em>"I was too eastborn"</em> instead of <em>"I went to Eastbourne"</em>, turned <em>"invisible friends"</em> into <em>"individual friends"</em>, and heard <em>"sit alone in a foreign country"</em> as <em>"see the lawn in a foreign country"</em>! Here is every fix we made:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="asr-fixes-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: HENRY DARGER GALLERY & CULTURAL PLACES FROM LESSON 02        -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-places" class="tab-panel hidden space-y-6">
+      
+      <!-- PART A: PROMISED HENRY DARGER & THE VIVIAN GIRLS ARTWORK GALLERY -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6 border-2 border-autumn-200">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-[#e6decb] pb-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-autumn-700 text-white text-[11px] font-mono uppercase tracking-wider">As Promised at 26:15 in Our Lesson</span>
+              <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Outsider Art • Henry Darger (1892–1973)</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+              Henry Darger's Room, Manuscripts & <em>The Vivian Girls</em> Gallery
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-1 max-w-3xl">
+              In our lesson (<span class="font-mono">26:15</span>), Louie promised: <em>"This is already in the notes as well—so after the lesson, you'll have it."</em> Click any of the 9 plates below to inspect Darger's Chicago room, his 15,000-page hand-bound manuscripts, and his traced watercolour panoramas in full screen.
+            </p>
+          </div>
+          <a href="lesson02_prompt.html" class="shrink-0 px-3.5 py-2 rounded-xl bg-autumn-100 hover:bg-autumn-200 text-autumn-900 text-xs font-semibold flex items-center gap-1.5 border border-autumn-300 transition">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Open Full Cultural Salon Page</span>
+          </a>
+        </div>
+
+        <!-- 9-Plate Interactive Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Plate 1 -->
+          <div onclick="openArtModal('images/darger_room.jpg', '1. Henry Darger\'s Room in Chicago (23:54 in Transcript)', 'Discovered after his death in 1973 at 851 W. Webster Ave, Chicago. Nobody knew he had spent 60 years creating a vast fantasy universe here.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/darger_room.jpg" alt="Henry Darger's room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-sage-800/90 text-white font-mono text-[10px] uppercase">🕒 23:54 • The Room</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900">1. Darger's Secret One-Room Sanctuary</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">Where his landlord found 15,145 typed pages and hundreds of giant watercolour scrolls when clearing his room.</p>
+            </div>
+          </div>
+
+          <!-- Plate 2 -->
+          <div onclick="openArtModal('images/vivian_girls_1.jpg', '2. Hand-Bound Volumes of The Realms of the Unreal (24:15 in Transcript)', 'Darger bound his 15,000 pages of stories and illustrations into massive handmade volumes stitched with string.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_girls_1.jpg" alt="Henry Darger bound volumes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-sage-800/90 text-white font-mono text-[10px] uppercase">🕒 24:15 • 15,000 Pages</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900">2. The 15,000-Page Bound Manuscripts</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">Hand-stitched encyclopedias chronicling the adventures of the Vivian Girls rescuing enslaved children.</p>
+            </div>
+          </div>
+
+          <!-- Plate 3 -->
+          <div onclick="openArtModal('images/vivian_girls_2.jpg', '3. Darger\'s Handwritten Scripts (24:45 in Transcript)', 'Pages from his handwritten manuscripts—organizing the vast world, characters, and chain of events inside his head.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_girls_2.jpg" alt="Henry Darger handwritten scripts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-sage-800/90 text-white font-mono text-[10px] uppercase">🕒 24:45 • Scripts</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900">3. Handwritten Scripts & Chronicles</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">As we discussed at 30:42, putting a story on paper lets you organize the chain of events and live alongside your characters.</p>
+            </div>
+          </div>
+
+          <!-- Plate 4 -->
+          <div onclick="openArtModal('images/vivian_sisters_umbrellas.jpg', '4. At Jennie Richee: Waiting for the Rain to Stop (24:55 in Transcript)', 'Watercolor and carbon tracing. The Vivian sisters stand in bright red dresses beside giant yellow blossoms as storm clouds gather.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_sisters_umbrellas.jpg" alt="The Vivian Girls in red dresses" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-autumn-700 text-white font-mono text-[10px] uppercase">🕒 24:55 • Watercolor</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900">4. <em>Waiting for the Rain to Stop</em> (Sisters in Red)</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">With zero formal art training, Darger traced figures from comic strips and colouring books to bring his mental world to life.</p>
+            </div>
+          </div>
+
+          <!-- Plate 5 -->
+          <div onclick="openArtModal('images/vivian_butterfly_girl.jpg', '5. The Vivian Girls Sheltering Under the Portico (25:15 in Transcript)', 'Traced and painted heroines surrounded by giant flowers—imagined as an army of brave girls who save the world.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_butterfly_girl.jpg" alt="The Vivian Girls under the portico" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-autumn-700 text-white font-mono text-[10px] uppercase">🕒 25:15 • Detail</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900">5. <em>Sheltering Under the Portico</em></h4>
+              <p class="text-xs text-stone-600 leading-relaxed">Having grown up in a Catholic institutional home/orphanage, Darger imagined these fearless girls as saviors.</p>
+            </div>
+          </div>
+
+          <!-- Plate 6 -->
+          <div onclick="openArtModal('images/vivian_stream.jpg', '6. At Jennie Richee: Pursued Down Stream (26:00 in Transcript)', 'Panoramic scroll combining a peaceful stone bridge, water lilies, and frogs with the peril of war.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_stream.jpg" alt="At Jennie Richee, Pursued Down Stream" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-autumn-700 text-white font-mono text-[10px] uppercase">🕒 26:00 • Panorama</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900">6. <em>At Jennie Richee: Pursued Down Stream</em></h4>
+              <p class="text-xs text-stone-600 leading-relaxed">A sweeping pastoral river scene where the Vivian Girls embark on perilous adventures.</p>
+            </div>
+          </div>
+
+          <!-- Plate 7 -->
+          <div onclick="openArtModal('images/darger_afam_03.jpg', '7. American Folk Art Museum Archive Plate I', 'Large-scale double-sided panoramic scroll by Henry Darger showing the Vivian Girls in action.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-48">
+              <img src="images/darger_afam_03.jpg" alt="Henry Darger panoramic scroll" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slatewarm-900/80 text-white font-mono text-[10px] uppercase">Archive Scroll I</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-base text-slatewarm-900">7. Panoramic Watercolor Scroll I</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">From the American Folk Art Museum collection of Darger's works.</p>
+            </div>
+          </div>
+
+          <!-- Plate 8 -->
+          <div onclick="openArtModal('images/darger_afam_05.jpg', '8. American Folk Art Museum Archive Plate II', 'Another vibrant composition illustrating the scale and colour combinations of Darger\'s secret world.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-48">
+              <img src="images/darger_afam_05.jpg" alt="Henry Darger composition" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slatewarm-900/80 text-white font-mono text-[10px] uppercase">Archive Scroll II</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-base text-slatewarm-900">8. Panoramic Watercolor Scroll II</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">Created purely for his own eyes with zero commercial pressure.</p>
+            </div>
+          </div>
+
+          <!-- Plate 9 -->
+          <div onclick="openArtModal('images/vivian_rescued.jpg', '9. The Vivian Girls & Rescued Children', 'Darger\'s heroines leading children to safety across his imagined landscape.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-48">
+              <img src="images/vivian_rescued.jpg" alt="The Vivian Girls rescue scene" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slatewarm-900/80 text-white font-mono text-[10px] uppercase">Archive Scroll III</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Zoom</span>
+            </div>
+            <div class="p-4 space-y-1">
+              <h4 class="font-serif font-bold text-base text-slatewarm-900">9. The Vivian Girls on an Adventure</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">Click to inspect the traced details and layered collage composition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PART B: 4 CULTURAL & PSYCHOLOGICAL DEEP-DIVE CARDS FROM OUR CONVERSATION -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Themes & Places from Lesson 02</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            4 Cultural & Artistic Threads We Explored Together
+          </h2>
+        </div>
+
+        <div id="cultural-places-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: PEACEFUL PRACTICE SANCTUARY & CONTINUITY FOR NEXT LESSON     -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-practice" class="tab-panel hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left 6 Cols: Calm Flashcard Deck -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Calm Memory Cards • Lesson 02</span>
+              <span id="fc-counter" class="text-xs font-mono text-stone-500">Card 1 of 12</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Gentle Vocabulary Flashcards</h3>
+            <p class="text-xs text-stone-600">Click the card to flip between the word, its meaning, and how we used it in our conversation.</p>
+          </div>
+
+          <div onclick="flipFlashcard()" class="cursor-pointer sanctuary-subcard rounded-2xl p-7 min-h-[240px] flex flex-col items-center justify-center text-center space-y-3 border-2 border-[#dfd0b5] hover:border-autumn-400 transition select-none">
+            <span id="fc-badge" class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-mono"></span>
+            <h4 id="fc-front-title" class="font-serif text-3xl font-bold text-slatewarm-900"></h4>
+            <p id="fc-sub" class="text-xs sm:text-sm text-stone-600 max-w-md leading-relaxed"></p>
+            <div id="fc-back-details" class="hidden space-y-2 pt-2 border-t border-parchment-200 w-full">
+              <p id="fc-quote" class="text-xs italic text-sage-800"></p>
+              <p id="fc-es" class="text-xs font-semibold text-autumn-700"></p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-2 pt-2">
+            <button onclick="prevFlashcard()" class="px-4 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-xs font-semibold text-stone-700 flex items-center gap-1.5 transition">
+              <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+            </button>
+            <button onclick="speakCurrentFlashcard()" class="px-4 py-2 rounded-xl bg-sage-100 hover:bg-sage-200 text-xs font-semibold text-sage-800 flex items-center gap-1.5 transition">
+              <i data-lucide="volume-2" class="w-4 h-4"></i> Listen (UK)
+            </button>
+            <button onclick="nextFlashcard()" class="px-4 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 text-xs font-semibold text-white flex items-center gap-1.5 transition">
+              Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right 6 Cols: Interactive Context Quiz -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">No-Pressure Review</span>
+              <h3 class="font-serif text-2xl font-bold text-slatewarm-900 mt-0.5">Match the Word to Our Conversation</h3>
+            </div>
+            <span id="quiz-score-badge" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">0 / 6 Completed</span>
+          </div>
+
+          <div id="quiz-container" class="space-y-4 max-h-[420px] overflow-y-auto pr-1">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- What We Said We Would Talk About Next Time (Direct Continuity for Lesson 03) -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4 border-2 border-sage-300/80">
+        <div class="flex items-center gap-2 text-autumn-800 font-serif font-bold text-2xl">
+          <i data-lucide="compass" class="w-5 h-5 text-autumn-600"></i>
+          <span>What We Promised to Talk About Next Time (Lesson 03 Continuity)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-autumn-500">
+            <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">🕒 51:52 – 52:38 • Agreed Next Topic</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">1. Commercial Pressure vs. "Getting Art Out the Door"</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Right at the end of Lesson 02, we contrasted outsider art (which has <strong>zero commercial pressure</strong>) with public art, where <em>"your project is not just what you want to do, but what you can make and finish—you have to get it out the door."</em> You said: <strong>"Okay, let's talk about that next time!"</strong>
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-600">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">🕒 46:13 – 46:38 • Louie's Promise</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">2. Sharing Personal Writing at the Edge of the Abyss</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Inspired by your courage in sending deeply personal poetry to trusted friends—standing at the top and looking into the <strong>abyss</strong>—Louie said: <em>"I have learned something new today. I am going to do what you do. I keep things to myself, but I'm going to share something."</em>
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-autumn-400">
+            <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">🕒 01:34 – 01:53 • Life Catch-Up</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">3. Your Meeting with the Master's Professor</h4>
+            <p class="text-stone-600 leading-relaxed">
+              At the start of Lesson 02, you were arranging a meeting with one of the professors from your Master's programme about a potential <strong>job position</strong> at the place she is leaving to work full-time at the university. How did that meeting go?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FULL-SCREEN ARTWORK ZOOM LIGHTBOX MODAL -->
+  <div id="art-modal" onclick="closeArtModal()" class="fixed inset-0 z-50 hidden bg-slatewarm-900/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8">
+    <div onclick="event.stopPropagation()" class="max-w-5xl w-full bg-[#fbf9f5] rounded-3xl overflow-hidden shadow-2xl border border-[#dfd0b5]">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-[#e6decb]">
+        <h3 id="modal-title" class="font-serif font-bold text-xl text-slatewarm-900">Artwork Title</h3>
+        <button onclick="closeArtModal()" class="px-3 py-1 rounded-xl bg-parchment-200 hover:bg-autumn-200 text-xs font-semibold text-slatewarm-900">✕ Close</button>
+      </div>
+      <div class="bg-stone-900 flex items-center justify-center max-h-[70vh] overflow-hidden">
+        <img id="modal-img" src="" alt="Full screen artwork" class="max-h-[70vh] w-auto object-contain" />
+      </div>
+      <div class="px-6 py-4 bg-[#fbf9f5]">
+        <p id="modal-caption" class="text-xs sm:text-sm text-stone-700 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-stone-500 border-t border-[#e6decb]/80 mt-8 no-print space-y-2">
+    <p class="font-serif italic text-base text-slatewarm-800">"If you can sit alone in a foreign country and feel completely at peace, you've found a home within yourself." — Lesson 02 Sanctuary prepared for Marinela</p>
+    <div class="flex flex-wrap items-center justify-center gap-4 pt-1">
+      <a href="index.html" class="text-autumn-700 font-semibold hover:underline">Week 02: Lesson 02 Notes (Current)</a>
+      <span>•</span>
+      <a href="lesson02_prompt.html" class="text-stone-600 hover:text-autumn-700 hover:underline">Week 02: Cultural Salon & Art Gallery</a>
+      <span>•</span>
+      <a href="lesson01.html" class="text-sage-700 font-semibold hover:underline">Week 01: Lesson 01 Notes (Oct 20)</a>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: VOCABULARY DATA, FULL TRANSCRIPT, AUDIO & AUTUMN BREEZE   -->
+  <!-- ===================================================================== -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 1. COMPLETE VOCABULARY DICTIONARY (54 FLAGGED ITEMS WITH TIMESTAMPS)
+    // -------------------------------------------------------------------------
+    const VOCAB_DB = {
+      "arrange": {
+        word: "arrange (a meeting)",
+        ipa: "/əˈreɪndʒ/",
+        pos: "verb",
+        level: "B2",
+        time: "01:34",
+        turnId: "turn-5",
+        cat: "idioms",
+        def: "To organize, schedule, or plan a meeting or event in advance with someone.",
+        quote: "Marinela (01:34): \"I'm trying to arrange a meeting with one of the professors from the Master's...\"",
+        es: "organizar / concertar (una reunión)"
+      },
+      "fair-enough": {
+        word: "fair enough",
+        ipa: "/ˌfeər ɪˈnʌf/",
+        pos: "British conversational idiom",
+        level: "B2",
+        time: "01:54",
+        turnId: "turn-6",
+        cat: "idioms",
+        def: "A natural British phrase meaning 'That makes complete sense; I understand why you feel or act that way.'",
+        quote: "Louie (01:54): \"Okay, fair enough. Well, today is a little bit about escapism.\"",
+        es: "es comprensible / me parece justo / tiene sentido"
+      },
+      "escapism": {
+        word: "escapism",
+        ipa: "/ɪˈskeɪ.pɪ.zəm/",
+        pos: "noun",
+        level: "C1",
+        time: "01:59",
+        turnId: "turn-6",
+        cat: "art",
+        def: "The tendency to seek distraction and relief from unpleasant realities, especially through art, writing, music, or fantasy worlds.",
+        quote: "Louie (01:59): \"Today is a little bit about escapism, and one of my favourite artists.\"",
+        es: "escapismo / evasión de la realidad"
+      },
+      "grasp": {
+        word: "grasp (a concept)",
+        ipa: "/ɡrɑːsp/",
+        pos: "verb",
+        level: "C1",
+        time: "02:15",
+        turnId: "turn-6",
+        cat: "emotions",
+        def: "To fully understand or comprehend a subtle, difficult, or nuanced idea.",
+        quote: "Louie (02:15): \"It is a Spanish word, so I don't quite grasp the full concept...\"",
+        es: "captar / comprender a fondo (un concepto)"
+      },
+      "deceived": {
+        word: "deceived",
+        ipa: "/dɪˈsiːvd/",
+        pos: "adjective / participle",
+        level: "B2",
+        time: "02:43",
+        turnId: "turn-7",
+        cat: "emotions",
+        def: "Made to believe something that is not true; misled by false appearances or promises.",
+        quote: "Marinela (02:43): \"It's when you are deceived... someone that you love and it's not the person that you expected them to be.\"",
+        es: "engañado/a / desengañado/a"
+      },
+      "desengano": {
+        word: "disillusionment (desengaño)",
+        ipa: "/ˌdɪs.ɪˈluː.ʒən.mənt/",
+        pos: "noun",
+        level: "C2",
+        time: "03:15",
+        turnId: "turn-7",
+        cat: "emotions",
+        def: "A bitter awakening or disappointment upon discovering that someone or something is less noble or worthy than one had believed.",
+        quote: "Marinela (03:15): \"Once you get it, it's not what you expected. So you can feel that desengaño.\"",
+        es: "desengaño / desilusión profunda"
+      },
+      "regret": {
+        word: "regret",
+        ipa: "/rɪˈɡret/",
+        pos: "noun / verb",
+        level: "B2",
+        time: "03:21",
+        turnId: "turn-8",
+        cat: "emotions",
+        def: "A feeling of sadness or wishing you had made a different choice in the past.",
+        quote: "Louie (03:21): \"So is there a little bit of regret involved?\"",
+        es: "arrepentimiento / pesar"
+      },
+      "disappointment": {
+        word: "disappointment",
+        ipa: "/ˌdɪs.əˈpɔɪnt.mənt/",
+        pos: "noun",
+        level: "B2",
+        time: "03:26",
+        turnId: "turn-9",
+        cat: "emotions",
+        def: "Sadness or displeasure caused by the non-fulfilment of one's hopes or expectations.",
+        quote: "Marinela (03:26): \"No, disappointment... the result that you get is always less than you expected.\"",
+        es: "decepción / chasco"
+      },
+      "deception": {
+        word: "deception",
+        ipa: "/dɪˈsep.ʃən/",
+        pos: "noun",
+        level: "C1",
+        time: "03:51",
+        turnId: "turn-10",
+        cat: "emotions",
+        def: "The act of hiding the truth or tricking someone. (Note: In Spanish, 'decepción' is a false friend for 'disappointment', whereas English 'deception' means 'engaño'.)",
+        quote: "Louie (03:51): \"Is there some kind of deception involved?\"",
+        es: "engaño (ojo: 'decepción' en español es 'disappointment')"
+      },
+      "betrayal": {
+        word: "betrayal",
+        ipa: "/bɪˈtreɪ.əl/",
+        pos: "noun",
+        level: "C1",
+        time: "04:10",
+        turnId: "turn-12",
+        cat: "emotions",
+        def: "Breaking someone's trust or loyalty by acting against them.",
+        quote: "Louie (04:10): \"So is it betrayal?\" Marinela (05:00): \"Maybe it was a betrayal, or they talked behind your back.\"",
+        es: "traición"
+      },
+      "behind-your-back": {
+        word: "talk behind someone's back",
+        ipa: "/tɔːk bɪˈhaɪnd ˈsʌm.wʌnz bæk/",
+        pos: "idiom",
+        level: "B2",
+        time: "05:00",
+        turnId: "turn-15",
+        cat: "idioms",
+        def: "To say critical or unkind things about someone secretly when they are not present.",
+        quote: "Marinela (05:00): \"Because maybe it was a betrayal, or talked behind your back...\"",
+        es: "hablar a tus espaldas"
+      },
+      "social-code": {
+        word: "social code",
+        ipa: "/ˈsəʊ.ʃəl kəʊd/",
+        pos: "noun phrase",
+        level: "C1",
+        time: "07:05",
+        turnId: "turn-19",
+        cat: "culture",
+        def: "The unwritten rules of behaviour, dress, and manners that a community expects people to follow.",
+        quote: "Marinela (07:05): \"It's something that they did, and it's not in your social code.\"",
+        es: "código social / normas de conducta"
+      },
+      "inquisition": {
+        word: "the Inquisition",
+        ipa: "/ðə ˌɪŋ.kwɪˈzɪʃ.ən/",
+        pos: "historical noun",
+        level: "C1",
+        time: "07:35",
+        turnId: "turn-21",
+        cat: "culture",
+        def: "The historical ecclesiastical tribunal in Spain that policed religious orthodoxy and public appearances for centuries.",
+        quote: "Marinela (07:35): \"Deep inside it has to do with religion and with probably the Inquisition, because you had to pretend... and be very careful about what you did or what you wore.\"",
+        es: "la Inquisición"
+      },
+      "secondhand-embarrassment": {
+        word: "secondhand embarrassment",
+        ipa: "/ˌsek.əndˈhænd ɪmˈbær.əs.mənt/",
+        pos: "noun phrase / idiom",
+        level: "C1",
+        time: "08:36",
+        turnId: "turn-24",
+        cat: "emotions",
+        def: "Vicarious embarrassment; feeling ashamed or cringing on behalf of someone else who doesn't realize how foolishly they are behaving.",
+        quote: "Louie (08:36): \"It's secondhand embarrassment.\" Marinela: \"Yeah, that's what it is!\"",
+        es: "vergüenza ajena"
+      },
+      "anecdotal": {
+        word: "anecdotal (experience)",
+        ipa: "/ˌæn.ɪkˈdəʊ.təl/",
+        pos: "adjective",
+        level: "C1",
+        time: "09:25",
+        turnId: "turn-26",
+        cat: "culture",
+        def: "Based on personal stories and everyday observations rather than official statistics.",
+        quote: "Louie (09:25): \"IELTS teachers are, in my anecdotal experience, they can be a little bit arrogant.\"",
+        es: "anecdótico / basado en la experiencia personal"
+      },
+      "different-animal": {
+        word: "a different animal",
+        ipa: "/ə ˈdɪf.ər.ənt ˈæn.ɪ.məl/",
+        pos: "idiom",
+        level: "C1",
+        time: "10:42",
+        turnId: "turn-28",
+        cat: "idioms",
+        def: "Something or someplace with a completely different character, scale, or energy compared to what you knew before.",
+        quote: "Louie (10:42): \"I've just moved to Hanoi for university, so it's a much different animal of a city.\"",
+        es: "otro mundo / harina de otro costal / algo totalmente distinto"
+      },
+      "impolite": {
+        word: "impolite",
+        ipa: "/ˌɪm.pəlˈaɪt/",
+        pos: "adjective",
+        level: "B2",
+        time: "11:06",
+        turnId: "turn-28",
+        cat: "culture",
+        def: "Rude; lacking good manners or basic courtesy towards others.",
+        quote: "Louie (11:06): \"The issue was, as I said, it's really impolite.\"",
+        es: "descortés / maleducado"
+      },
+      "hypocrisy": {
+        word: "hypocrisy",
+        ipa: "/hɪˈpɒk.rɪ.si/",
+        pos: "noun",
+        level: "C1",
+        time: "11:55",
+        turnId: "turn-28",
+        cat: "emotions",
+        def: "Claiming to hold certain moral standards or expectations while behaving in the exact opposite way yourself.",
+        quote: "Louie (11:55): \"I said to him, it's hypocrisy—that he does not speak Vietnamese, but he expects people to speak English in England.\"",
+        es: "hipocresía"
+      },
+      "abruptly": {
+        word: "abruptly",
+        ipa: "/əˈbrʌpt.li/",
+        pos: "adverb",
+        level: "B2",
+        time: "12:55",
+        turnId: "turn-28",
+        cat: "emotions",
+        def: "In a sudden, blunt, or curt manner that seems unfriendly or rude.",
+        quote: "Louie (12:55): \"Because the way he was speaking abruptly, and dying on the hill of this conversation...\"",
+        es: "abruptamente / bruscamente / de forma cortante"
+      },
+      "die-on-a-hill": {
+        word: "die on this hill",
+        ipa: "/daɪ ɒn ðɪs hɪl/",
+        pos: "idiom",
+        level: "C2",
+        time: "13:00",
+        turnId: "turn-28",
+        cat: "idioms",
+        def: "To stubbornly defend an opinion or argument to the bitter end, even when it is clearly wrong or unimportant.",
+        quote: "Louie (13:00): \"...speaking abruptly, and dying on the hill of this conversation, it was very unusual.\"",
+        es: "obstinarse hasta el final / defender una postura a capa y espada sin razón"
+      },
+      "ridiculous": {
+        word: "ridiculous / ridicule",
+        ipa: "/rɪˈdɪk.jə.ləs/",
+        pos: "adjective / noun",
+        level: "B2",
+        time: "13:45",
+        turnId: "turn-29",
+        cat: "emotions",
+        def: "Absurd, foolish, and deserving of mockery or embarrassment.",
+        quote: "Marinela (13:45): \"That idea of ridicule is that other shame—ajena is the other. You feel the shame for the other.\"",
+        es: "ridículo / sentido del ridículo"
+      },
+      "ignorance": {
+        word: "ignorance",
+        ipa: "/ˈɪɡ.nər.əns/",
+        pos: "noun",
+        level: "B2",
+        time: "14:24",
+        turnId: "turn-30",
+        cat: "emotions",
+        def: "Lack of knowledge, awareness, or cultural sensitivity.",
+        quote: "Louie (14:24): \"Ignorance.\" Marinela: \"Yeah, and they don't care—they don't know.\"",
+        es: "ignorancia"
+      },
+      "give-it-ones-all": {
+        word: "give it one's all",
+        ipa: "/ɡɪv ɪt wʌnz ɔːl/",
+        pos: "idiom",
+        level: "C1",
+        time: "14:48",
+        turnId: "turn-32",
+        cat: "idioms",
+        def: "To put 100% of your effort, heart, and energy into learning or doing something.",
+        quote: "Louie (14:48): \"My brother who lives in Seville, he speaks fluent Spanish—and so he gave it his all.\"",
+        es: "darlo todo / poner todo el empeño"
+      },
+      "let-alone": {
+        word: "let alone",
+        ipa: "/let əˈləʊn/",
+        pos: "conjunctive idiom",
+        level: "C1",
+        time: "16:05",
+        turnId: "turn-34",
+        cat: "idioms",
+        def: "Used to emphasize that because the first thing is not true or possible, the second thing is even less likely ('not even').",
+        quote: "Louie (16:05): \"I really didn't know much about travelling at all, let alone to Spain.\"",
+        es: "y mucho menos / por no hablar de"
+      },
+      "tourist-resorts": {
+        word: "tourist resorts / touristy places",
+        ipa: "/ˈtʊə.rɪst rɪˈzɔːts/",
+        pos: "noun phrase",
+        level: "B2",
+        time: "16:20",
+        turnId: "turn-35",
+        cat: "culture",
+        def: "Holiday towns (like Benidorm or Magaluf) built specifically for mass tourism.",
+        quote: "Marinela (16:20): \"Just to some places... I think these are tourist resorts, touristy places.\"",
+        es: "complejos turísticos / zonas muy turísticas"
+      },
+      "flip-flops": {
+        word: "flip-flops",
+        ipa: "/ˈflɪp.flɒps/",
+        pos: "noun (plural)",
+        level: "B2",
+        time: "16:42",
+        turnId: "turn-35",
+        cat: "culture",
+        def: "Light open sandals with a Y-shaped strap between the toes.",
+        quote: "Marinela (16:42): \"Those foreigners that wear white socks with flip-flops... you feel that shame for them!\"",
+        es: "chanclas"
+      },
+      "dress-code": {
+        word: "dress code",
+        ipa: "/ˈdres kəʊd/",
+        pos: "noun",
+        level: "B2",
+        time: "18:05",
+        turnId: "turn-37",
+        cat: "culture",
+        def: "A set of social or institutional expectations about what clothing and colour combinations are acceptable.",
+        quote: "Marinela (18:05): \"Coming from a very small place, there was like a dress code that you have to follow. And in Eastbourne they didn't have that pressure... I thought, 'I love this.'\"",
+        es: "código de vestimenta"
+      },
+      "textiles": {
+        word: "textiles",
+        ipa: "/ˈtek.staɪlz/",
+        pos: "noun (plural)",
+        level: "B2",
+        time: "18:25",
+        turnId: "turn-38",
+        cat: "culture",
+        def: "Woven or knitted fabrics and cloth used to make clothing.",
+        quote: "Louie (18:25): \"I have a small textiles business here... just to learn business Vietnamese and understand the chain.\"",
+        es: "textiles / telas / tejidos"
+      },
+      "tailored": {
+        word: "tailored (clothes)",
+        ipa: "/ˈteɪ.ləd/",
+        pos: "adjective",
+        level: "B2",
+        time: "18:45",
+        turnId: "turn-38",
+        cat: "culture",
+        def: "Custom-made and fitted specifically to an individual's body measurements by a tailor.",
+        quote: "Louie (18:45): \"Because tailoring is so cheap and textiles are so cheap, everyone wears tailored clothes.\"",
+        es: "hecho a medida / de sastrería"
+      },
+      "counter": {
+        word: "counter (something)",
+        ipa: "/ˈkaʊn.tər/",
+        pos: "verb",
+        level: "C1",
+        time: "19:18",
+        turnId: "turn-38",
+        cat: "idioms",
+        def: "To act in opposition to a strict norm or expectation; to playfully subvert or push back against a convention.",
+        quote: "Louie (19:18): \"The Vietnamese men have a strict code of dressing. And so what I do is, I counter it—I take the textiles that the ladies make for their dresses and make them into shirts.\"",
+        es: "contrarrestar / ir a contracorriente de"
+      },
+      "outsider-art": {
+        word: "outsider art (Art Brut)",
+        ipa: "/ˌaʊtˈsaɪ.dər ɑːt/",
+        pos: "noun",
+        level: "C1",
+        time: "21:20",
+        turnId: "turn-42",
+        cat: "art",
+        def: "Art created outside the boundaries of official culture by self-taught artists, often with no intention of the public ever seeing it.",
+        quote: "Louie (21:27): \"Outsider art is when someone creates a body of work with no intention at all of the public seeing it. It's only for their eyes.\"",
+        es: "arte marginal / Art Brut"
+      },
+      "body-of-work": {
+        word: "body of work",
+        ipa: "/ˈbɒd.i əv wɜːk/",
+        pos: "noun phrase",
+        level: "C1",
+        time: "21:27",
+        turnId: "turn-42",
+        cat: "art",
+        def: "The complete collection of creative works (paintings, writings, music) produced by an artist over their lifetime.",
+        quote: "Louie (21:27): \"...when someone creates a huge body of work, and no one knew he did it until they went to throw his stuff in the bin after he died.\"",
+        es: "obra (conjunto de la obra de un artista)"
+      },
+      "sway": {
+        word: "sway (someone)",
+        ipa: "/sweɪ/",
+        pos: "verb",
+        level: "C1",
+        time: "21:50",
+        turnId: "turn-42",
+        cat: "idioms",
+        def: "To influence or bias someone's opinion before they have had a chance to make up their own mind.",
+        quote: "Louie (21:50): \"Maybe I should wait for my opinion for later on—I really don't want to sway you or put words in your mouth.\"",
+        es: "influenciar / condicionar la opinión de alguien"
+      },
+      "put-words-in-mouth": {
+        word: "put words in someone's mouth",
+        ipa: "/pʊt wɜːdz ɪn ˈsʌm.wʌnz maʊθ/",
+        pos: "idiom",
+        level: "C1",
+        time: "21:52",
+        turnId: "turn-42",
+        cat: "idioms",
+        def: "To suggest or claim that someone thinks or means something they haven't actually said themselves.",
+        quote: "Louie (21:52): \"I really don't want to sway you, to put words in your mouth or push the conversation in one way.\"",
+        es: "poner palabras en la boca de alguien"
+      },
+      "manuscripts": {
+        word: "manuscript",
+        ipa: "/ˈmæn.jə.skrɪpt/",
+        pos: "noun",
+        level: "B2",
+        time: "24:10",
+        turnId: "turn-44",
+        cat: "art",
+        def: "An author's original handwritten or typed text before (or without) publication.",
+        quote: "Louie (24:10): \"These are what his manuscripts look like. He would write thousands and thousands of pages—15,000 pages of stories.\"",
+        es: "manuscrito"
+      },
+      "do-it-justice": {
+        word: "do something justice",
+        ipa: "/duː ˈsʌm.θɪŋ ˈdʒʌs.tɪs/",
+        pos: "idiom",
+        level: "C1",
+        time: "25:02",
+        turnId: "turn-46",
+        cat: "idioms",
+        def: "To show, describe, or reproduce something in a way that fully captures its true beauty and quality.",
+        quote: "Louie (25:02): \"He illustrated them as well—amazing images. I'm sorry I can't do it justice.\"",
+        es: "hacerle justicia (a algo)"
+      },
+      "orphanage": {
+        word: "orphanage",
+        ipa: "/ˈɔː.fən.ɪdʒ/",
+        pos: "noun",
+        level: "B2",
+        time: "25:10",
+        turnId: "turn-46",
+        cat: "culture",
+        def: "A residential institution for the care and education of children who have lost their parents.",
+        quote: "Louie (25:10): \"The Vivian Girls are girls from an orphanage... he wasn't raised by his parents.\"",
+        es: "orfanato / hospicio"
+      },
+      "enslaved": {
+        word: "enslaved",
+        ipa: "/ɪnˈsleɪvd/",
+        pos: "adjective / participle",
+        level: "C1",
+        time: "25:45",
+        turnId: "turn-46",
+        cat: "culture",
+        def: "Forced into slavery; deprived of freedom and made to work under tyranny.",
+        quote: "Louie (25:45): \"They became his superheroes in a way, in a world where children are enslaved.\"",
+        es: "esclavizados/as"
+      },
+      "trace": {
+        word: "trace (an image)",
+        ipa: "/treɪs/",
+        pos: "verb",
+        level: "B2",
+        time: "28:55",
+        turnId: "turn-52",
+        cat: "art",
+        def: "To copy a drawing or picture by placing a sheet of paper over it and drawing along the visible lines.",
+        quote: "Louie (28:55): \"He traced the images.\" Marinela (31:13): \"When you say trace, it's like when this is a drawing, and I copy over it like that?\"",
+        es: "calcar (un dibujo o imagen)"
+      },
+      "methodology": {
+        word: "methodology",
+        ipa: "/ˌmeθ.əˈdɒl.ə.dʒi/",
+        pos: "noun",
+        level: "C1",
+        time: "29:25",
+        turnId: "turn-52",
+        cat: "art",
+        def: "A system of methods, techniques, and working practices used in a particular art or discipline.",
+        quote: "Louie (29:25): \"So his methodology of tracing and using other tools—I think he did it because he needed to organize this vast world in his head.\"",
+        es: "metodología / método de trabajo"
+      },
+      "idolize": {
+        word: "idolize",
+        ipa: "/ˈaɪ.də.laɪz/",
+        pos: "verb",
+        level: "C1",
+        time: "33:10",
+        turnId: "turn-56",
+        cat: "emotions",
+        def: "To admire, revere, or look up to someone as a hero or protector.",
+        quote: "Louie (33:10): \"Maybe he idolized the other children and maybe they helped him, so they became his saviors.\"",
+        es: "idolatrar / idealizar"
+      },
+      "speculation": {
+        word: "speculation",
+        ipa: "/ˌspek.jəˈleɪ.ʃən/",
+        pos: "noun",
+        level: "C1",
+        time: "33:25",
+        turnId: "turn-56",
+        cat: "art",
+        def: "Forming a theory or guess about why something happened without firm factual proof.",
+        quote: "Louie (33:25): \"But again, this is just speculation.\"",
+        es: "especulación / conjetura"
+      },
+      "shower-head": {
+        word: "showerhead",
+        ipa: "/ˈʃaʊə.hed/",
+        pos: "noun",
+        level: "B2",
+        time: "33:52",
+        turnId: "turn-57",
+        cat: "culture",
+        def: "The perforated nozzle in a shower that sprays water—often detachable on a hose like an old telephone receiver!",
+        quote: "Marinela (33:54): \"We didn't have a telephone at home... and I remember talking to them through the showerhead, and they were gypsies, two brothers!\"",
+        es: "alcachofa de la ducha (usada como teléfono de juguete)"
+      },
+      "folklore": {
+        word: "folklore",
+        ipa: "/ˈfəʊk.lɔːr/",
+        pos: "noun",
+        level: "C1",
+        time: "34:50",
+        turnId: "turn-58",
+        cat: "culture",
+        def: "The traditional beliefs, legends, customs, and stories of a community passed down through generations.",
+        quote: "Louie (34:50): \"In England, in folklore, they have magical abilities or mystic insight.\" Marinela: \"Yeah, it's in the folklore, you're right.\"",
+        es: "folclore / tradición popular"
+      },
+      "catalyst": {
+        word: "catalyst",
+        ipa: "/ˈkæt.əl.ɪst/",
+        pos: "noun",
+        level: "C1",
+        time: "36:35",
+        turnId: "turn-60",
+        cat: "art",
+        def: "A person, arrival, or event that sparks sudden change or action in a story or situation.",
+        quote: "Louie (36:35): \"How these characters interact and affect the behaviours of the townspeople—they're the catalyst.\"",
+        es: "catalizador / detonante (en una historia)"
+      },
+      "unorthodox": {
+        word: "unorthodox",
+        ipa: "/ʌnˈɔː.θə.dɒks/",
+        pos: "adjective",
+        level: "C2",
+        time: "36:40",
+        turnId: "turn-60",
+        cat: "culture",
+        def: "Contrary to what is usual, traditional, or accepted by mainstream society.",
+        quote: "Louie (36:40): \"Their knowledge, their adventures, and their unorthodox behaviours.\"",
+        es: "poco ortodoxo / fuera de lo convencional"
+      },
+      "on-the-verge-of": {
+        word: "on the verge of",
+        ipa: "/ɒn ðə vɜːdʒ ɒv/",
+        pos: "idiom",
+        level: "C1",
+        time: "36:47",
+        turnId: "turn-61",
+        cat: "idioms",
+        def: "Right on the border or edge between two states (for example, between what is legal and illegal).",
+        quote: "Marinela (36:47): \"Yeah, like on the verge of legal or illegal.\"",
+        es: "al borde de / en la frontera entre"
+      },
+      "ostracized": {
+        word: "ostracized",
+        ipa: "/ˈɒs.trə.saɪzd/",
+        pos: "adjective / participle",
+        level: "C2",
+        time: "37:48",
+        turnId: "turn-62",
+        cat: "culture",
+        def: "Excluded, shunned, or pushed out from mainstream society or a group.",
+        quote: "Louie (37:48): \"There was a time when they were heavily ostracized from society.\"",
+        es: "marginado / condenado al ostracismo / excluido"
+      },
+      "therapeutic": {
+        word: "therapeutic",
+        ipa: "/ˌθer.əˈpjuː.tɪk/",
+        pos: "adjective",
+        level: "C1",
+        time: "39:45",
+        turnId: "turn-64",
+        cat: "emotions",
+        def: "Having a healing, calming, and restorative effect on the mind and spirit.",
+        quote: "Louie (39:45): \"I'm just gonna write... and I feel amazing. It's therapeutic.\"",
+        es: "terapéutico / sanador"
+      },
+      "abyss": {
+        word: "the abyss",
+        ipa: "/ðə əˈbɪs/",
+        pos: "noun",
+        level: "C1",
+        time: "43:19",
+        turnId: "turn-71",
+        cat: "art",
+        def: "A deep, seemingly bottomless chasm or void; used figuratively for a thrilling moment of emotional vulnerability and uncertainty.",
+        quote: "Marinela (43:20): \"Like you are safe because you know you're not gonna jump, but you're looking at the abyss, thinking about what they are gonna say to you back.\"",
+        es: "el abismo"
+      },
+      "from-your-guts": {
+        word: "come from one's guts",
+        ipa: "/kʌm frɒm wʌnz ɡʌts/",
+        pos: "idiom",
+        level: "C1",
+        time: "44:01",
+        turnId: "turn-71",
+        cat: "idioms",
+        def: "To come from the deepest, rawest, most honest emotional core inside you (visceral truth).",
+        quote: "Marinela (44:01): \"When you share a poem or something that you wrote, it's you—especially poetry. It comes from your guts.\"",
+        es: "salir de las entrañas / de lo más profundo"
+      },
+      "daring": {
+        word: "daring / thrill-seeking",
+        ipa: "/ˈdeə.rɪŋ/",
+        pos: "adjective",
+        level: "C1",
+        time: "44:12",
+        turnId: "turn-72",
+        cat: "emotions",
+        def: "Adventurously bold and willing to take emotional or creative risks that others shy away from.",
+        quote: "Louie (44:12): \"It makes me feel that you're quite daring... thrill-seeking, because you're exposing yourself.\"",
+        es: "atrevida / audaz / amante del vértigo emocional"
+      },
+      "vistas": {
+        word: "vista",
+        ipa: "/ˈvɪs.tə/",
+        pos: "noun",
+        level: "C1",
+        time: "48:25",
+        turnId: "turn-76",
+        cat: "culture",
+        def: "A pleasing, sweeping view, especially seen through a long opening of mountains, valleys, or rivers.",
+        quote: "Louie (48:25): \"Being in Vietnam and seeing the different vistas hugely impacted me for about two years.\"",
+        es: "panorama / paisaje amplio / vista"
+      },
+      "monolithic": {
+        word: "monolithic",
+        ipa: "/ˌmɒn.əˈlɪθ.ɪk/",
+        pos: "adjective",
+        level: "C2",
+        time: "49:10",
+        turnId: "turn-76",
+        cat: "culture",
+        def: "Massive, towering, and appearing like a single giant block of stone or concrete against nature.",
+        quote: "Louie (49:10): \"I was driving through the mountains near Laos and there's this bridge, and it's monolithic.\"",
+        es: "monolítico / colosal / imponente"
+      }
+    };
+
+    // Helper for inline vocabulary highlights inside the transcript
+    function v(key, displayWord) {
+      const item = (typeof VOCAB_DB !== 'undefined' && VOCAB_DB[key]) ? VOCAB_DB[key] : null;
+      const label = displayWord || (item ? item.word : key);
+      return '<span class="vocab-mark" data-vkey="' + key + '" onclick="inspectVocab(\'' + key + '\')">' + label + '</span>';
+    }
+
+    // Helper for inline note-taker correction pill
+    function fixBadge(corrected, rawMistake) {
+      return '<span class="asr-fix-pill" title="Note-taker misheard \'' + corrected.replace(/'/g, "\\'") + '\' as \'' + rawMistake.replace(/'/g, "\\'") + '\'">✨ Fixed: "' + corrected + '" <span class="text-stone-400">(note-taker wrote: "' + rawMistake + '")</span></span>';
+    }
+
+    // -------------------------------------------------------------------------
+    // 2. COMPLETE CLEANED LESSON 02 TRANSCRIPT (00:00 TO 52:57)
+    // -------------------------------------------------------------------------
+    const TRANSCRIPT_TURNS = [
+      // CHAPTER I: CATCHING UP & DEFINING "DESENGAÑO" (00:00 - 05:27)
+      {
+        id: "turn-1",
+        chapterId: "chap-1",
+        chapterTitle: "Chapter I • Catching Up, University Job Meeting & Defining \"Desengaño\" (00:00 – 05:27)",
+        speaker: "Louie",
+        time: "00:00",
+        html: `Testing. Oh, hi, Marinela! ${fixBadge("Marinela", "Marilyn")} Hello—how are you today?`
+      },
+      {
+        id: "turn-2",
+        speaker: "Marinela",
+        time: "00:52",
+        html: `Hello! I'm fine. How are you?`
+      },
+      {
+        id: "turn-3",
+        speaker: "Louie",
+        time: "00:57",
+        html: `Yes, very good. I just want to make sure you can hear me okay. Yes, okay, good, good. So I was just checking my audio. And how has your week been?`
+      },
+      {
+        id: "turn-4",
+        speaker: "Marinela",
+        time: "01:17",
+        html: `Busy. I'm always busy! So, I've been teaching this morning, and I'm going to the hairdresser as soon as I finish this class.`
+      },
+      {
+        id: "turn-5",
+        speaker: "Marinela",
+        time: "01:34",
+        html: `And I'm trying to ${v("arrange", "arrange")} a meeting with one of the professors from the Master's for maybe a job position in the place where she's still working. Because she's moving—she's going to work just at the university now. So that's nice, but I don't know—tomorrow! Too many things.`
+      },
+      {
+        id: "turn-6",
+        speaker: "Louie",
+        time: "01:54",
+        html: `Okay, ${v("fair-enough", "fair enough")}. Well, today is a little bit about ${v("escapism", "escapism")}, and one of my favourite artists. First of all, I was wondering if you could try to describe this word for me in English. It is a Spanish word, so I don't quite ${v("grasp", "grasp")} the full concept, but I was wondering if you could try to describe it for me. Here we go.`
+      },
+      {
+        id: "turn-7",
+        speaker: "Marinela",
+        time: "02:29",
+        html: `Yeah, sure. Oof, in English! Um, yeah—it's when you are ${v("deceived", "deceived")}. Normally it's because it could be someone that you love, and they're not the person that you expected them to be. Or maybe a situation where you wanted something very much, but then once you get it, it's not what you expected. So you can feel that ${v("desengano", "desengaño")} ${fixBadge("desengaño", "Disengaño")}.`
+      },
+      {
+        id: "turn-8",
+        speaker: "Louie",
+        time: "03:21",
+        html: `So is there a little bit of ${v("regret", "regret")} involved?`
+      },
+      {
+        id: "turn-9",
+        speaker: "Marinela",
+        time: "03:26",
+        html: `Mm-hm. No, ${v("disappointment", "disappointment")}. Like deceived—you expected more than what you got; the result that you get is always less than you expected. So you feel disappointed.`
+      },
+      {
+        id: "turn-10",
+        speaker: "Louie",
+        time: "03:51",
+        html: `Sorry to interrupt—you said there is some kind of ${v("deception", "deception")} involved?`
+      },
+      {
+        id: "turn-11",
+        speaker: "Marinela",
+        time: "03:58",
+        html: `Yeah, yeah. But it's more—a disappointment is sad, whereas with this word, you can feel a bit of anger too, because of that disappointment.`
+      },
+      {
+        id: "turn-12",
+        speaker: "Louie",
+        time: "04:10",
+        html: `So is it ${v("betrayal", "betrayal")}? Is there betrayal?`
+      },
+      {
+        id: "turn-13",
+        speaker: "Marinela",
+        time: "04:13",
+        html: `No, no—that's another word. You feel disappointed and a bit angry too, like, "Oh, it was not what I expected," because my expectations were higher.`
+      },
+      {
+        id: "turn-14",
+        speaker: "Louie",
+        time: "04:32",
+        html: `Hmm. So angry not at the person, but angry at the situation?`
+      },
+      {
+        id: "turn-15",
+        speaker: "Marinela",
+        time: "04:39",
+        html: `Both—it can be both. You can feel that for the situation or when a person is involved. So you can have that feeling for somebody who is not the person that you thought they were, because maybe it was a betrayal, or they ${v("behind-your-back", "talked behind your back")} ${fixBadge("talked behind your back", "took at your back")}, or something like that. Like you didn't expect that person to behave like that with you, so you cannot trust them anymore.`
+      },
+      {
+        id: "turn-16",
+        speaker: "Louie",
+        time: "05:14",
+        html: `Hmm, interesting. This is a very complicated word, I think!`
+      },
+
+      // CHAPTER II: "VERGÜENZA AJENA" (SECONDHAND EMBARRASSMENT), THE INQUISITION & POLITE VIETNAMESE (05:28 - 14:40)
+      {
+        id: "turn-17",
+        chapterId: "chap-2",
+        chapterTitle: "Chapter II • \"Vergüenza Ajena\" (Secondhand Embarrassment), The Inquisition & Polite Vietnamese (05:28 – 14:40)",
+        speaker: "Louie",
+        time: "05:28",
+        html: `All right, thank you. I have one more Spanish expression for you—go ahead! (Also, I missed the 'v' in *vergüenza ajena*.)`
+      },
+      {
+        id: "turn-18",
+        speaker: "Marinela",
+        time: "05:39",
+        html: `Ooh, wow, that's a good one! Okay, that's a religious thing, and it's a social thing. It's when you feel embarrassed for a situation in itself. Because in Spain we live outdoors because of the weather, so we socialize a lot. Sometimes we can feel a kind of embarrassment for someone's action, or the clothes they wear, or the way they talk, or the way they behave.`
+      },
+      {
+        id: "turn-19",
+        speaker: "Marinela",
+        time: "06:28",
+        html: `So even if it's not your business, you can feel that for somebody who is doing an action. It's not even something related to you—it's something that they did, and it's not in your ${v("social-code", "social code")}.`
+      },
+      {
+        id: "turn-20",
+        speaker: "Louie",
+        time: "07:09",
+        html: `So they do something or they advertise something that's not in your values?`
+      },
+      {
+        id: "turn-21",
+        speaker: "Marinela",
+        time: "07:21",
+        html: `Yeah, but deep inside it has to do with religion, and probably with ${v("inquisition", "the Inquisition")}, because during the Inquisition you had to pretend that you were Catholic no matter what, even if you were not. So you had to be very careful about what you did, or what you said, or what you wore at that time, I guess. Because how else can you feel shame for somebody's action when you don't even know them? If it's a relative or a friend, it makes sense, but for a stranger, I don't know!`
+      },
+      {
+        id: "turn-22",
+        speaker: "Louie",
+        time: "08:15",
+        html: `That's a very interesting word. For the purpose of this warm-up, I purposely didn't read the explanation—I had no idea what the words were just so I could really play my part. But I just read here: in English, it's ${v("secondhand-embarrassment", "secondhand embarrassment")}.`
+      },
+      {
+        id: "turn-23",
+        speaker: "Marinela",
+        time: "08:39",
+        html: `Yeah! That's what it is. Because you're not the object of the action—you didn't even do anything—but you can feel that because you have a social code of behaviour or morality, and that person is not following it.`
+      },
+      {
+        id: "turn-24",
+        speaker: "Louie",
+        time: "08:59",
+        html: `Oh, okay! Something happened to me the other day. Someone wanted me to meet a person I didn't even know existed, and they were on their way without even telling me they were coming. They were an IELTS teacher—and in my ${v("anecdotal", "anecdotal")} experience, IELTS teachers can sometimes be a little bit arrogant ${fixBadge("arrogant / ambiguous", "ambigu")}.`
+      },
+      {
+        id: "turn-25",
+        speaker: "Louie",
+        time: "09:40",
+        html: `I'm in Vietnam, and I believe that you should at least try to learn Vietnamese, especially if you live here. This gentleman has lived in Vietnam for 13 years! I just ordered something in Vietnamese, and he said to me, "You do not speak like that in Vietnamese."`
+      },
+      {
+        id: "turn-26",
+        speaker: "Louie",
+        time: "10:08",
+        html: `I said, "Excuse me? I learned my Vietnamese from my girlfriend, from school, from textbooks, from my friends—because when I first came to Vietnam for the first two years, I didn't speak to anyone from the West. I only interacted with Vietnamese people." Being around Westerners in Vietnam is a new thing for me, because I've just moved to Hanoi for university, so it's ${v("different-animal", "a much different animal")} of a city.`
+      },
+      {
+        id: "turn-27",
+        speaker: "Louie",
+        time: "10:50",
+        html: `I asked him, "What's wrong?" And he said, "You just say the amount and 'beer', or the amount and 'coffee'!" I told him that's really ${v("impolite", "impolite")}. His argument was that I speak too politely in Vietnamese because I'm English. And I said, "Well, you're English! And you don't speak Vietnamese at all."`
+      },
+      {
+        id: "turn-28",
+        speaker: "Louie",
+        time: "11:45",
+        html: `He admitted that he expects people in England to speak English and to speak politely. And I told him that's ${v("hypocrisy", "hypocrisy")}—he does neither in a foreign country! Then I asked the owner of the place, "What is it like when I speak Vietnamese?" And the owner said, "You're very respectable and polite. It's normal—it's how we speak." I felt ${v("secondhand-embarrassment", "secondhand embarrassment")} from this gentleman because of the way he was speaking ${v("abruptly", "abruptly")} and ${v("die-on-a-hill", "dying on the hill")} of this conversation.`
+      },
+      {
+        id: "turn-29",
+        speaker: "Marinela",
+        time: "13:10",
+        html: `I was just thinking, for example, if you go to Mallorca or Benidorm—one of those places where some English tourists go and get drunk—and imagine they try to speak Spanish when they don't know how, and have no self-control. For you, it's ${v("ridiculous", "ridiculous")}. That idea of ridicule is that *vergüenza ajena*—*ajena* means belonging to the other. You feel the shame for the other person because they don't realize how ridiculous they look. There's no anger involved, really—you just feel embarrassed for them because they don't realize.`
+      },
+      {
+        id: "turn-30",
+        speaker: "Louie",
+        time: "14:15",
+        html: `Yes! That's exactly how I felt the other day—it's ${v("ignorance", "ignorance")}.`
+      },
+      {
+        id: "turn-31",
+        speaker: "Marinela",
+        time: "14:27",
+        html: `Yeah, and they don't care—they don't know.`
+      },
+
+      // CHAPTER III: TOURISTS IN SPAIN, EASTBOURNE'S FREEDOM OF DRESS & TAILORED SHIRTS IN VIETNAM (14:45 - 21:13)
+      {
+        id: "turn-32",
+        chapterId: "chap-3",
+        chapterTitle: "Chapter III • Tourists in Spain, Eastbourne's Freedom of Dress & Tailored Shirts in Vietnam (14:45 – 21:13)",
+        speaker: "Louie",
+        time: "14:45",
+        html: `My brother, who lives in Seville, speaks fluent Spanish—he ${v("give-it-ones-all", "gave it his all")}. And I had an ex-partner in England whose mother is Spanish and father is Italian, so she speaks fluent Spanish too. Even my sister, who goes on holiday to Spain once a year—she's actually right there now!—takes three Spanish classes a week.`
+      },
+      {
+        id: "turn-33",
+        speaker: "Marinela",
+        time: "15:26",
+        html: `Wow!`
+      },
+      {
+        id: "turn-34",
+        speaker: "Louie",
+        time: "15:27",
+        html: `So I'm shocked when English people go to Spain and behave like that. In fact, I'll be very honest: when I was younger, I wouldn't go to Spain—not because of Spanish culture, but because of other English people! I didn't know much about travelling at all, ${v("let-alone", "let alone")} to Spain, but I knew who was going from our country.`
+      },
+      {
+        id: "turn-35",
+        speaker: "Marinela",
+        time: "16:13",
+        html: `Just to some places! Because I have English students and they are very good students and nice people. Those are just ${v("tourist-resorts", "tourist resorts—touristy places")} ${fixBadge("tourist resorts", "tourist resources—resource. Places")}. If you talk to your brother in Seville and ask him about those foreigners who wear white socks with ${v("flip-flops", "flip-flops")}—when you see someone like that, you feel, "Oh my God, look at that, this is so ridiculous!" You feel that shame for them. It's silly, because it's my code, not their code.`
+      },
+      {
+        id: "turn-36",
+        speaker: "Louie",
+        time: "17:03",
+        html: `Why do you think they wear socks with sandals and flip-flops? I don't know either!`
+      },
+      {
+        id: "turn-37",
+        speaker: "Marinela",
+        time: "17:11",
+        html: `I don't know! The first time I went to England, it was a long, long time ago, at the beginning of the '90s, and I went to Eastbourne ${fixBadge("went to Eastbourne", "was too eastborn")}. My hometown in Spain is not very big, and back then there were not many people from abroad apart from tourists. I remember being in Eastbourne ${fixBadge("being in Eastbourne", "being an eastborn")} and seeing a group of older people wearing clothes with no idea of colour combination. And I was like, "Oh my God, I love that! They don't care about the clothes they wear!" Because coming from a small place in Spain, there was a strict ${v("dress-code", "dress code")} that you had to follow. In England they didn't have that pressure—they could combine colours or not, and everything was fine. And I thought, "I love this."`
+      },
+      {
+        id: "turn-38",
+        speaker: "Louie",
+        time: "18:15",
+        html: `Would you like me to tell you something? I love clothes, so I have a tiny ${v("textiles", "textiles")} project here—not to make money, just to learn business Vietnamese and understand the supply chain. Because tailoring and textiles are so cheap here, everyone wears ${v("tailored", "tailored")} clothes. To make this exact shirt I'm wearing costs $4, including labour! And because Vietnamese men have a strict code of dressing, what I do is ${v("counter", "counter")} it: I take the colourful textiles that the ladies use for their dresses, and I have them made into men's shirts.`
+      },
+      {
+        id: "turn-39",
+        speaker: "Marinela",
+        time: "19:26",
+        html: `Right! Oh, okay—I like that!`
+      },
+      {
+        id: "turn-40",
+        speaker: "Louie",
+        time: "19:35",
+        html: `I get complimented a lot! Except once, there's a 7-year-old girl named Hà—Con Hà ${fixBadge("Em Hà / Con Hà", "M-Ha—sorry, Con A")}—who came into my and my girlfriend's house to show us her new custom-made dress. And she looked at me, and I was wearing a shirt made from the exact same fabric as her dress! She was not impressed, as you can imagine. I never wore that shirt again—I put it into storage just for her! But my goal with wearing tailored Vietnamese trousers and those fabrics is to show through my clothes that I appreciate Vietnamese culture and want to be part of their society.`
+      },
+      {
+        id: "turn-41",
+        speaker: "Marinela",
+        time: "21:11",
+        html: `That's nice. That's very nice.`
+      },
+
+      // CHAPTER IV: OUTSIDER ART, HENRY DARGER'S "THE VIVIAN GIRLS" & TRACING THE WORLD IN ONE'S HEAD (21:14 - 33:27)
+      {
+        id: "turn-42",
+        chapterId: "chap-4",
+        chapterTitle: "Chapter IV • Outsider Art, Henry Darger's \"The Vivian Girls\" & Organizing an Inner World (21:14 – 33:27)",
+        speaker: "Louie",
+        time: "21:14",
+        html: `Now I would love to show you something. Have you ever heard of ${v("outsider-art", "outsider art")}? Outsider art is when someone creates a ${v("body-of-work", "body of work")} with no intention at all of the public seeing it—it's only for their eyes. I'll wait to share my opinion later on because I really don't want to ${v("sway", "sway")} you or ${v("put-words-in-mouth", "put words in your mouth")}. This gentleman made a huge body of work, and no one knew he did it until they went to throw his stuff in the bin after he died.`
+      },
+      {
+        id: "turn-43",
+        speaker: "Marinela",
+        time: "23:37",
+        html: `How do you spell his name? Henry...?`
+      },
+      {
+        id: "turn-44",
+        speaker: "Louie",
+        time: "23:38",
+        html: `Henry Darger—H-E-N-R-Y D-A-R-G-E-R ${fixBadge("Henry Darger", "Henry Dagger / Out Dagger")}. He made a complete fantasy world in his head called *The Vivian Girls*. This is the room where they found everything, and these are what his ${v("manuscripts", "manuscripts")} look like. He wrote 15,000 pages of stories.`
+      },
+      {
+        id: "turn-45",
+        speaker: "Marinela",
+        time: "23:56",
+        html: `Oh, wow. Beautiful! Oh, my God—he did that?`
+      },
+      {
+        id: "turn-46",
+        speaker: "Louie",
+        time: "24:55",
+        html: `Yes! He illustrated them as well—amazing images. I'm sorry I can't ${v("do-it-justice", "do it justice")} on screen, but this is already in your lesson notes so you'll have all the images after class. The Vivian Girls are girls from an ${v("orphanage", "orphanage")}. He wasn't raised by his parents—he grew up in a Catholic institution—and so he dreamed of an army of little girls who would save him and save the world. They became his superheroes in a world where children are ${v("enslaved", "enslaved")}. What do you think about this concept of outsider art ${fixBadge("outsider art", "outside are")}?`
+      },
+      {
+        id: "turn-47",
+        speaker: "Marinela",
+        time: "27:13",
+        html: `Being a work that you don't show to others? This is difficult for me, because I need to share what I do! That's the main object of my art. I sing and do things like that, and I need to share it. Sometimes I just record things and send them to friends, and I tell them, "You can erase it, I just needed to practice."`
+      },
+      {
+        id: "turn-48",
+        speaker: "Louie",
+        time: "27:41",
+        html: `Because singing is a performance—when you sing or play an instrument, the sound is out of your body. Do you know what I mean?`
+      },
+      {
+        id: "turn-49",
+        speaker: "Marinela",
+        time: "27:54",
+        html: `Yes—when you play an instrument or sing, the sound is out of you.`
+      },
+      {
+        id: "turn-50",
+        speaker: "Louie",
+        time: "28:05",
+        html: `No one knows why Henry Darger did this, because no one ever talked to him about it. Why do you think he did this?`
+      },
+      {
+        id: "turn-51",
+        speaker: "Marinela",
+        time: "28:17",
+        html: `Because it was his way of escaping from reality, and he needed to create that place—that world—around him. I wish I could do it! I can't draw.`
+      },
+      {
+        id: "turn-52",
+        speaker: "Louie",
+        time: "28:32",
+        html: `Oh! I should tell you how he did it: he had no formal training at all. In the analysis, they found that he ${v("trace", "traced")} the images. He would find things he liked in real life—comics, magazines, colouring books—and trace over them to bring them into his art. And looking at his ${v("methodology", "methodology")} of tracing, I think he did it because he had this vast world of adventures and characters in his head, and he needed to organize it for himself. When a story is only in your head, you can lose track of the chain of events; as you put it on paper, the logical steps take place and the story builds itself.`
+      },
+      {
+        id: "turn-53",
+        speaker: "Marinela",
+        time: "31:13",
+        html: `When you say "trace," it's like when there is a drawing underneath and I copy over the lines like that?`
+      },
+      {
+        id: "turn-54",
+        speaker: "Louie",
+        time: "31:19",
+        html: `Yes, exactly!`
+      },
+      {
+        id: "turn-55",
+        speaker: "Marinela",
+        time: "31:23",
+        html: `Okay! Well, I remember once—the only time I wrote a complete short story—I started writing it without stopping. And it was as if I didn't write it myself; it was as if I were connected to some source, and I wrote it from the beginning to the end, and then I almost didn't change anything! It only happened to me once. So maybe that world really existed in his mind, and he had to put it on paper, as you said, to organize it—or to live with it, to have them as friends in a way.`
+      },
+      {
+        id: "turn-56",
+        speaker: "Louie",
+        time: "32:26",
+        html: `Because he grew up in an orphanage lacking his mother's love and his father's direction, maybe he ${v("idolize", "idolized")} the other children and they became his saviors in a way. Again, that's just ${v("speculation", "speculation")}.`
+      },
+
+      // CHAPTER V: CHILDHOOD IMAGINARY FRIENDS THROUGH THE SHOWERHEAD, GYPSY FOLKLORE & WRITING AS A MENTAL SANCTUARY (33:28 - 40:09)
+      {
+        id: "turn-57",
+        chapterId: "chap-5",
+        chapterTitle: "Chapter V • Imaginary Friends Through the Showerhead, Gypsy Folklore & Writing at 3 A.M. (33:28 – 40:09)",
+        speaker: "Marinela",
+        time: "33:28",
+        html: `When I was very little, before my brother was born in 1978, I had two invisible, imaginary friends ${fixBadge("invisible friends", "individual friends")}. In the late '70s we didn't have a telephone at home because it wasn't that common yet, and I remember talking to them through the ${v("shower-head", "showerhead")}! And they were gypsies—don't ask me why!—two gypsy brothers. I talked to them for a long time, and for me it was real. Then one day they disappeared, probably when my brother was born.`
+      },
+      {
+        id: "turn-58",
+        speaker: "Louie",
+        time: "34:32",
+        html: `You know, that's fascinating—two gypsy brothers as your imaginary friends ${fixBadge("imaginary friends", "advisory friends")}! Do gypsies have the same connotation in Spain as in England? In English ${v("folklore", "folklore")}, they're associated with magical abilities, spells, mystic insight, or fortune-telling.`
+      },
+      {
+        id: "turn-59",
+        speaker: "Marinela",
+        time: "35:13",
+        html: `Yes! In Seville, for example, when you go to touristy places, there are gypsy women with rosemary who offer to read your hand ${fixBadge("read your hand", "Read the hair—their hand")} for free, and then they want to charge you! So yeah, it's in the folklore, you're right—though for me they were just two boys.`
+      },
+      {
+        id: "turn-60",
+        speaker: "Louie",
+        time: "35:35",
+        html: `I always picture travellers going from town to town by coach, having strange adventures. I love that as a premise in stories: how this exotic family comes into a town and acts as a ${v("catalyst", "catalyst")} affecting the townspeople with their knowledge, adventures, and ${v("unorthodox", "unorthodox")} behaviours.`
+      },
+      {
+        id: "turn-61",
+        speaker: "Marinela",
+        time: "36:47",
+        html: `Yeah, like ${v("on-the-verge-of", "on the verge of")} legal or illegal! While in England or Ireland gypsies are seen as people moving from one place to another, in Spain they used to be like that ${fixBadge("In Spain they used to be", "Spenda used to be")}, but not anymore. They are a deep part of our culture because of flamenco and the culture of the South. By the time I was born, they lived in apartment buildings alongside other people. They always had their own rules and are still outsiders in a way, but they are much more integrated into the culture than in England.`
+      },
+      {
+        id: "turn-62",
+        speaker: "Louie",
+        time: "37:34",
+        html: `In England they still travel and have their sites. There was a time when they were heavily ${v("ostracized", "ostracized")} from society. Today local communities want the children to go to school and integrate, though the travelling community values mobility and keeping their core identity.`
+      },
+      {
+        id: "turn-63",
+        speaker: "Louie",
+        time: "38:47",
+        html: `Going back to having a place of one's own—I don't feel I have a physical place that is mine, but I have a space in my head. I love to write. Last night I only slept two hours, and I got to a point where I said, "I can't sleep, I'm just going to write." And I felt amazing! It's ${v("therapeutic", "therapeutic")}. That is my place. Do you have anything like that artistically?`
+      },
+
+      // CHAPTER VI: FEELING AT HOME ON STAGE, THE ABYSS OF SHARING POETRY & REORGANIZING OUR WORLD (40:10 - 52:57)
+      {
+        id: "turn-64",
+        chapterId: "chap-6",
+        chapterTitle: "Chapter VI • Feeling at Home on Stage, Sharing Poetry at the Edge of the Abyss & Commercial Pressure (40:10 – 52:57)",
+        speaker: "Marinela",
+        time: "40:10",
+        html: `Yesterday on Instagram I posted a quote that said: *"If you can sit alone in a foreign country ${fixBadge("sit alone in a foreign country", "see the lawn in a foreign country")} and feel completely at peace, you've found something that most people will never find: a home within yourself."* And someone else said that your home is the place from which you don't try to escape anymore. I would say that when I am on stage and I sing, or when I am doing theatre, I don't care where I am—whether it's Spain or another place—I feel at home. My mind stops!`
+      },
+      {
+        id: "turn-65",
+        speaker: "Louie",
+        time: "41:15",
+        html: `Is it both singing and acting?`
+      },
+      {
+        id: "turn-66",
+        speaker: "Marinela",
+        time: "41:19",
+        html: `Acting too, but singing is even better for me because it's what I love most.`
+      },
+      {
+        id: "turn-67",
+        speaker: "Louie",
+        time: "41:25",
+        html: `Earlier you mentioned that you enjoy sharing your work with other people. What is that feeling you have when you share something you've created with someone?`
+      },
+      {
+        id: "turn-68",
+        speaker: "Marinela",
+        time: "42:09",
+        html: `For example, sometimes I write poetry—though I have to be in a special mood. When I like what I wrote, I send it to a trusted friend who has the sensibility and knowledge to analyze it honestly and tell me, "Okay, that's a good poem," or "That's rubbish!"`
+      },
+      {
+        id: "turn-69",
+        speaker: "Louie",
+        time: "42:58",
+        html: `And what is the emotion you feel in that moment when you share it?`
+      },
+      {
+        id: "turn-70",
+        speaker: "Marinela",
+        time: "43:09",
+        html: `It's like when you are standing at the top of a high place and looking down into... how do you say?`
+      },
+      {
+        id: "turn-71",
+        speaker: "Louie",
+        time: "43:19",
+        html: `The ${v("abyss", "abyss")}?`
+      },
+      {
+        id: "turn-72",
+        speaker: "Marinela",
+        time: "43:20",
+        html: `The ${v("abyss", "abyss")}! Yeah, kind of like that. You are safe because you know you're not going to jump, but you're looking into the abyss, wondering what the next step will be or what they're going to say back to you. Because when you're acting or singing, there is a character or the music between you and the audience. But when you share a poem that you wrote, there's nothing to hide behind—it's you. Especially poetry: it ${v("from-your-guts", "comes from your guts")}.`
+      },
+      {
+        id: "turn-73",
+        speaker: "Louie",
+        time: "44:03",
+        html: `Hearing your view on that makes me feel that you're quite ${v("daring", "daring")}—almost thrill-seeking! Because it's such a revealing act, exposing yourself to someone whose opinion you value.`
+      },
+      {
+        id: "turn-74",
+        speaker: "Marinela",
+        time: "45:02",
+        html: `Yeah, because if I don't value their opinion, I don't share it. With people that I care about, it's a different feeling because I—or the poem—can be rejected somehow, but I'm going to learn from it.`
+      },
+      {
+        id: "turn-75",
+        speaker: "Louie",
+        time: "45:37",
+        html: `It's very brave! And imagine how wonderful it feels when your artistic work is truly understood by them. You know, I have learned something new today. I always keep my writing to myself, but I am going to do what you do—I'm going to think about sharing something!`
+      },
+      {
+        id: "turn-76",
+        speaker: "Louie",
+        time: "46:25",
+        html: `I realized that whenever I write a new story or poem, it's me reorganizing my world after a change or a new visual stimulus. For instance, seeing the mountain ${v("vistas", "vistas")} in Vietnam hugely impacted me. Once, I was driving my motorbike through the mountains near Laos and crossed a ${v("monolithic", "monolithic")} bridge over a huge river toward an unlocked hydroelectric plant—literal translation: "the power machine house of water." The security guard let me look around, and I followed a river trail where there were no shops at all, trading money for food directly with families living in isolated houses in the middle of nowhere. All of those adventures fed into my imagination, and writing them down was my way of organizing my world.`
+      },
+      {
+        id: "turn-77",
+        speaker: "Marinela",
+        time: "51:07",
+        html: `That's so true. I never thought about it like that, but it is true—it's organizing your mind to give it meaning and put everything in the right place. I like it!`
+      },
+      {
+        id: "turn-78",
+        speaker: "Louie",
+        time: "51:40",
+        html: `And one last thought on Henry Darger ${fixBadge("Henry Darger", "Henry Daga")} and outsider art: because he never showed anyone, there was zero commercial pressure. I always tell my friends in England, "Your project is not just what you want to do, but what you can make and finish—you have to get it out the door." When you're selling or publishing art, there's always that external pressure.`
+      },
+      {
+        id: "turn-79",
+        speaker: "Marinela",
+        time: "52:36",
+        html: `Yeah! Okay, let's talk about that next time!`
+      },
+      {
+        id: "turn-80",
+        speaker: "Louie",
+        time: "52:38",
+        html: `Exactly, we'll talk about that next time! Thank you very much, Marinela. I'll let you go to the hairdresser, get these notes typed up for you, and see you next week. Take care!`
+      },
+      {
+        id: "turn-81",
+        speaker: "Marinela",
+        time: "52:41",
+        html: `Thank you, Louie ${fixBadge("Louie", "Mira")}! Take care, bye-bye!`
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 3. MARINELA'S NATURAL STRENGTHS IN LESSON 02 (6 ITEMS)
+    // -------------------------------------------------------------------------
+    const STUDENT_STRENGTHS = [
+      {
+        time: "02:49",
+        phrase: "\"not the person that you expected them to be\"",
+        note: "Complex, completely natural English object-infinitive structure to explain 'desengaño'."
+      },
+      {
+        time: "08:51",
+        phrase: "\"a social code of behaviour or morality\"",
+        note: "Precise sociological phrasing to explain why 'vergüenza ajena' happens in tight-knit communities."
+      },
+      {
+        time: "17:50",
+        phrase: "\"no idea of colour combination\"",
+        note: "Natural collocation describing eccentric British outfits in Eastbourne in the early 1990s."
+      },
+      {
+        time: "28:17",
+        phrase: "\"his way of escaping from reality\"",
+        note: "Clear, idiomatic explanation of Henry Darger's psychological motivation."
+      },
+      {
+        time: "36:47",
+        phrase: "\"on the verge of legal or illegal\"",
+        note: "Advanced C1 idiom ('on the verge of') used effortlessly in spontaneous conversation!"
+      },
+      {
+        time: "44:01",
+        phrase: "\"Especially poetry—it comes from your guts.\"",
+        note: "Vivid, visceral English idiom capturing emotional honesty when sharing personal writing."
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 4. GENTLE PHRASING REFINEMENTS FROM LESSON 02 (6 ITEMS)
+    // -------------------------------------------------------------------------
+    const GENTLE_POLISHES = [
+      {
+        time: "05:00",
+        topic: "Idiom for Secret Criticism",
+        said: "Maybe it was a betrayal, or took at your back.",
+        natural: "Maybe it was a betrayal, or they talked behind your back.",
+        why: "In Spanish we say 'hablar a tus espaldas'. In English, the exact idiom is 'to talk behind someone's back' (or 'go behind someone's back')."
+      },
+      {
+        time: "16:20",
+        topic: "Tourist Towns & 'Touristy'",
+        said: "I think these are tourist resources... touristic places.",
+        natural: "I think these are tourist resorts—touristy places.",
+        why: "For places like Benidorm or Magaluf, native speakers say 'tourist resorts' or 'touristy places' (whereas 'touristic' is rarely used by native UK speakers)."
+      },
+      {
+        time: "17:15",
+        topic: "Movement ('Went to') vs. Location ('In')",
+        said: "The first time I went to England, I was to Eastbourne.",
+        natural: "The first time I went to England, I went to Eastbourne.",
+        why: "Use 'I went to Eastbourne' (movement) or 'I was in Eastbourne / I stayed in Eastbourne' (location)."
+      },
+      {
+        time: "31:48",
+        topic: "Preposition + Gerund (-ing)",
+        said: "I started writing it without stop.",
+        natural: "I started writing it without stopping (or: non-stop).",
+        why: "After a preposition like 'without', English always uses the '-ing' form ('without stopping'), or the adverb 'non-stop'."
+      },
+      {
+        time: "33:39",
+        topic: "'Remember + -ing' for Childhood Memories",
+        said: "I remember to talk to them through the showerhead.",
+        natural: "I remember talking to them through the showerhead.",
+        why: "'Remember + -ing' ('remember talking') looks back at a real memory in the past, whereas 'remember to do' is for a future task (like 'remember to lock the door')."
+      },
+      {
+        time: "45:25",
+        topic: "Preposition with 'Care About'",
+        said: "With people that I care, it's a different feeling.",
+        natural: "With people that I care about, it's a different feeling.",
+        why: "When 'care' means feeling affection or valuing someone, keep the preposition 'about' at the end of the relative clause ('people that I care about')."
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 5. AUTOMATED NOTE-TAKER SPELLING FIXES IN LESSON 02 (15 ITEMS)
+    // -------------------------------------------------------------------------
+    const ASR_FIXES = [
+      {
+        time: "00:04",
+        speaker: "Louie",
+        wrong: "Oh, hi, Marilyn.",
+        right: "Oh, hi, Marinela.",
+        note: "The automated speech-to-text substituted 'Marilyn' for 'Marinela' throughout the whole transcript!"
+      },
+      {
+        time: "03:18",
+        speaker: "Marinela",
+        wrong: "So you can feel that a Disengaño.",
+        right: "So you can feel that desengaño.",
+        note: "Fixed the Spanish spelling of 'desengaño' (disillusionment / bitter awakening)."
+      },
+      {
+        time: "05:00",
+        speaker: "Marinela",
+        wrong: "or took at your back",
+        right: "or talked behind your back",
+        note: "The note-taker misheard 'talked' as 'took'."
+      },
+      {
+        time: "09:30",
+        speaker: "Louie",
+        wrong: "they can be a little bit ambigu.",
+        right: "they can be a little bit arrogant.",
+        note: "The speech-to-text clipped the adjective at the end of the sentence."
+      },
+      {
+        time: "16:20",
+        speaker: "Marinela",
+        wrong: "tourist resources—resource. Places.",
+        right: "tourist resorts—resort places.",
+        note: "When you were thinking of the word 'resort' for places like Benidorm, the note-taker wrote 'resources'."
+      },
+      {
+        time: "17:15",
+        speaker: "Marinela",
+        wrong: "I was too eastborn... being an eastborn",
+        right: "I went to Eastbourne... being in Eastbourne",
+        note: "Classic speech-to-text error! It turned the English coastal town of Eastbourne into 'too eastborn' and 'an eastborn'."
+      },
+      {
+        time: "19:38",
+        speaker: "Louie",
+        wrong: "M-Ha—sorry, Con A. I can't call her M.",
+        right: "Em Hà—sorry, Con Hà. I can't call her Em.",
+        note: "Louie was explaining Vietnamese pronouns ('Em' for a slightly older girl vs. 'Con' for a 7-year-old child named Hà)."
+      },
+      {
+        time: "22:40",
+        speaker: "Louie",
+        wrong: "Henry Dagger / Out Dagger / Henry Daga",
+        right: "Henry Darger (1892–1973)",
+        note: "The note-taker spelled the American outsider artist Henry Darger three different ways ('Dagger', 'Out Dagger', and 'Daga')."
+      },
+      {
+        time: "27:05",
+        speaker: "Louie",
+        wrong: "this concept of outside are",
+        right: "this concept of outsider art",
+        note: "Misheard 'outsider art' as 'outside are'."
+      },
+      {
+        time: "33:35",
+        speaker: "Marinela",
+        wrong: "I have two individual friends.",
+        right: "I had two invisible (imaginary) friends.",
+        note: "You were describing your two childhood imaginary friends before your brother was born!"
+      },
+      {
+        time: "34:35",
+        speaker: "Louie",
+        wrong: "two brothers: your advisory friends.",
+        right: "two brothers: your imaginary friends.",
+        note: "The note-taker turned 'imaginary friends' into 'advisory friends'!"
+      },
+      {
+        time: "35:20",
+        speaker: "Marinela",
+        wrong: "they tell you to read the hair—their hand",
+        right: "they tell you to read your hand (palm reading)",
+        note: "Describing gypsy fortune-tellers in Seville offering to read tourists' palms."
+      },
+      {
+        time: "37:00",
+        speaker: "Marinela",
+        wrong: "Spenda used to be like that, but not anymore.",
+        right: "In Spain they used to be like that, but not anymore.",
+        note: "The note-taker merged 'In Spain they' into a made-up name 'Spenda'."
+      },
+      {
+        time: "40:10",
+        speaker: "Marinela",
+        wrong: "If you can see the lawn in a foreign country and feel completely at peace",
+        right: "If you can sit alone in a foreign country and feel completely at peace",
+        note: "Funny homophone! Your beautiful Instagram quote was 'If you can sit alone in a foreign country', which the AI heard as 'see the lawn'!"
+      },
+      {
+        time: "52:41",
+        speaker: "Marinela",
+        wrong: "Thank you, Mira.",
+        right: "Thank you, Louie.",
+        note: "Sorted out the closing goodbye at the end of class."
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 6. CULTURAL & ARTISTIC THREADS CARDS (4 CARDS)
+    // -------------------------------------------------------------------------
+    const CULTURAL_PLACES = [
+      {
+        meta: "02:15 – 14:40 • Spanish Soul Words & History",
+        badge: "Linguistic Anthropology",
+        title: "1. Desengaño, Vergüenza Ajena & The Inquisition's Shadow",
+        desc: "You explained two Spanish expressions that have no single-word equivalent in English: 'desengaño' (when a person or dream turns out to be far less than you believed, mixing disappointment with anger) and 'vergüenza ajena' (secondhand embarrassment). You connected 'vergüenza ajena' to Spain's outdoor street life and the historical legacy of the Inquisition, when everyone had to police their outward appearance and conform to a strict religious and social code.",
+        quote: "\"Deep inside it has to do with religion and probably with the Inquisition... because you have a social code of behaviour or morality, and you feel embarrassed for them because they don't realize.\""
+      },
+      {
+        meta: "16:13 – 21:13 • Eastbourne, UK & Vietnam",
+        badge: "Dress Codes & Freedom",
+        title: "2. Eastbourne in the Early '90s vs. Tailored Shirts in Vietnam",
+        desc: "Coming from a smaller Spanish town with strong pressure to follow a dress code, you vividly remembered visiting Eastbourne in the early 1990s and loving how older British people combined colours however they pleased without caring what anyone thought. Louie shared how he counters Vietnam's strict men's dress code by having $4 tailored shirts made from colourful women's dress textiles—until 7-year-old Con Hà showed up wearing the exact same dress!",
+        quote: "\"I remember being in Eastbourne and seeing a group of older people wearing clothes with no idea of colour combination... I love that because you don't have that pressure on you.\""
+      },
+      {
+        meta: "21:14 – 33:27 • Chicago & Childhood Imagination",
+        badge: "Outsider Art",
+        title: "3. Henry Darger's The Vivian Girls & Organizing an Inner World",
+        desc: "We explored the life of Henry Darger (1892–1973), who grew up in a Catholic institution and secretly wrote 15,000 pages and painted hundreds of traced watercolour scrolls about 'The Vivian Girls'. You connected his creative compulsion to the one time you wrote a complete short story non-stop as if channeling a source—and to your childhood imaginary friends (two gypsy brothers you spoke to through the showerhead before your brother was born in 1978).",
+        quote: "\"Maybe that really existed in his mind, and he had to put it on paper, as you said, to organize it—or to live with it, to have them as friends in a way.\""
+      },
+      {
+        meta: "40:10 – 52:57 • Stage, Poetry & Laos Mountains",
+        badge: "Artistic Sanctuary",
+        title: "4. Feeling at Home on Stage & Looking into the Abyss of Poetry",
+        desc: "While Louie finds his mental sanctuary in late-night writing—reorganizing his world after experiences like riding his motorbike across a monolithic bridge near Laos—you feel most 'at home' when singing or acting on stage, where your mind completely stops. And when you share personal poetry with a trusted friend, there is no character or music to hide behind: it feels like standing safely on a cliff and looking down into the abyss.",
+        quote: "\"When you share a poem or something that you wrote, it's you—especially poetry, it comes from your guts... You are safe because you know you're not gonna jump, but you're looking at the abyss.\""
+      }
+    ];
+
+    // -------------------------------------------------------------------------
+    // 7. FLASHCARDS & QUIZ DATA
+    // -------------------------------------------------------------------------
+    const FLASHCARD_KEYS = [
+      "escapism",
+      "desengano",
+      "secondhand-embarrassment",
+      "hypocrisy",
+      "die-on-a-hill",
+      "let-alone",
+      "outsider-art",
+      "do-it-justice",
+      "trace",
+      "on-the-verge-of",
+      "abyss",
+      "from-your-guts"
+    ];
+
+    const QUIZ_QUESTIONS = [
+      {
+        q: "1. When someone behaves foolishly in public without realizing it—like wearing white socks with flip-flops or being loudly rude—you might feel ________ on their behalf.",
+        options: ["secondhand embarrassment", "speculation", "methodology"],
+        correct: 0,
+        explain: "'Secondhand embarrassment' is the exact English equivalent of Spanish 'vergüenza ajena'."
+      },
+      {
+        q: "2. The English teacher in Vietnam expected foreigners in England to speak polite English, yet refused to learn polite Vietnamese after 13 years. Louie called this ________.",
+        options: ["folklore", "hypocrisy", "escapism"],
+        correct: 1,
+        explain: "'Hypocrisy' (hipocresía) is demanding moral or social standards from others that you refuse to follow yourself."
+      },
+      {
+        q: "3. When I was younger, I didn't know much about travelling at all, ________ travelling to Spain.",
+        options: ["let alone", "fair enough", "on the verge of"],
+        correct: 0,
+        explain: "'Let alone' (y mucho menos) emphasizes that if the first thing is unlikely, the second thing is even less likely."
+      },
+      {
+        q: "4. Because Henry Darger had no formal art training, he used carbon paper to ________ figures from comic strips and colouring books.",
+        options: ["sway", "ostracize", "trace"],
+        correct: 2,
+        explain: "To 'trace' (calcar) is to copy the lines of an image by drawing over it through another sheet of paper."
+      },
+      {
+        q: "5. Sharing a deeply personal poem with a friend whose opinion you value feels like standing at the top of a cliff and looking down into the ________.",
+        options: ["abyss", "vista", "showerhead"],
+        correct: 0,
+        explain: "In your wonderful metaphor at 43:20, you compared sharing personal poetry to looking down into 'the abyss' (el abismo)."
+      },
+      {
+        q: "6. Unlike singing or acting, where there is music or a character between you and the audience, poetry is raw and personal—it ________.",
+        options: ["dies on a hill", "comes from your guts", "puts words in your mouth"],
+        correct: 1,
+        explain: "As you said at 44:01, 'Especially poetry—it comes from your guts' (sale de las entrañas)."
+      }
+    ];
+
+    // =========================================================================
+    // CORE APPLICATION ENGINE
+    // =========================================================================
+    let currentVocabCat = 'all';
+    let currentCardIndex = 0;
+    let isCardFlipped = false;
+    let quizAnswered = new Set();
+    let speechRate = 1.0;
+
+    function renderTranscript() {
+      const container = document.getElementById('transcript-stream-container');
+      const searchVal = (document.getElementById('transcript-search')?.value || '').toLowerCase().trim();
+      const speakerFilter = document.getElementById('speaker-filter')?.value || 'all';
+
+      let html = '';
+      TRANSCRIPT_TURNS.forEach(turn => {
+        if (turn.chapterTitle && speakerFilter === 'all' && !searchVal) {
+          html += `
+            <div id="${turn.chapterId}" class="pt-3 pb-1">
+              <div class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-sage-100/90 via-parchment-100 to-autumn-50 border border-sage-200 flex items-center gap-2 text-xs sm:text-sm font-serif font-bold text-sage-800 shadow-sm">
+                <span>${turn.chapterTitle}</span>
+              </div>
+            </div>
+          `;
+        }
+        if (speakerFilter !== 'all' && turn.speaker !== speakerFilter) return;
+        const plainText = turn.html.replace(/<[^>]+>/g, '').toLowerCase();
+        if (searchVal && !plainText.includes(searchVal) && !turn.time.includes(searchVal)) return;
+
+        const isStudent = turn.speaker === 'Marinela';
+        const cardStyle = isStudent
+          ? 'bg-[#fffdf9] border-l-4 border-l-autumn-500 border border-[#e6decb]'
+          : 'bg-[#f8faf8] border-l-4 border-l-sage-600 border border-[#d8e4dc]';
+        const badgeStyle = isStudent
+          ? 'bg-autumn-100 text-autumn-800 border-autumn-200'
+          : 'bg-sage-100 text-sage-800 border-sage-200';
+
+        html += `
+          <article id="${turn.id}" class="rounded-2xl p-4 sm:p-5 ${cardStyle} shadow-sm transition-all duration-300 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold border ${badgeStyle}">
+                  ${isStudent ? '🌸 Marinela' : '🍂 Louie'}
+                </span>
+                <span class="font-mono text-xs text-stone-500">🕒 ${turn.time}</span>
+              </div>
+              <button onclick="speakPlainTurn('${turn.id}')" class="text-stone-400 hover:text-sage-700 transition p-1 rounded-lg" title="Listen to this line">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+            <div class="text-sm sm:text-[15px] text-slatewarm-800 leading-relaxed">${turn.html}</div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+      if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+      if (typeof tippy === 'function') initVocabTooltips();
+    }
+
+    function initVocabTooltips() {
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        const key = el.getAttribute('data-vkey');
+        const item = VOCAB_DB[key];
+        if (!item) return;
+        if (el._tippy) el._tippy.destroy();
+        tippy(el, {
+          theme: 'autumn-sanctuary',
+          allowHTML: true,
+          interactive: true,
+          animation: 'shift-away',
+          maxWidth: 320,
+          content: `
+            <div class="p-2.5 space-y-2 text-left">
+              <div class="flex items-center justify-between gap-2 border-b border-parchment-200 pb-1.5">
+                <div>
+                  <span class="font-serif font-bold text-base text-slatewarm-900">${item.word}</span>
+                  <span class="block font-mono text-[10px] text-stone-500">${item.ipa} • ${item.pos}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="px-1.5 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[10px] font-bold">${item.level}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[10px]">🕒 ${item.time}</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-700 leading-snug">${item.def}</p>
+              <div class="flex items-center justify-between pt-1 text-[11px] border-t border-parchment-200">
+                <span class="text-sage-800 font-semibold">🇪🇸 ${item.es}</span>
+                <button onclick="speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded bg-sage-700 text-white text-[10px] font-semibold">🔊 Listen</button>
+              </div>
+            </div>
+          `
+        });
+      });
+    }
+
+    function inspectVocab(key) {
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('insp-time').textContent = '🕒 ' + item.time;
+      document.getElementById('insp-word').textContent = item.word;
+      document.getElementById('insp-ipa').textContent = item.ipa;
+      document.getElementById('insp-pos').textContent = item.pos;
+      document.getElementById('insp-level').textContent = item.level;
+      document.getElementById('insp-def').textContent = item.def;
+      document.getElementById('insp-quote').textContent = item.quote;
+      document.getElementById('insp-es').textContent = item.es;
+      const cleanWord = item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'");
+      document.getElementById('insp-audio-btn').setAttribute('onclick', "speakWord('" + cleanWord + "')");
+
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        el.classList.toggle('active-vocab', el.getAttribute('data-vkey') === key);
+      });
+    }
+
+    function setVocabCategory(cat) {
+      currentVocabCat = cat;
+      ['all', 'emotions', 'art', 'culture', 'idioms'].forEach(c => {
+        const btn = document.getElementById('vcat-' + c);
+        if (!btn) return;
+        btn.className = c === cat
+          ? 'vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sage-700 text-white transition'
+          : 'vcat-btn px-3.5 py-1.5 rounded-xl text-xs font-medium bg-parchment-100 text-stone-700 hover:bg-autumn-100 transition';
+      });
+      renderVocabGrid();
+    }
+
+    function renderVocabGrid() {
+      const grid = document.getElementById('vocab-cards-grid');
+      const search = (document.getElementById('vocab-search')?.value || '').toLowerCase().trim();
+      const levelFilter = document.getElementById('vocab-level-filter')?.value || 'all';
+
+      const entries = Object.entries(VOCAB_DB).filter(([key, item]) => {
+        if (currentVocabCat !== 'all' && item.cat !== currentVocabCat) return false;
+        if (levelFilter !== 'all' && !item.level.includes(levelFilter)) return false;
+        if (search) {
+          const hay = (item.word + ' ' + item.def + ' ' + item.es + ' ' + item.time).toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return true;
+      });
+
+      grid.innerHTML = entries.map(([key, item]) => `
+        <div class="sanctuary-subcard rounded-2xl p-5 flex flex-col justify-between space-y-3 hover:border-autumn-400">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-autumn-100 text-autumn-800 font-mono text-[11px] font-bold">${item.level}</span>
+                <span class="px-2 py-0.5 rounded-md bg-parchment-100 text-stone-600 text-[11px]">${item.pos}</span>
+              </div>
+              <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="px-2.5 py-0.5 rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 font-mono text-[11px] font-semibold transition" title="Jump to this moment in the transcript">
+                🕒 ${item.time} ↗
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between gap-2 pt-1">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-slatewarm-900">${item.word}</h3>
+                <span class="text-xs font-mono text-stone-500">${item.ipa}</span>
+              </div>
+              <button onclick="speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')" class="p-2 rounded-xl bg-parchment-100 hover:bg-sage-100 text-sage-800 transition" title="Listen in British English">
+                <i data-lucide="volume-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">${item.def}</p>
+            <p class="text-xs italic text-stone-500 bg-parchment-50 p-2.5 rounded-xl border border-parchment-200">${item.quote}</p>
+          </div>
+
+          <div class="pt-2 border-t border-parchment-200 flex items-center justify-between text-xs">
+            <span class="text-sage-800 font-medium">🇪🇸 ${item.es}</span>
+            <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="text-autumn-700 hover:underline font-semibold text-[11px]">
+              See in Transcript →
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+    }
+
+    function jumpToTranscriptTurn(turnId, vocabKey) {
+      switchTab('transcript');
+      setTimeout(() => {
+        if (vocabKey) inspectVocab(vocabKey);
+        const el = document.getElementById(turnId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.remove('turn-highlight-flash');
+          void el.offsetWidth;
+          el.classList.add('turn-highlight-flash');
+        }
+      }, 100);
+    }
+
+    function renderFixesAndPlaces() {
+      const strengthsEl = document.getElementById('student-strengths-grid');
+      strengthsEl.innerHTML = STUDENT_STRENGTHS.map(s => `
+        <div class="p-3 rounded-xl bg-white/90 border border-sage-200">
+          <span class="font-mono text-[11px] text-sage-700">🕒 ${s.time}</span>
+          <div class="font-bold text-slatewarm-900 mt-0.5">${s.phrase}</div>
+          <p class="text-stone-600 mt-0.5">${s.note}</p>
+        </div>
+      `).join('');
+
+      const polishesEl = document.getElementById('gentle-polishes-grid');
+      polishesEl.innerHTML = GENTLE_POLISHES.map(p => `
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-2.5 border-l-4 border-l-sage-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-sage-800">${p.topic}</span>
+            <span class="px-2 py-0.5 rounded-full bg-parchment-100 font-mono text-[11px] text-stone-600">🕒 ${p.time}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-autumn-50/70 border border-autumn-200/80 text-xs text-stone-600">
+            <span class="font-semibold text-autumn-800">In the moment:</span> "${p.said}"
+          </div>
+          <div class="p-2.5 rounded-xl bg-sage-50 border border-sage-200 text-xs text-slatewarm-900 flex items-center justify-between gap-2">
+            <div><span class="font-semibold text-sage-800">Natural Polish:</span> <strong>"${p.natural}"</strong></div>
+            <button onclick="speakWord('${p.natural.replace(/'/g, "\\'")}')" class="p-1.5 rounded-lg bg-white text-sage-700 hover:bg-sage-100 shrink-0" title="Listen">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed">${p.why}</p>
+        </div>
+      `).join('');
+
+      const fixesEl = document.getElementById('asr-fixes-grid');
+      fixesEl.innerHTML = ASR_FIXES.map(f => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2 border-t-2 border-t-autumn-400">
+          <div class="flex items-center justify-between text-[11px] font-mono text-stone-500">
+            <span>${f.speaker}</span>
+            <span>🕒 ${f.time}</span>
+          </div>
+          <div class="text-xs line-through text-stone-400">Note-taker wrote: "${f.wrong}"</div>
+          <div class="text-sm font-serif font-bold text-sage-800">Actually said: "${f.right}"</div>
+          <p class="text-xs text-stone-600 leading-relaxed">${f.note}</p>
+        </div>
+      `).join('');
+
+      const placesEl = document.getElementById('cultural-places-grid');
+      placesEl.innerHTML = CULTURAL_PLACES.map(c => `
+        <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-l-4 border-l-autumn-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-autumn-700 font-semibold">${c.meta}</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-medium">${c.badge}</span>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-slatewarm-900">${c.title}</h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">${c.desc}</p>
+          <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs italic text-stone-700">${c.quote}</div>
+        </div>
+      `).join('');
+
+      if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+    }
+
+    function openArtModal(src, title, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('art-modal').classList.remove('hidden');
+    }
+
+    function closeArtModal() {
+      document.getElementById('art-modal').classList.add('hidden');
+    }
+
+    // Flashcards & Quiz
+    function renderFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (!item) return;
+
+      document.getElementById('fc-counter').textContent = 'Card ' + (currentCardIndex + 1) + ' of ' + FLASHCARD_KEYS.length;
+      document.getElementById('fc-badge').textContent = item.time + ' • ' + item.pos + ' (' + item.level + ')';
+
+      const titleEl = document.getElementById('fc-front-title');
+      const subEl = document.getElementById('fc-sub');
+      const backEl = document.getElementById('fc-back-details');
+
+      if (!isCardFlipped) {
+        titleEl.textContent = item.word;
+        subEl.textContent = item.ipa + ' — Click card to reveal meaning & lesson context';
+        backEl.classList.add('hidden');
+      } else {
+        titleEl.textContent = item.word;
+        subEl.textContent = item.def;
+        document.getElementById('fc-quote').textContent = item.quote;
+        document.getElementById('fc-es').textContent = '🇪🇸 ' + item.es;
+        backEl.classList.remove('hidden');
+      }
+    }
+
+    function flipFlashcard() {
+      isCardFlipped = !isCardFlipped;
+      renderFlashcard();
+    }
+    function nextFlashcard() {
+      isCardFlipped = false;
+      currentCardIndex = (currentCardIndex + 1) % FLASHCARD_KEYS.length;
+      renderFlashcard();
+    }
+    function prevFlashcard() {
+      isCardFlipped = false;
+      currentCardIndex = (currentCardIndex - 1 + FLASHCARD_KEYS.length) % FLASHCARD_KEYS.length;
+      renderFlashcard();
+    }
+    function speakCurrentFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (item) speakWord(item.word.replace(/\s*\(.*?\)/g, ''));
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = QUIZ_QUESTIONS.map((q, qIdx) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2.5">
+          <p class="text-xs sm:text-sm font-medium text-slatewarm-900">${q.q}</p>
+          <div class="flex flex-wrap gap-2">
+            ${q.options.map((opt, oIdx) => `
+              <button id="qbtn-${qIdx}-${oIdx}" onclick="answerQuiz(${qIdx}, ${oIdx})" class="px-3 py-1.5 rounded-xl border border-[#dfd0b5] bg-parchment-50 hover:bg-autumn-100 text-xs font-medium text-stone-700 transition">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <p id="qexp-${qIdx}" class="hidden text-xs text-sage-800 bg-sage-50 p-2.5 rounded-xl border border-sage-200"></p>
+        </div>
+      `).join('');
+    }
+
+    function answerQuiz(qIdx, oIdx) {
+      const q = QUIZ_QUESTIONS[qIdx];
+      const expEl = document.getElementById('qexp-' + qIdx);
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById('qbtn-' + qIdx + '-' + idx);
+        if (idx === q.correct) {
+          btn.className = 'px-3 py-1.5 rounded-xl border border-sage-500 bg-sage-600 text-white text-xs font-semibold';
+        } else if (idx === oIdx) {
+          btn.className = 'px-3 py-1.5 rounded-xl border border-autumn-300 bg-autumn-100 text-autumn-900 text-xs';
+        }
+      });
+      expEl.textContent = '✨ ' + q.explain;
+      expEl.classList.remove('hidden');
+
+      if (oIdx === q.correct && !quizAnswered.has(qIdx)) {
+        quizAnswered.add(qIdx);
+        document.getElementById('quiz-score-badge').textContent = quizAnswered.size + ' / ' + QUIZ_QUESTIONS.length + ' Completed';
+        if (quizAnswered.size === QUIZ_QUESTIONS.length && typeof confetti === 'function') {
+          confetti({ particleCount: 55, spread: 60, origin: { y: 0.7 }, colors: ['#be6f38', '#5b826f', '#e2b086'] });
+        }
+      }
+    }
+
+    // Tab Navigation, Filters & Theme Switchers
+    function switchTab(tabName) {
+      const tabs = ['transcript', 'vocab', 'fixes', 'places', 'practice'];
+      tabs.forEach(t => {
+        const panel = document.getElementById('tab-panel-' + t);
+        const btn = document.getElementById('tab-btn-' + t);
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm';
+          if (typeof gsap !== 'undefined') {
+            gsap.fromTo(panel, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+          }
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100';
+        }
+      });
+    }
+
+    function filterTranscript() {
+      renderTranscript();
+    }
+
+    function scrollToChapter(chapId) {
+      document.getElementById('speaker-filter').value = 'all';
+      document.getElementById('transcript-search').value = '';
+      renderTranscript();
+      const el = document.getElementById(chapId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let highlightsOn = true;
+    function toggleVocabHighlights() {
+      highlightsOn = !highlightsOn;
+      document.body.classList.toggle('hide-vocab-highlights', !highlightsOn);
+      const btn = document.getElementById('btn-toggle-highlights');
+      btn.querySelector('span').textContent = 'Vocab Highlights: ' + (highlightsOn ? 'On' : 'Off');
+    }
+
+    let asrBadgesOn = true;
+    function toggleAsrBadges() {
+      asrBadgesOn = !asrBadgesOn;
+      document.body.classList.toggle('hide-asr-fixes', !asrBadgesOn);
+      const btn = document.getElementById('btn-toggle-asr');
+      btn.querySelector('span').textContent = 'Note-Taker Fixes: ' + (asrBadgesOn ? 'Visible' : 'Hidden');
+    }
+
+    function setThemeMood(mood) {
+      document.body.setAttribute('data-theme', mood);
+      ['kensington', 'winchester', 'twilight'].forEach(m => {
+        const btn = document.getElementById('theme-' + m);
+        if (!btn) return;
+        btn.className = m === mood
+          ? 'px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition'
+          : 'px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition';
+      });
+    }
+
+    // British English Speech Synthesis (en-GB)
+    function setVoiceRate(rate) {
+      speechRate = rate;
+      document.getElementById('rate-slow').className = rate < 1
+        ? 'px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition'
+        : 'px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition';
+      document.getElementById('rate-normal').className = rate >= 1
+        ? 'px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition'
+        : 'px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition';
+    }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = speechRate;
+      const voices = window.speechSynthesis.getVoices();
+      const ukVoice = voices.find(v => v.lang.includes('en-GB') && (v.name.includes('Libby') || v.name.includes('Sonia') || v.name.includes('Google UK') || v.name.includes('Natural'))) || voices.find(v => v.lang.includes('en-GB'));
+      if (ukVoice) utter.voice = ukVoice;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function speakPlainTurn(turnId) {
+      const turn = TRANSCRIPT_TURNS.find(t => t.id === turnId);
+      if (!turn) return;
+      const temp = document.createElement('div');
+      temp.innerHTML = turn.html;
+      temp.querySelectorAll('.asr-fix-pill').forEach(el => el.remove());
+      speakWord(temp.textContent || '');
+    }
+
+    // Calming London Autumn Breeze & Rain Soundscape (Web Audio API)
+    let audioCtx = null;
+    let soundscapePlaying = false;
+    let masterGain = null;
+    let lfoTimer = null;
+    let currentFilter = null;
+
+    function buildNoiseBuffer(ctx) {
+      const bufferSize = ctx.sampleRate * 4;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = buffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+        b6 = white * 0.115926;
+      }
+      return buffer;
+    }
+
+    function toggleSoundscape() {
+      const label = document.getElementById('soundscape-label');
+      const btn = document.getElementById('soundscape-btn');
+
+      if (!soundscapePlaying) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const noiseSource = audioCtx.createBufferSource();
+        noiseSource.buffer = buildNoiseBuffer(audioCtx);
+        noiseSource.loop = true;
+
+        currentFilter = audioCtx.createBiquadFilter();
+        masterGain = audioCtx.createGain();
+        const vol = parseFloat(document.getElementById('soundscape-volume').value || '0.22');
+        masterGain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+        masterGain.gain.exponentialRampToValueAtTime(vol, audioCtx.currentTime + 1.5);
+
+        noiseSource.connect(currentFilter);
+        currentFilter.connect(masterGain);
+        masterGain.connect(audioCtx.destination);
+        noiseSource.start();
+        audioCtx._activeSource = noiseSource;
+
+        soundscapePlaying = true;
+        applyPresetSettings(document.getElementById('soundscape-preset').value);
+
+        label.textContent = 'London Breeze: Playing';
+        btn.classList.add('bg-sage-100', 'text-sage-900');
+      } else {
+        if (lfoTimer) clearInterval(lfoTimer);
+        if (audioCtx && audioCtx._activeSource) {
+          try { audioCtx._activeSource.stop(); } catch (e) {}
+        }
+        soundscapePlaying = false;
+        label.textContent = 'London Breeze Audio: Off';
+        btn.classList.remove('bg-sage-100', 'text-sage-900');
+      }
+    }
+
+    function applyPresetSettings(preset) {
+      if (!currentFilter || !audioCtx) return;
+      if (lfoTimer) clearInterval(lfoTimer);
+
+      if (preset === 'breeze') {
+        currentFilter.type = 'bandpass';
+        currentFilter.Q.value = 1.8;
+        currentFilter.frequency.setValueAtTime(340, audioCtx.currentTime);
+        let t = 0;
+        lfoTimer = setInterval(() => {
+          if (!soundscapePlaying) return;
+          t += 0.15;
+          const freq = 320 + Math.sin(t) * 140 + Math.cos(t * 0.4) * 60;
+          currentFilter.frequency.setTargetAtTime(Math.max(180, freq), audioCtx.currentTime, 0.4);
+        }, 300);
+      } else if (preset === 'rain') {
+        currentFilter.type = 'lowpass';
+        currentFilter.Q.value = 0.7;
+        currentFilter.frequency.setTargetAtTime(880, audioCtx.currentTime, 0.3);
+      } else {
+        currentFilter.type = 'lowpass';
+        currentFilter.Q.value = 1.2;
+        currentFilter.frequency.setTargetAtTime(240, audioCtx.currentTime, 0.3);
+      }
+    }
+
+    function changeSoundscapePreset(preset) {
+      if (soundscapePlaying) applyPresetSettings(preset);
+    }
+
+    function updateSoundscapeVolume(val) {
+      if (masterGain && audioCtx && soundscapePlaying) {
+        masterGain.gain.setTargetAtTime(parseFloat(val), audioCtx.currentTime, 0.15);
+      }
+    }
+
+    // Autumn Leaves in London Breeze Canvas Engine
+    const canvas = document.getElementById('autumn-breeze-canvas');
+    const ctx = canvas.getContext('2d');
+    let leaves = [];
+    let leafMode = 1;
+
+    const LEAF_COLORS = [
+      'rgba(190, 111, 56, 0.42)',
+      'rgba(211, 140, 87, 0.40)',
+      'rgba(165, 191, 177, 0.42)',
+      'rgba(203, 179, 142, 0.45)',
+      'rgba(163, 88, 43, 0.34)'
+    ];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function createLeaf() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height - canvas.height,
+        size: 6 + Math.random() * 8,
+        speedY: 0.35 + Math.random() * 0.55,
+        speedX: 0.25 + Math.random() * 0.45,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.014,
+        swayOffset: Math.random() * 100,
+        color: LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)]
+      };
+    }
+
+    function rebuildLeaves() {
+      const count = leafMode === 1 ? 15 : leafMode === 2 ? 30 : 0;
+      leaves = Array.from({ length: count }, () => {
+        const l = createLeaf();
+        l.y = Math.random() * canvas.height;
+        return l;
+      });
+    }
+
+    function cycleLeafBreeze() {
+      leafMode = (leafMode + 1) % 3;
+      const label = document.getElementById('leaves-label');
+      if (leafMode === 1) label.textContent = 'Leaves: Gentle';
+      else if (leafMode === 2) label.textContent = 'Leaves: London Breeze';
+      else label.textContent = 'Leaves: Still';
+      rebuildLeaves();
+    }
+
+    let breezeTime = 0;
+    function animateLeaves() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (leafMode !== 0) {
+        breezeTime += 0.01;
+        leaves.forEach(l => {
+          l.y += l.speedY;
+          l.x += l.speedX + Math.sin(breezeTime + l.swayOffset) * 0.45;
+          l.angle += l.spin;
+
+          if (l.y > canvas.height + 20) {
+            l.y = -20;
+            l.x = Math.random() * canvas.width;
+          }
+          if (l.x > canvas.width + 20) l.x = -20;
+
+          ctx.save();
+          ctx.translate(l.x, l.y);
+          ctx.rotate(l.angle);
+          ctx.fillStyle = l.color;
+          ctx.beginPath();
+          ctx.ellipse(0, 0, l.size, l.size * 0.52, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+      }
+      requestAnimationFrame(animateLeaves);
+    }
+
+    // Initialize safely on load
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        renderTranscript();
+        renderVocabGrid();
+        renderFixesAndPlaces();
+        renderFlashcard();
+        renderQuiz();
+        inspectVocab('secondhand-embarrassment');
+        rebuildLeaves();
+        animateLeaves();
+        if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+      } catch (err) {
+        console.error('Initialization error caught safely:', err);
+      }
+    });
+  </script>
+</body>
+</html>

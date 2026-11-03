@@ -91,3 +91,107 @@ Always include at the repository root:
 - `index.html` (self-contained single-file app using CDN links for Tailwind, Lucide, GSAP, Popper/Tippy.js, and Canvas-Confetti)
 - `.nojekyll` (prevents GitHub Pages from ignoring files or running Jekyll build steps)
 - `README.md` (clean summary of the lesson, tabs, and note-taker fixes)
+
+---
+
+## 🛡️ 7. Text Rendering & Format Integrity Safeguards (Preventing Blank Screens & Missing Text)
+
+A recurring failure mode in AI-generated lesson portals is that **text is either not displayed at all (blank containers/tabs)** or **text formatting breaks into garbled mojibake or raw code**. This section documents the root causes and mandates strict engineering rules to guarantee 100% reliable text display in every future student folder.
+
+### A. Root Causes of Text Rendering Failures
+1. **Unquoted String Literals in DOM Lookups**:
+   - *Example bug*: `document.getElementById(spk- + s.toLowerCase() + -btn)`
+   - *Result*: JavaScript interprets `spk-` as an undefined identifier, immediately throwing an uncaught `ReferenceError: spk is not defined`. Script execution ceases, leaving `#transcript-turns-container` and `#vocab-cards-grid` completely empty.
+2. **Nested Template Literal Collisions in Generator Scripts**:
+   - When an AI writes a meta-script (in Node or PowerShell) that uses backtick template strings to generate HTML containing client-side backtick template strings:
+   - *Result*: The outer script prematurely evaluates `${item.word}` as an empty string, or unescaped backticks terminate the string early, resulting in raw unquoted HTML inside `<script>`:
+     `container.innerHTML = NATURAL_STRENGTHS.map(...) => <div class="sanctuary-subcard...>`
+   - The browser encounters a fatal `SyntaxError: Unexpected token '<'`, crashing all tab interactions and rendering zero content.
+3. **PowerShell 5.1 Codepage Mojibake (`ðŸ`, `â€¢`, `à¹„à¸—à¸¢`)**:
+   - On Windows PowerShell 5.1, executing a `.ps1` script without a UTF-8 BOM causes PowerShell to parse string literals using the Windows-1252 (ANSI) codepage.
+   - *Result*: UTF-8 multi-byte characters (emojis `🌿`, Thai text `วันปิยมหาราช`, smart quotes `“`, bullets `•`) get mangled into `ðŸŒ¿` and `â€¢`.
+4. **Missing or Mismatched Keys in `VOCAB_DB`**:
+   - If a turn calls `v("pyloric-sphincter")` but the key in `VOCAB_DB` is missing or spelled differently, calling `item.word` in Tippy or Spotlight throws `TypeError: Cannot read properties of undefined (reading 'word')`.
+5. **DOM Initialization Halting on Unhandled Errors**:
+   - If one component throws an error inside `DOMContentLoaded` before other components initialize, subsequent tabs (Flashcards, Quiz, Dictionary) never render.
+
+---
+
+### B. Mandatory Engineering Rules for All Future AI Models
+
+#### Rule 1: Always Safely Quote String Concatenations
+Every prefix, infix, and suffix in DOM lookups MUST be an explicit, quoted string literal:
+```js
+// ❌ WRONG (Crashes entire script with ReferenceError):
+const btn = document.getElementById(spk- + s.toLowerCase() + -btn);
+const btn = document.getElementById(cat- + c);
+const btn = document.getElementById(lvl- + l);
+
+// ✅ CORRECT:
+const btn = document.getElementById('spk-' + s.toLowerCase() + '-btn');
+const btn = document.getElementById('cat-' + c);
+const btn = document.getElementById('lvl-' + l);
+```
+
+#### Rule 2: Defensive Vocabulary Lookup with Fallbacks
+Never assume `VOCAB_DB[key]` exists without a safe fallback. Both `v()` and Tippy `content()` must handle missing keys gracefully:
+```js
+function v(key, displayWord) {
+  const item = (typeof VOCAB_DB !== 'undefined' && VOCAB_DB[key]) ? VOCAB_DB[key] : null;
+  const label = displayWord || (item ? item.word : key);
+  return '<span class="vocab-mark" data-vkey="' + key + '" onclick="inspectVocab(\'' + key + '\')">' + label + '</span>';
+}
+```
+
+#### Rule 3: Avoid Nested Template Literal Expansion in Build Scripts
+When using PowerShell or Node to generate `index.html`, do NOT write meta-scripts with unescaped nested template literals. Either:
+- Write the HTML file directly using clean string concatenation, or
+- Read the template and data from clean UTF-8 source files, or
+- Explicitly escape nested backticks (`\``) and variables (`\${...}`) so the generator does not strip or corrupt them.
+
+#### Rule 4: Windows PowerShell 5.1 UTF-8 BOM Rule
+When writing `.ps1` automation scripts on Windows:
+- Always save the `.ps1` file with a **UTF-8 BOM** (`[System.Text.Encoding]::UTF8`) so PowerShell 5.1 parses non-ASCII characters (emojis, Thai, Arabic, IPA phonetics) correctly.
+- Always write target web files (`index.html`, `README.md`) using UTF-8 without BOM: `[System.Text.UTF8Encoding]::new($false)`.
+- Always place `<meta charset="UTF-8">` as the very first child of `<head>` in `index.html`.
+
+#### Rule 5: Guard Third-Party Libraries Defensively
+Never assume CDN libraries (`tippy`, `lucide`, `confetti`) loaded synchronously without checking:
+```js
+if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+if (typeof tippy === 'function') initTippyTooltips();
+if (typeof confetti === 'function') confetti({ ... });
+```
+
+#### Rule 6: Wrap DOM Initialization in Try/Catch
+Always wrap application startup in a `try...catch` block so a failure in one widget does not block the transcript or vocabulary tabs:
+```js
+window.addEventListener('DOMContentLoaded', () => {
+  try {
+    renderTranscript();
+    renderVocabGrid();
+    renderStrengths();
+    renderPhrasing();
+    renderAsrFixes();
+    renderEditorialTopics();
+    renderReflections();
+    updateFlashcardUI();
+    renderIdiomGym();
+    renderQuiz();
+    initLeafCanvas();
+    inspectVocab(Object.keys(VOCAB_DB)[0]);
+    if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+  } catch (err) {
+    console.error('Initialization error caught safely:', err);
+  }
+});
+```
+
+#### Rule 7: Pre-Flight Automated Verification Script
+Before concluding, the AI must run a validation script on the generated `index.html` to confirm:
+1. No mojibake characters (`â€`, `ðŸ`).
+2. No unquoted assignments (`=\s*<div`).
+3. No unquoted ID prefixes (`[^'"`](?:spk-|cat-|lvl-)`).
+4. 100% of `v("key")` calls in the transcript exist in `VOCAB_DB`.
+5. All closing tags (`</html>`, `</body>`, `</script>`) are present and intact.
+

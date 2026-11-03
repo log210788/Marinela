@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marinela • Lesson 02: Cultural Salon — Art, History & Anglo-Spanish Perspectives</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            parchment: {
+              50: '#fbf9f5',
+              100: '#f6f1e7',
+              200: '#ede3d1',
+              300: '#dfd0b5',
+              400: '#cbb38e',
+              500: '#b6966b',
+            },
+            autumn: {
+              50: '#fcf6f0',
+              100: '#f7e9db',
+              200: '#eed0b5',
+              300: '#e2b086',
+              400: '#d38c57',
+              500: '#be6f38',
+              600: '#a3582b',
+              700: '#854524',
+              800: '#6c3921',
+            },
+            sage: {
+              50: '#f4f7f5',
+              100: '#e4ece7',
+              200: '#cadad1',
+              300: '#a5bfb1',
+              400: '#7b9f8d',
+              500: '#5b826f',
+              600: '#476858',
+              700: '#3a5448',
+              800: '#30443b',
+            },
+            slatewarm: {
+              700: '#3d4441',
+              800: '#2b312e',
+              900: '#1e2321',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-base: #f9f6f0;
+      --bg-card: rgba(255, 253, 249, 0.93);
+      --bg-subcard: rgba(255, 255, 255, 0.97);
+      --border-soft: #e6decb;
+      --border-accent: #d9c8b0;
+      --text-main: #2b312e;
+      --text-muted: #5c6660;
+      --grad-1: rgba(238, 208, 181, 0.42);
+      --grad-2: rgba(202, 218, 209, 0.48);
+      --grad-3: rgba(246, 241, 231, 0.70);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      background-image:
+        radial-gradient(at 12% 10%, var(--grad-1) 0px, transparent 52%),
+        radial-gradient(at 88% 18%, var(--grad-2) 0px, transparent 55%),
+        radial-gradient(at 50% 88%, var(--grad-3) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 35px -10px rgba(60, 45, 30, 0.07);
+    }
+
+    .sanctuary-subcard {
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-soft);
+      transition: all 0.25s ease;
+    }
+
+    .sanctuary-subcard:hover {
+      border-color: var(--border-accent);
+      box-shadow: 0 8px 24px -8px rgba(133, 69, 36, 0.08);
+    }
+
+    .vocab-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.05rem 0.45rem;
+      border-radius: 0.375rem;
+      background: rgba(190, 111, 56, 0.12);
+      border-bottom: 2px solid rgba(163, 88, 43, 0.55);
+      color: #6c3921;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .vocab-pill:hover {
+      background: rgba(190, 111, 56, 0.24);
+      transform: translateY(-1px);
+    }
+
+    .verdict-active-overrated {
+      background-color: #854524 !important;
+      color: #ffffff !important;
+      border-color: #854524 !important;
+    }
+
+    .verdict-active-worth {
+      background-color: #3a5448 !important;
+      color: #ffffff !important;
+      border-color: #3a5448 !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans antialiased selection:bg-autumn-200 selection:text-autumn-900">
+
+  <!-- TOP NAVIGATION -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#fbf9f5]/90 border-b border-[#e6decb]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="w-9 h-9 rounded-xl bg-autumn-100 border border-autumn-200 flex items-center justify-center text-autumn-700 shadow-sm">
+          <i data-lucide="landmark" class="w-5 h-5"></i>
+        </span>
+        <div>
+          <h1 class="font-serif font-bold text-lg sm:text-xl text-slatewarm-900 leading-none">
+            Marinela & Louie • Lesson 02: Cultural Salon & Critical Reading
+          </h1>
+          <p class="text-[11px] font-mono text-stone-500 mt-0.5">
+            Anglo-Spanish History, Art Without Illusions (*Desengaño*), Plaza vs. Cloister & Cultural Critique
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="#vivian-girls-section" class="hidden md:inline-flex px-2.5 py-1 rounded-lg bg-autumn-700 text-white text-xs font-semibold shadow-sm">🎨 The Vivian Girls (Art)</a>
+        <a href="#reading-section" class="hidden md:inline-flex px-2.5 py-1 rounded-lg bg-autumn-100/80 text-autumn-900 text-xs font-semibold">📖 Cultural Readings</a>
+        <a href="#ex-concepts" class="hidden md:inline-flex px-2.5 py-1 rounded-lg hover:bg-parchment-200 text-xs font-medium text-stone-600">1. Desengaño & Soul Words</a>
+        <a href="#ex-art" class="hidden md:inline-flex px-2.5 py-1 rounded-lg hover:bg-parchment-200 text-xs font-medium text-stone-600">2. Art & Truth</a>
+        <a href="#ex-cliches" class="hidden md:inline-flex px-2.5 py-1 rounded-lg hover:bg-parchment-200 text-xs font-medium text-stone-600">3. Expats & Clichés</a>
+        <a href="index.html" class="px-3 py-1.5 rounded-xl bg-autumn-600 hover:bg-autumn-700 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm transition">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span>Lesson 02 Notes & Transcript</span>
+        </a>
+        <a href="lesson01.html" class="px-3 py-1.5 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-stone-700 text-xs font-semibold flex items-center gap-1.5 border border-parchment-300 transition">
+          <span>Week 01 (Lesson 01)</span>
+        </a>
+        <button onclick="toggleTeacherDrawer()" class="px-3 py-1.5 rounded-xl bg-sage-700 hover:bg-sage-800 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-sm">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Teacher Guide</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+    <!-- TEACHER STRATEGY DRAWER (FOR LOUIE) -->
+    <section id="teacher-drawer" class="hidden sanctuary-card rounded-3xl p-6 border-2 border-sage-300 bg-sage-50/90 space-y-4">
+      <div class="flex items-center justify-between border-b border-sage-200 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-sage-700 text-white text-[11px] font-mono uppercase tracking-wider">Cultural Key</span>
+          <h2 class="font-serif font-bold text-xl text-slatewarm-900">Why Her "Skepticism" Is Actually Deeply Cultural (Spanish *Desengaño*)</h2>
+        </div>
+        <button onclick="toggleTeacherDrawer()" class="text-xs text-stone-500 hover:text-stone-800 flex items-center gap-1">
+          <i data-lucide="x" class="w-4 h-4"></i> Hide before screen-share
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+        <div class="bg-white/90 rounded-2xl p-4 border border-sage-200 space-y-2">
+          <div class="font-mono text-[11px] uppercase text-autumn-700 font-semibold">1. Why "The Vivian Girls" Fits Her Perfectly</div>
+          <p class="text-stone-700 leading-relaxed">
+            In Lesson 01 (<span class="font-mono">10:02</span>), Marinela said: <em>"The world seems to be so terrible lately, so I really want to be in a place that is like being in my own bubble because civilization never learned anything."</em> Henry Darger spent 60 years in a tiny Chicago room creating a secret 15,000-page universe (<strong><em>The Story of the Vivian Girls</em></strong>) because he couldn't bear the cruelty of the adult world.
+          </p>
+        </div>
+
+        <div class="bg-white/90 rounded-2xl p-4 border border-sage-200 space-y-2">
+          <div class="font-mono text-[11px] uppercase text-sage-700 font-semibold">2. The Golden Age Concept of "Desengaño"</div>
+          <p class="text-stone-700 leading-relaxed">
+            In Spanish literature and art (Cervantes, Quevedo, Velázquez, Goya), being "unimpressed" by superficial hype is a prized cultural virtue called <strong><em>desengaño</em></strong> (seeing through false illusions to the raw truth). Outsider Art like Darger's was created with zero desire for fame or money.
+          </p>
+        </div>
+
+        <div class="bg-white/90 rounded-2xl p-4 border border-sage-200 space-y-2">
+          <div class="font-mono text-[11px] uppercase text-autumn-700 font-semibold">3. Light & Darkness in the Paintings</div>
+          <p class="text-stone-700 leading-relaxed">
+            Notice how Darger combines bright yellow sunflowers and girls in red storybook dresses with dark storm clouds, fleeing across rivers, and war. Connect this to Marinela's Lesson 01 metaphor of <em>going from light into dark and back into light</em>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- FEATURED VISUAL ART SALON: HENRY DARGER & "THE VIVIAN GIRLS"        -->
+    <!-- =================================================================== -->
+    <section id="vivian-girls-section" class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-8 border-2 border-autumn-200">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-[#e6decb] pb-5">
+        <div>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-autumn-700 text-white text-[11px] font-mono uppercase tracking-wider">Featured Visual Art Study</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Outsider Art (Art Brut) • MoMA & American Folk Art Museum</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slatewarm-900 mt-1">
+            Henry Darger & <em>The Story of the Vivian Girls</em> (<em>In the Realms of the Unreal</em>)
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1 max-w-4xl">
+            Click any painting or archival photograph below to inspect it in full-screen detail. Together we will look at the artwork, read the story behind Darger's secret 60-year "bubble," and debate what makes art truly authentic.
+          </p>
+        </div>
+        <div class="shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-parchment-100 border border-parchment-300 text-xs font-mono text-stone-700">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-autumn-700"></i>
+            Click any image to zoom
+          </span>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE ARTWORK & ARCHIVE GALLERY -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="font-serif font-bold text-xl text-slatewarm-900 flex items-center gap-2">
+            <i data-lucide="frame" class="w-5 h-5 text-autumn-700"></i>
+            <span>Part A • Visual Gallery: The Paintings, The Manuscripts & The Secret Room</span>
+          </h3>
+          <span class="text-xs font-mono text-stone-500">6 Curated Plates</span>
+        </div>
+
+        <!-- Top Row: 3 Panoramic Watercolor Paintings of The Vivian Girls -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Plate 1: Vivian Sisters in Red Dresses -->
+          <div onclick="openArtModal('images/vivian_sisters_umbrellas.jpg', 'Plate 01 • At Jennie Richee, Waiting for the Rain to Stop (Detail A)', 'Watercolor, pencil, and carbon tracing on pieced paper. Notice the contrast between the bright red dresses, the giant yellow flowers, and the approaching dark storm clouds in the sky.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-56">
+              <img src="images/vivian_sisters_umbrellas.jpg" alt="The Vivian Girls in red dresses waiting for the rain to stop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slatewarm-900/80 text-white font-mono text-[10px] uppercase tracking-wider">Plate 01 • Watercolor Scroll</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Inspect Painting</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900 leading-snug">
+                <em>At Jennie Richee: Waiting for the Rain to Stop</em> (The Sisters in Red)
+              </h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Two of the seven Vivian princesses stand in bright red dresses beside giant yellow blossoms and a quiet farmhouse as a storm gathers overhead.
+              </p>
+            </div>
+          </div>
+
+          <!-- Plate 2: Vivian Girls Under the Portico -->
+          <div onclick="openArtModal('images/vivian_butterfly_girl.jpg', 'Plate 02 • At Jennie Richee, Waiting for the Rain to Stop (Detail B: The Portico)', 'Darger traced figures from 1930s children\'s colouring books and newspaper comics, then painted them into vast, cinematic panoramas up to 3 metres wide.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-56">
+              <img src="images/vivian_butterfly_girl.jpg" alt="The Vivian Girls sheltering under a portico with flowers" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slatewarm-900/80 text-white font-mono text-[10px] uppercase tracking-wider">Plate 02 • Watercolor Detail</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Inspect Painting</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900 leading-snug">
+                <em>The Vivian Girls Sheltering Under the Portico</em>
+              </h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Darger couldn't draw from life, so he collected comic strips and magazines from the street and traced the heroines in yellow and crimson dresses.
+              </p>
+            </div>
+          </div>
+
+          <!-- Plate 3: Pursued Down Stream -->
+          <div onclick="openArtModal('images/vivian_stream.jpg', 'Plate 03 • At Jennie Richee, Pursued Down Stream', 'A panoramic landscape scroll with a stone bridge, giant water lilies, frogs, and an approaching soldier on horseback. Notice how tranquil nature coexists with constant danger.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-56">
+              <img src="images/vivian_stream.jpg" alt="At Jennie Richee, pursued down stream" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slatewarm-900/80 text-white font-mono text-[10px] uppercase tracking-wider">Plate 03 • Panoramic Scroll</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Inspect Painting</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900 leading-snug">
+                <em>3 At Jennie Richee: Pursued Down Stream</em>
+              </h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                A pastoral stone bridge and water-lily river where the Vivian Girls flee from the Glandelinian army—blending storybook peace with wartime <span class="vocab-pill" onclick="event.stopPropagation(); speakWord('peril')">peril</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Row: 3 Archival Photographs of Darger's Room, Bound Volumes & Portrait -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Plate 4: Darger's Secret One-Room Apartment -->
+          <div onclick="openArtModal('images/darger_room.jpg', 'Plate 04 • Henry Darger\'s Secret One-Room Chicago Apartment (851 W. Webster Ave)', 'For 40 years, Darger lived in a single small room in Chicago, working by day as a hospital janitor and returning here every night to type and paint his secret universe.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/darger_room.jpg" alt="Henry Darger's room with typewriter and stacked books" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-sage-800/90 text-white font-mono text-[10px] uppercase tracking-wider">Plate 04 • The Artist's Bubble</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Inspect Room</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900 leading-snug">
+                <em>The Ultimate "Bubble": Darger's Single Room & Typewriter</em>
+              </h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Nobody ever entered his room for 40 years. On this small wooden desk and typewriter, he wrote 15,145 pages and painted hundreds of scrolls.
+              </p>
+            </div>
+          </div>
+
+          <!-- Plate 5: Hand-Bound Volumes & Source Materials -->
+          <div onclick="openArtModal('images/vivian_girls_1.jpg', 'Plate 05 • Hand-Bound Volumes of The Realms of the Unreal', 'Darger stitched his huge watercolor scrolls and typed pages into giant handmade books using string and wallpaper scraps found in the street.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_girls_1.jpg" alt="Henry Darger hand-bound volumes in museum case" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-sage-800/90 text-white font-mono text-[10px] uppercase tracking-wider">Plate 05 • Handmade Books</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Inspect Volumes</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900 leading-snug">
+                <em>15 Volumes Hand-Stitched with String</em>
+              </h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                When his landlord Nathan Lerner opened the room in 1973, he found 15 colossal hand-bound encyclopedias of an imaginary planet.
+              </p>
+            </div>
+          </div>
+
+          <!-- Plate 6: Handwritten Manuscript & Portrait -->
+          <div onclick="openArtModal('images/vivian_girls_2.jpg', 'Plate 06 • Darger\'s Handwritten Manuscript: The History of My Life', 'Alongside The Vivian Girls, Darger wrote a 5,000-page autobiography that spent 200 pages describing the story of the Vivian Girls before spendng 4,800 pages describing a single giant tornado.')" class="group cursor-pointer sanctuary-subcard rounded-2xl overflow-hidden flex flex-col justify-between">
+            <div class="relative overflow-hidden bg-stone-900/5 h-52">
+              <img src="images/vivian_girls_2.jpg" alt="Henry Darger handwritten manuscript pages" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-sage-800/90 text-white font-mono text-[10px] uppercase tracking-wider">Plate 06 • Original Manuscript</span>
+              <span class="absolute bottom-3 right-3 px-2 py-1 rounded-lg bg-white/90 text-slatewarm-900 text-[11px] font-semibold shadow-sm opacity-0 group-hover:opacity-100 transition">🔍 Inspect Pages</span>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <h4 class="font-serif font-bold text-lg text-slatewarm-900 leading-snug">
+                <em>Pages from "The History of My Life"</em>
+              </h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                Every night after mopping hospital floors, Darger wrote in meticulous script, acting as historian, meteorologist, and protector of the Vivian Girls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- READING EXTRACT & 4 CRITICAL THINKING PROMPTS ON THE VIVIAN GIRLS -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pt-2">
+        <!-- Left 7 Cols: Short Cultural Reading on Henry Darger & The Vivian Girls -->
+        <div class="lg:col-span-7 sanctuary-subcard rounded-2xl p-6 sm:p-8 space-y-4 border-2 border-parchment-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-parchment-200 pb-3">
+            <div class="flex items-center gap-3">
+              <img src="images/darger_portrait.jpg" alt="Henry Darger portrait" onclick="openArtModal('images/darger_portrait.jpg', 'Henry Darger (1892–1973)', 'One of only three known photographs of Henry Darger, taken during his lifetime in Chicago.')" class="w-12 h-12 rounded-xl object-cover border border-parchment-300 cursor-pointer" />
+              <div>
+                <span class="text-xs font-mono uppercase text-autumn-700 font-semibold">Art & Psychology Reading • Chicago, 1973</span>
+                <h3 class="font-serif font-bold text-2xl text-slatewarm-900">
+                  The Janitor's Secret Universe: Why Henry Darger Created <em>The Vivian Girls</em>
+                </h3>
+              </div>
+            </div>
+            <button onclick="speakWord(document.getElementById('darger-extract-text').innerText)" class="px-3 py-1.5 rounded-lg bg-parchment-100 hover:bg-parchment-200 text-stone-800 text-xs font-semibold flex items-center gap-1.5 border border-parchment-300">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5 text-autumn-700"></i>
+              <span>Listen (UK)</span>
+            </button>
+          </div>
+
+          <div id="darger-extract-text" class="font-serif text-lg sm:text-xl leading-relaxed text-slatewarm-900 space-y-4 bg-[#fcfaf5] p-5 sm:p-6 rounded-xl border border-parchment-200">
+            <p>
+              "To his neighbours in Chicago, <strong>Henry Darger (1892–1973)</strong> was an invisible old man—a <span class="vocab-pill" onclick="speakWord('reclusive')">reclusive</span> hospital janitor who wore a frayed coat, attended Mass every morning, and spoke only about the weather. Having survived a brutal childhood in an <span class="vocab-pill" onclick="speakWord('asylum')">asylum</span>, Darger had reached a quiet conclusion: the adult world was irredeemably cruel.
+            </p>
+            <p>
+              So inside his tiny single room, he built an alternative civilization. Across <strong>15,145 typed pages</strong> and hundreds of panoramic watercolours—some stretching over three metres wide—he chronicled <strong><em>The Story of the Vivian Girls</em></strong>: seven <span class="vocab-pill" onclick="speakWord('intrepid')">intrepid</span> princesses in bright dresses who lead a rebellion to rescue enslaved children from a tyrannical adult empire.
+            </p>
+            <p>
+              Darger never showed his paintings to a single living soul. When he moved into a nursing home shortly before his death, he told his landlord to throw everything in his room into the rubbish. Instead, his <span class="vocab-pill" onclick="speakWord('clandestine')">clandestine</span> masterpieces were saved—and today they hang in the Museum of Modern Art in New York and the Collection de l'Art Brut in Europe, selling for nearly a million dollars each."
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">reclusive:</strong> avoiding the company of others; living in a private bubble <em>(solitario / recluso)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">intrepid:</strong> fearless and heroic in the face of danger <em>(intrépidas / valientes)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">clandestine:</strong> kept completely secret from the public <em>(clandestino / secreto)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">outsider art:</strong> art made outside official galleries or training <em>(arte marginal / Art Brut)</em>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Cols: 4 Critical Thinking & Visual Analysis Questions -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3.5 border-2 border-autumn-200/80">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-autumn-800 font-semibold">4 Critical Thinking Questions on The Vivian Girls</span>
+              <span class="px-2 py-0.5 rounded bg-autumn-100 text-autumn-800 text-[10px] font-mono">Debate & Analysis</span>
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm text-stone-700 leading-relaxed">
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">1. Visual Analysis — Sunflowers & Storm Clouds:</strong>
+                <p class="mt-1">
+                  Look closely at <strong>Plates 01, 02 & 03</strong>. At first glance, you see innocent girls in red dresses, yellow flowers, and water lilies—copied from 1930s children's books. Yet in Darger's story, they are in the middle of a brutal war and approaching storms. Why makes that contrast between childhood innocence and dark danger so psychologically haunting?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">2. Your Quote in Lesson 01 vs. Darger's Room (Plate 04):</strong>
+                <p class="mt-1">
+                  In Lesson 01 (<span class="font-mono">10:02</span>), you said: <em>"The world seems to be so terrible lately, so I really want to be in a place that is like being in my own bubble because civilization never learned anything."</em> Looking at Darger's room in <strong>Plate 04</strong>, do you sympathize with his decision to retreat into his own world—or where is the line between a healthy sanctuary and total isolation?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">3. The Ethical Dilemma — Rescue or Betrayal?</strong>
+                <p class="mt-1">
+                  Darger never wanted anyone to see his inner life and asked his landlord to throw his manuscripts in the bin. Was exhibiting <em>The Vivian Girls</em> in museums an act of cultural rescue, or did the art world violate a <span class="vocab-pill" onclick="speakWord('vulnerable')">vulnerable</span> man's privacy for money and prestige?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">4. Pure Art vs. The Modern Art Market:</strong>
+                <p class="mt-1">
+                  Most famous artists create work hoping for applause, followers, or money. Darger painted for 60 years for an audience of zero. Does the fact that he wasn't trying to impress anyone make <em>The Vivian Girls</em> more honest than mainstream contemporary art?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PART 1: 3 CULTURAL READING EXTRACTS (HISTORY, ARCHITECTURE & ART)   -->
+    <!-- =================================================================== -->
+    <section id="reading-section" class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-[#e6decb] pb-5">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Part 02 • Anglo-Spanish Cultural Reading & Analysis</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+            The Anglo-Spanish Cultural Salon: 3 Short Readings
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-1">
+            Each reading connects <strong>Spanish & British history, architecture, and art</strong> to the exact places and ideas you mentioned in Lesson 01. Choose one to read together and debate!
+          </p>
+        </div>
+
+        <!-- Extract Switcher Tabs -->
+        <div class="flex flex-wrap gap-2 shrink-0">
+          <button onclick="switchExtract(1)" id="ext-btn-1" class="px-4 py-2 rounded-xl text-xs font-semibold transition bg-autumn-700 text-white shadow-sm">
+            1. Spaniards in Rainy Winchester (1554)
+          </button>
+          <button onclick="switchExtract(2)" id="ext-btn-2" class="px-4 py-2 rounded-xl text-xs font-semibold transition bg-parchment-100 hover:bg-parchment-200 text-stone-700 border border-parchment-300">
+            2. Spanish Plaza vs. English Cloister
+          </button>
+          <button onclick="switchExtract(3)" id="ext-btn-3" class="px-4 py-2 rounded-xl text-xs font-semibold transition bg-parchment-100 hover:bg-parchment-200 text-stone-700 border border-parchment-300">
+            3. Velázquez, Goya & Unsentimental Truth
+          </button>
+        </div>
+      </div>
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- EXTRACT 1: PHILIP II OF SPAIN IN WINCHESTER CATHEDRAL (1554)      -->
+      <!-- ----------------------------------------------------------------- -->
+      <div id="ext-panel-1" class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-7 sanctuary-subcard rounded-2xl p-6 sm:p-8 space-y-4 border-2 border-parchment-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-parchment-200 pb-3">
+            <div>
+              <span class="text-xs font-mono uppercase text-autumn-700 font-semibold">Cultural History Extract • Winchester, July 1554</span>
+              <h3 class="font-serif font-bold text-2xl text-slatewarm-900">
+                When Renaissance Spain Met Rainy Winchester
+              </h3>
+            </div>
+            <button onclick="speakWord(document.getElementById('extract-text-1').innerText)" class="px-3 py-1.5 rounded-lg bg-parchment-100 hover:bg-parchment-200 text-stone-800 text-xs font-semibold flex items-center gap-1.5 border border-parchment-300">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5 text-autumn-700"></i>
+              <span>Listen (UK)</span>
+            </button>
+          </div>
+
+          <div id="extract-text-1" class="font-serif text-lg sm:text-xl leading-relaxed text-slatewarm-900 space-y-4 bg-[#fcfaf5] p-5 sm:p-6 rounded-xl border border-parchment-200">
+            <p>
+              "In July 1554, Prince Philip of Spain—raised among the sun-drenched Renaissance palaces of Valladolid and Salamanca—rode into <strong>Winchester</strong> in the pouring rain to marry Queen Mary I of England inside Winchester Cathedral.
+            </p>
+            <p>
+              The letters sent home by his Spanish <span class="vocab-pill" onclick="speakWord('courtiers')">courtiers</span> read like a comedy of cultural <span class="vocab-pill" onclick="speakWord('disillusionment')">disillusionment</span>. Expecting the romantic Britain of King Arthur's legends, the Spaniards were instead <span class="vocab-pill" onclick="speakWord('appalled')">appalled</span> by the mud, the <span class="vocab-pill" onclick="speakWord('bleak')">bleak</span> summer skies, and a local population that drank thick, lukewarm <span class="vocab-pill" onclick="speakWord('ale')">ale</span> instead of wine.
+            </p>
+            <p>
+              <em>'The English,'</em> one bewildered Spanish nobleman wrote from Winchester, <em>'have built magnificent stone cathedrals, yet they live inside a damp fog and regard every foreigner with polite <span class="vocab-pill" onclick="speakWord('suspicion')">suspicion</span>. Truly, only a madman would trade Castile for this island.'</em> Yet four centuries later, it is precisely that quiet, green <span class="vocab-pill" onclick="speakWord('melancholy')">melancholy</span> of Hampshire that draws the modern traveller back."
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 text-xs">
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">disillusionment:</strong> disappointment when something isn't as good as believed <em>(desilusión / desengaño)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">appalled:</strong> shocked and unimpressed <em>(espantado / horrorizado)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">bleak:</strong> cold, grey, and charmless <em>(sombrío / desolado)</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-4">
+            <span class="text-xs font-mono uppercase text-sage-700 font-semibold">Cultural Thinking Questions</span>
+
+            <div class="space-y-3 text-xs sm:text-sm text-stone-700 leading-relaxed">
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">1. Did You See Queen Mary's Chair in Winchester?</strong>
+                <p class="mt-1">
+                  When you visited Winchester two weeks ago, did you know that the King of Spain was married inside Winchester Cathedral (and the chair he sat in is still there)? Why do you think you loved Winchester while Philip II's courtiers hated it?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">2. 470 Years of Anglo-Spanish Contrasts:</strong>
+                <p class="mt-1">
+                  In 1554, the Spanish complained about British food, warm beer, the rain, and polite <span class="vocab-pill" onclick="speakWord('restraint')">restraint</span>. What do Spaniards still complain about when they visit England today—and what do you actually <em>prefer</em> about British culture over Spanish culture?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">3. The Charm of "Green Melancholy":</strong>
+                <p class="mt-1">
+                  Spanish culture is famous for brightness, noise, and sun; English culture has a quiet, rainy <span class="vocab-pill" onclick="speakWord('melancholy')">melancholy</span>. Why can grey skies and quiet stone towns sometimes feel more comforting than endless sunshine?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- EXTRACT 2: THE PLAZA MAYOR VS. THE ENGLISH CLOISTER               -->
+      <!-- ----------------------------------------------------------------- -->
+      <div id="ext-panel-2" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-7 sanctuary-subcard rounded-2xl p-6 sm:p-8 space-y-4 border-2 border-parchment-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-parchment-200 pb-3">
+            <div>
+              <span class="text-xs font-mono uppercase text-autumn-700 font-semibold">Urban Anthropology Extract • Architecture & Psychology</span>
+              <h3 class="font-serif font-bold text-2xl text-slatewarm-900">
+                The Spanish <em>Plaza</em> vs. The English <em>Cloister</em>
+              </h3>
+            </div>
+            <button onclick="speakWord(document.getElementById('extract-text-2').innerText)" class="px-3 py-1.5 rounded-lg bg-parchment-100 hover:bg-parchment-200 text-stone-800 text-xs font-semibold flex items-center gap-1.5 border border-parchment-300">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5 text-autumn-700"></i>
+              <span>Listen (UK)</span>
+            </button>
+          </div>
+
+          <div id="extract-text-2" class="font-serif text-lg sm:text-xl leading-relaxed text-slatewarm-900 space-y-4 bg-[#fcfaf5] p-5 sm:p-6 rounded-xl border border-parchment-200">
+            <p>
+              "To understand the difference between Spanish and British society, one need only compare the <strong>Spanish Renaissance Plaza</strong> with the <strong>English Collegiate Quad</strong>.
+            </p>
+            <p>
+              A Spanish town is built inside-out: its heart is the open stone <em>plaza</em>, an <span class="vocab-pill" onclick="speakWord('amphitheatre')">amphitheatre</span> where citizens are simultaneously actors and spectators. Life is meant to be witnessed—from the evening <span class="vocab-pill" onclick="speakWord('stroll')">stroll</span> (<em>el paseo</em>) to the loud, lingering <span class="vocab-pill" onclick="speakWord('conviviality')">conviviality</span> of the terrace. Solitude in such a town is almost a public offence.
+            </p>
+            <p>
+              An English historic town like Oxford or Winchester is built on the opposite philosophy: the <strong>walled sanctuary</strong>. Behind high stone walls lie hidden courtyards, <span class="vocab-pill" onclick="speakWord('cloisters')">cloisters</span>, and walled gardens designed to <span class="vocab-pill" onclick="speakWord('shield')">shield</span> the individual from the gaze of the crowd. Where the Spanish plaza demands social performance, the English town grants the right to be left alone."
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 text-xs">
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">conviviality:</strong> lively, noisy social friendliness <em>(convivialidad / bullicio social)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">cloister:</strong> covered stone walk around a quiet courtyard <em>(claustro)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">shield:</strong> protect from an outside force <em>(proteger / resguardar)</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-4">
+            <span class="text-xs font-mono uppercase text-sage-700 font-semibold">Cultural Thinking Questions</span>
+
+            <div class="space-y-3 text-xs sm:text-sm text-stone-700 leading-relaxed">
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">1. "Solitude as a Public Offence":</strong>
+                <p class="mt-1">
+                  In Lesson 01 (<span class="font-mono">10:02</span>), you compared your Spanish Renaissance hometown to Oxford and talked about wanting to be <em>"in my own bubble."</em> Is Spanish street life sometimes exhausting for someone who values quiet reflection?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">2. Actors and Spectators:</strong>
+                <p class="mt-1">
+                  In small or historic Spanish towns, do you feel that everyone watches and comments on everyone else's life—whereas in England, people give you more anonymity?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">3. What Foreign Students Misunderstand About Spain:</strong>
+                <p class="mt-1">
+                  Your American and Asian students probably arrive in Spain thinking Spanish life is one non-stop fiesta on a terrace. What is a deeper truth about Spanish culture that tourists completely miss?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- EXTRACT 3: VELÁZQUEZ, GOYA & SPANISH "DESENGAÑO"                  -->
+      <!-- ----------------------------------------------------------------- -->
+      <div id="ext-panel-3" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-7 sanctuary-subcard rounded-2xl p-6 sm:p-8 space-y-4 border-2 border-parchment-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-parchment-200 pb-3">
+            <div>
+              <span class="text-xs font-mono uppercase text-autumn-700 font-semibold">Art Criticism Extract • Painting & Documentary Photography</span>
+              <h3 class="font-serif font-bold text-2xl text-slatewarm-900">
+                From Velázquez and Goya to the Modern Camera: The Refusal to Flatter
+              </h3>
+            </div>
+            <button onclick="speakWord(document.getElementById('extract-text-3').innerText)" class="px-3 py-1.5 rounded-lg bg-parchment-100 hover:bg-parchment-200 text-stone-800 text-xs font-semibold flex items-center gap-1.5 border border-parchment-300">
+              <i data-lucide="volume-2" class="w-3.5 h-3.5 text-autumn-700"></i>
+              <span>Listen (UK)</span>
+            </button>
+          </div>
+
+          <div id="extract-text-3" class="font-serif text-lg sm:text-xl leading-relaxed text-slatewarm-900 space-y-4 bg-[#fcfaf5] p-5 sm:p-6 rounded-xl border border-parchment-200">
+            <p>
+              "Why does Spanish art feel so startlingly modern compared to the idealized beauty of the Italian Renaissance or French Romanticism? The answer lies in a uniquely Spanish cultural instinct: <strong><em>desengaño</em></strong>—the <span class="vocab-pill" onclick="speakWord('lucid')">lucid</span> refusal to be fooled by <span class="vocab-pill" onclick="speakWord('pretence')">pretence</span> or superficial glamour.
+            </p>
+            <p>
+              When <strong>Velázquez</strong> painted court jesters and dwarfs at the royal palace, he gave them more psychological dignity and intelligence than the King himself. A century later, when <strong>Goya</strong> painted the Spanish royal family, he refused to <span class="vocab-pill" onclick="speakWord('flatter')">flatter</span> them, exposing their vanity and <span class="vocab-pill" onclick="speakWord('folly')">folly</span> in plain sight.
+            </p>
+            <p>
+              Today, the finest documentary photographers carry that same <span class="vocab-pill" onclick="speakWord('unflinching')">unflinching</span> gaze. In an age obsessed with <span class="vocab-pill" onclick="speakWord('curated')">curated</span> perfection and fake optimism, true art does not try to make the world look pretty; it tries to make us <em>see</em>."
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 text-xs">
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">pretence:</strong> fake appearances or hype <em>(fingimiento / apariencias)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">flatter:</strong> praise or portray someone too favourably <em>(halagar / favorecer)</em>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200">
+              <strong class="text-autumn-800">unflinching:</strong> not looking away from hard truths <em>(implacable / directo)</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-4">
+            <span class="text-xs font-mono uppercase text-sage-700 font-semibold">Cultural Thinking Questions</span>
+
+            <div class="space-y-3 text-xs sm:text-sm text-stone-700 leading-relaxed">
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">1. The Art of Not Being Fooled (<em>Desengaño</em>):</strong>
+                <p class="mt-1">
+                  Does this explain part of your own personality? Are you someone who naturally dislikes fake enthusiasm and <span class="vocab-pill" onclick="speakWord('pretence')">pretence</span>, and prefers honest, <span class="vocab-pill" onclick="speakWord('unflinching')">unflinching</span> reality?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">2. Your Photographer Friend:</strong>
+                <p class="mt-1">
+                  In Lesson 01 (<span class="font-mono">23:18</span>), you spoke warmly about your American student who was a photographer working with trauma in Black and Indigenous communities. What made her photography or her way of seeing the world feel real to you?
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
+                <strong class="text-slatewarm-900">3. Why Tourist Art Feels Empty:</strong>
+                <p class="mt-1">
+                  Why do "pretty" Instagram photos of cities leave us feeling nothing, while a dark painting by Goya or a raw black-and-white photograph stays in our memory for years?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- ACTIVITY 1: CULTURAL UNTRANSLATABLES (SPAIN VS. BRITAIN)            -->
+    <!-- =================================================================== -->
+    <section id="ex-concepts" class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+      <div class="border-b border-[#e6decb] pb-4">
+        <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Cultural Thinking Activity 01 • Language & National Psychology</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+          Untranslatable Cultural Words: How Do You Explain These to Each Other?
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mt-1">
+          The words a culture invents reveal what that society secretly values or fears. <strong>Marinela's Challenge:</strong> Explain the cultural psychology of the 3 Spanish concepts to a British person. <strong>Louie's Challenge:</strong> Explain the 3 British concepts to Marinela!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Spanish Cultural Concepts -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-autumn-800 font-serif font-bold text-xl">
+            <span>🇪🇸 3 Spanish Cultural Concepts to Explain in English</span>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif font-bold text-xl text-slatewarm-900">1. <em>El Desengaño</em> (Golden Age Literature)</h4>
+              <span class="px-2 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[11px]">Cervantes / Quevedo</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              In English, "disappointment" is always negative. Why is <em>desengaño</em> (waking up from illusions / seeing the world without rose-tinted glasses) considered a form of <strong>wisdom</strong> in Spanish culture?
+            </p>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif font-bold text-xl text-slatewarm-900">2. <em>Tener Duende</em> (Lorca & Flamenco)</h4>
+              <span class="px-2 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[11px]">Art & Soul</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Federico García Lorca said <em>duende</em> is not about technical perfection—it is a dark, raw emotion that rises from the soles of the feet when art confronts mortality. How would you explain <em>duende</em> to a British student?
+            </p>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif font-bold text-xl text-slatewarm-900">3. <em>Vergüenza Ajena</em></h4>
+              <span class="px-2 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[11px]">Social Psychology</span>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              English had to borrow the slang word "cringe" or say <span class="vocab-pill" onclick="speakWord('second-hand embarrassment')">second-hand embarrassment</span>, whereas Spanish has had <em>vergüenza ajena</em> for centuries. What kind of behaviour gives you <em>vergüenza ajena</em>?
+            </p>
+          </div>
+        </div>
+
+        <!-- British Cultural Concepts -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-sage-800 font-serif font-bold text-xl">
+            <span>🇬🇧 3 British Cultural Concepts for Living in England</span>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif font-bold text-xl text-slatewarm-900">1. <em>"Muddling Through"</em></h4>
+              <button onclick="speakWord('muddling through')" class="px-2 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[11px]">🔊 UK Audio</button>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              The British distrust grand master plans and dramatic theories. They take pride in <strong>muddling through</strong>—managing calmly and imperfectly without making a fuss, even when things are a mess.
+            </p>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif font-bold text-xl text-slatewarm-900">2. <em>"Taking the Mickey" (Self-Deprecation)</em></h4>
+              <button onclick="speakWord('self-deprecation')" class="px-2 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[11px]">🔊 UK Audio</button>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              In Britain, boasting about your achievements is social suicide; the higher your status, the more you are expected to make fun of yourself (<span class="vocab-pill" onclick="speakWord('self-deprecation')">self-deprecation</span>). And if British colleagues tease you gently, it means they actually like you!
+            </p>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif font-bold text-xl text-slatewarm-900">3. <em>"Eccentricity" vs. Conformity</em></h4>
+              <button onclick="speakWord('eccentricity')" class="px-2 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[11px]">🔊 UK Audio</button>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Why is Britain simultaneously so polite and rule-obsessed about queuing, yet so tolerant of <span class="vocab-pill" onclick="speakWord('eccentric')">eccentric</span> professors, artists, and people who live happily in their own strange bubble?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- ACTIVITY 2: THE CURATOR'S EYE — WHAT MAKES CULTURE AUTHENTIC?       -->
+    <!-- =================================================================== -->
+    <section id="ex-art" class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+      <div class="border-b border-[#e6decb] pb-4">
+        <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Cultural Thinking Activity 02 • Art, Heritage & Authenticity</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+          The Cultural Skeptic's Dilemma: Authentic Heritage vs. Cultural Theme Park
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mt-1">
+          Both Spain and England suffer from the same modern cultural problem: historic places (like Ibiza, Barcelona, Oxford, and Bath) risk turning into <strong>museums or theme parks for tourists</strong>. Debate these 3 cultural dilemmas together!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+          <span class="text-xs font-mono text-autumn-700 font-semibold">Cultural Dilemma 01</span>
+          <h4 class="font-serif font-bold text-xl text-slatewarm-900">When a Historic Town Becomes a Postcard</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Your hometown comes from the Spanish Renaissance, and you loved Winchester and Ibiza. At what point does a historic town stop being a real, living community and become a <span class="vocab-pill" onclick="speakWord('soulless')">soulless</span> backdrop for tourists? Has your hometown escaped that fate?
+          </p>
+        </div>
+
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+          <span class="text-xs font-mono text-sage-700 font-semibold">Cultural Dilemma 02</span>
+          <h4 class="font-serif font-bold text-xl text-slatewarm-900">Searching for Ancestors & Roots</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            In Lesson 01 (<span class="font-mono">23:18</span>), you helped an American student find her Spanish grandmother's ancestors in northern Spain. Why are North Americans often so passionate about tracing their 19th-century European roots, while Europeans rarely look up their family tree?
+          </p>
+        </div>
+
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+          <span class="text-xs font-mono text-autumn-700 font-semibold">Cultural Dilemma 03</span>
+          <h4 class="font-serif font-bold text-xl text-slatewarm-900">Teaching Language Without Clichés</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Many Spanish textbooks are full of superficial clichés (paella, sangria, flamenco, Gaudí). When you teach Spanish to adults from China, Japan, or the US, what <strong>real</strong> aspects of Spanish history, art, or mentality do you wish textbooks included instead?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- ACTIVITY 3: CULTURAL STEREOTYPES ON TRIAL (BRITAIN VS. SPAIN)       -->
+    <!-- =================================================================== -->
+    <section id="ex-cliches" class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+      <div class="border-b border-[#e6decb] pb-4">
+        <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Cultural Thinking Activity 03 • Cross-Cultural Reality Check</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+          Expats & Outsiders: Compare How We Live Abroad
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mt-1">
+          In Lesson 01 (<span class="font-mono">10:36</span>), Louie said: <em>"I think it's a duty if you live in a country to speak the language."</em> Let's compare how British expats behave in Spain vs. how you plan to live in England!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="sanctuary-subcard rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-autumn-100 text-autumn-900 font-mono text-xs font-semibold">Case Study A • British Expats in Spain / Ibiza</span>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slatewarm-900">
+            The "Sunny Bubble" Expats Who Never Learn Spanish
+          </h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Hundreds of thousands of British retirees and expats live on the Spanish coast and in Ibiza. Many live there for 15 years, eat at British pubs, and barely speak A1 Spanish—yet when they do join a Spanish class, you mentioned (<span class="font-mono">21:52</span>) that older retired students can actually be fascinating people training their minds against Alzheimer's.
+          </p>
+          <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs sm:text-sm text-slatewarm-900">
+            💭 <strong>Question for Marinela:</strong> From your experience teaching in Spain, what separates a foreigner who genuinely <span class="vocab-pill" onclick="speakWord('integrates')">integrates</span> into Spanish culture from a foreigner who treats Spain like a cheap resort?
+          </div>
+        </div>
+
+        <div class="sanctuary-subcard rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-sage-100 text-sage-900 font-mono text-xs font-semibold">Case Study B • A Spanish Teacher in Southern England</span>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slatewarm-900">
+            Immersion vs. Keeping Your Own Cultural Identity
+          </h3>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            When you move to England next year to teach Spanish, your job will be to represent Spanish language and culture all day—while living inside British culture after work.
+          </p>
+          <div class="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200 text-xs sm:text-sm text-slatewarm-900">
+            💭 <strong>Question for Marinela:</strong> When you live in England, what parts of Spanish daily culture will you refuse to give up (e.g., meal times, olive oil, directness), and what British habits are you happiest to adopt?
+          </div>
+        </div>
+      </div>
+
+      <!-- Useful Cultural & Analytical Phrases Bar -->
+      <div class="p-4 rounded-2xl bg-parchment-100 border border-parchment-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <span class="font-semibold text-slatewarm-900">🇬🇧 C1/C2 Phrases for Cultural Critique (Click for UK audio):</span>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="speakWord('It is agross oversimplification to say that')" class="vocab-pill">"It's an oversimplification to say..."</button>
+          <button onclick="speakWord('Beneath the surface, there is a stark contrast')" class="vocab-pill">"Beneath the surface..."</button>
+          <button onclick="speakWord('It has been romanticized beyond recognition')" class="vocab-pill">"Romanticized beyond recognition"</button>
+          <button onclick="speakWord('I take that stereotype with a pinch of salt')" class="vocab-pill">"Take it with a pinch of salt"</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL COMPACT ROOFTOP CARD AT BOTTOM -->
+    <section class="sanctuary-card rounded-3xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="space-y-1">
+        <span class="text-[11px] font-mono uppercase text-stone-500">Optional Quick Callback • Lesson 01 (06:54)</span>
+        <h3 class="font-serif font-bold text-lg text-slatewarm-900">Louie's Hanoi Rooftop Photo / Video</h3>
+        <p class="text-xs text-stone-600">If you want to briefly show the rooftop view of Vietnamese street culture you mentioned last time, load your file here.</p>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <label for="rooftop-upload" class="cursor-pointer px-3.5 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-stone-800 text-xs font-semibold flex items-center gap-1.5 border border-parchment-300 transition">
+          <i data-lucide="image" class="w-3.5 h-3.5 text-autumn-700"></i>
+          <span>Open Photo / Video Viewer</span>
+        </label>
+        <input id="rooftop-upload" type="file" accept="image/*,video/*" class="hidden" onchange="handleRooftopUpload(event)" />
+      </div>
+    </section>
+
+    <div id="rooftop-modal" class="hidden sanctuary-card rounded-3xl p-6 space-y-4">
+      <div class="flex justify-between items-center">
+        <h4 class="font-serif font-bold text-xl text-slatewarm-900">Hanoi Office Rooftop View</h4>
+        <button onclick="document.getElementById('rooftop-modal').classList.add('hidden')" class="text-xs text-stone-500">Close</button>
+      </div>
+      <img id="rooftop-img" class="hidden w-full max-h-[500px] object-contain rounded-2xl" />
+      <video id="rooftop-video" controls class="hidden w-full max-h-[500px] rounded-2xl"></video>
+    </div>
+
+  </main>
+
+  <!-- FULL-SCREEN ARTWORK LIGHTBOX MODAL -->
+  <div id="art-lightbox" onclick="closeArtModal()" class="hidden fixed inset-0 z-50 bg-slatewarm-900/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8">
+    <div onclick="event.stopPropagation()" class="bg-[#fbf9f5] border-2 border-parchment-300 rounded-3xl max-w-5xl w-full overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-parchment-200 bg-parchment-50">
+        <div>
+          <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">High-Resolution Artwork & Archive Viewer</span>
+          <h4 id="art-modal-title" class="font-serif font-bold text-xl sm:text-2xl text-slatewarm-900"></h4>
+        </div>
+        <button onclick="closeArtModal()" class="px-3 py-1.5 rounded-xl bg-parchment-200 hover:bg-parchment-300 text-slatewarm-900 text-xs font-semibold flex items-center gap-1 transition">
+          <i data-lucide="x" class="w-4 h-4"></i>
+          <span>Close (Esc)</span>
+        </button>
+      </div>
+      <div class="p-4 sm:p-6 bg-stone-900/5 flex items-center justify-center">
+        <img id="art-modal-img" src="" alt="Artwork zoom view" class="max-h-[68vh] w-auto object-contain rounded-xl shadow-md" />
+      </div>
+      <div class="px-6 py-4 bg-white border-t border-parchment-200">
+        <p id="art-modal-desc" class="text-xs sm:text-sm text-stone-700 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-stone-500 border-t border-[#e6decb] mt-8">
+    <p class="font-serif italic text-base text-slatewarm-800">Marinela & Louie • Lesson 02 Cultural Salon & Critical Reading Lab</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function openArtModal(src, title, desc) {
+      const modal = document.getElementById('art-lightbox');
+      document.getElementById('art-modal-img').src = src;
+      document.getElementById('art-modal-title').innerText = title;
+      document.getElementById('art-modal-desc').innerText = desc;
+      modal.classList.remove('hidden');
+    }
+
+    function closeArtModal() {
+      document.getElementById('art-lightbox').classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeArtModal();
+    });
+
+    function switchExtract(num) {
+      for (let i = 1; i <= 3; i++) {
+        const panel = document.getElementById(`ext-panel-${i}`);
+        const btn = document.getElementById(`ext-btn-${i}`);
+        if (i === num) {
+          panel.classList.remove('hidden');
+          btn.className = 'px-4 py-2 rounded-xl text-xs font-semibold transition bg-autumn-700 text-white shadow-sm';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'px-4 py-2 rounded-xl text-xs font-semibold transition bg-parchment-100 hover:bg-parchment-200 text-stone-700 border border-parchment-300';
+        }
+      }
+    }
+
+    function toggleTeacherDrawer() {
+      const drawer = document.getElementById('teacher-drawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    function handleRooftopUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      const modal = document.getElementById('rooftop-modal');
+      const img = document.getElementById('rooftop-img');
+      const vid = document.getElementById('rooftop-video');
+      modal.classList.remove('hidden');
+
+      if (file.type.startsWith('video/')) {
+        img.classList.add('hidden');
+        vid.src = url;
+        vid.classList.remove('hidden');
+        vid.play();
+      } else {
+        vid.classList.add('hidden');
+        img.src = url;
+        img.classList.remove('hidden');
+      }
+    }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = 0.94;
+      const voices = window.speechSynthesis.getVoices();
+      const ukVoice = voices.find(v => v.lang.includes('en-GB') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Libby') || v.name.includes('Sonia'))) || voices.find(v => v.lang.includes('en-GB'));
+      if (ukVoice) utter.voice = ukVoice;
+      window.speechSynthesis.speak(utter);
+    }
+  </script>
+</body>
+</html>
